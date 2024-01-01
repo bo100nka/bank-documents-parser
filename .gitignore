@@ -1,3 +1,5 @@
 .vs/
 bank-documents-parser/bank-documents-parser/obj/
 bank-documents-parser/bank-documents-parser/bin/
+bank-documents-parser/bank-documents-parser-tests/bin/
+bank-documents-parser/bank-documents-parser-tests/obj/
