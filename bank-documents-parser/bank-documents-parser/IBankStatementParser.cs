@@ -3,6 +3,9 @@
     public interface IBankStatementParser
     {
         string[] GetBankStatementsFiles();
-        ParseResult TryParse(Stream stream);
+        
+        string TryParseRaw(string file);
+        
+        ParseResult TryParsePayments(string text, string? origin);
     }
 }

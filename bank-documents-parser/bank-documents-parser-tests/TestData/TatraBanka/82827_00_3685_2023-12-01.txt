@@ -1,0 +1,2816 @@
+Podnikateľský účet 2946082827 Mena EUR Dátum 30.11.2023
+IBAN SK77 1100 0000 0029 4608 2827 BIC (SWIFT) TATRSKBX
+---------------------------------------------------------------------------------------------
+Číslo klienta: GPH204
+Majiteľ účtu: Yellow INTERNET, s.r.o.
+Dojč 337
+906 02 Dojč
+Slovensko
+Názov účtu: Yellow INTERNET
+E-mail: peto@yellownet.sk
+084
+Yellow INTERNET, s.r.o.
+Dojč 337
+906 02 Dojč
+Slovensko
+Tatra banka, a.s., Hodžovo nám. 3
+811 06 Bratislava
+IČO: 00686930
+DIČ: 2020408522
+Obchodný reg.Okr.súdu Bratislava I.
+Oddiel Sa, vložka č. 71/B
+POBOČKA/BRANCH 084 SENICA ID: 00 Výpis číslo: 11
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Posledný výpis 31.10.2023 801.05
+02.11.2023 Platba 0200/000000-5196349062 01.11.2023 5.00
+Prijatá platba: PO23110162523244
+Referencia banky platiteľa: 2330550000020026
+Referencia platiteľa: /VS802013/SS01102346/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:01.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK3002000000005196349062
+Eva Skyvova
+Detail: DO2022-11-15/SP
+---------------------------------------------------------------------------------------------
+02.11.2023 Platba 0200/000000-5196349062 01.11.2023 5.00
+Prijatá platba: PO23110162523329
+Referencia banky platiteľa: 2330550000020071
+Referencia platiteľa: /VS802013/SS1112346/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:01.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK3002000000005196349062
+Eva Skyvova
+Detail: DO2022-11-15/SP
+---------------------------------------------------------------------------------------------
+02.11.2023 Platba 0900/000000-0553452672 01.11.2023 12.09
+Prijatá platba: PO23110162555817
+Referencia banky platiteľa: 16505493592-20231101233549.874361
+Referencia platiteľa: /VS806002/SS/KS308
+Suma:12.09EUR Kurz:1.00000000 Valuta:01.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK2909000000000553452672
+Milan Rusnak
+Detail: Beatrica Rusnakova
+---------------------------------------------------------------------------------------------
+02.11.2023 Platba 0900/000000-0553452672 01.11.2023 12.09
+Prijatá platba: PO23110162555828
+Referencia banky platiteľa: 16505495872-20231101233618.300280
+Referencia platiteľa: /VS806002/SS/KS308
+Suma:12.09EUR Kurz:1.00000000 Valuta:01.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK2909000000000553452672
+Milan Rusnak
+Detail: Beatrica Rusnakova
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 7500/000000-4006409841 5.00
+Prijatá platba: PP23110223416678
+Referencia banky platiteľa: 20231101-PRSCT00034229
+Referencia platiteľa: /VS0000815005/SS/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK3975000000004006409841
+MIKULICEK PAVOL
+Detail: Internet Hlboke Mikulicek
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 1111/000000-6622895002 5.00
+Prijatá platba: PP23110223336921
+Referencia banky platiteľa: 20231031-IZ607898025
+Referencia platiteľa: /VS804025/SS/KS0308
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 1
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Suma:5.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK7611110000006622895002
+IVAN NAVRATIL - NOV
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 7500/000000-4012959065 5.00
+Prijatá platba: PP23110223413596
+Referencia banky platiteľa: 20231101-PRSCT00031987
+Referencia platiteľa: /VS820011/SS/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK5175000000004012959065
+VALACHOVICOVA ANNA
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 6500/000000-0015049499 10.00
+Prijatá platba: PP23110223425108
+Referencia banky platiteľa: 16676-20231031-1093113894
+Referencia platiteľa: /VS0000810004/SS0000000000/KS0000
+Suma:10.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK7165000000000015049499
+Pavlikova Barbora
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 0900/000000-5048712616 10.00
+Prijatá platba: PP23110223355957
+Referencia banky platiteľa: FSY0011173312-20231101
+Referencia platiteľa: /VS7104/SS01092010/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK7209000000005048712616
+Peter Buček
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 0900/000000-5025934304 10.00
+Prijatá platba: PP23110223372054
+Referencia banky platiteľa: FSY0011270155-20231101
+Referencia platiteľa: /VS801011/SS010421233/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK6109000000005025934304
+Michal Čičvara
+Detail: Internet Michal Čičvara
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 5600/000000-9255648002 10.00
+Prijatá platba: PP23110223347865
+Referencia banky platiteľa: 2023-10-31/O:64SX37
+Referencia platiteľa: /VS813024/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK1856000000009255648002
+JANOCKOVA LUBICA
+Detail: Janockova
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 1111/000000-1448270003 10.00
+Prijatá platba: PP23110223328572
+Referencia banky platiteľa: 20231031-IZ607832541
+Referencia platiteľa: /VS814022/SS011023143/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK5711110000001448270003
+RIZKOVA ZDENKA
+Detail: Ivan Rizek
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 1111/000000-1492433009 10.00
+Prijatá platba: PP23110223328203
+Referencia banky platiteľa: 20231031-IZ607832043
+Referencia platiteľa: /VS814034/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK1011110000001492433009
+ELENA JAMARIKOVA
+---------------------------------------------------------------------------------------------
+02.11.2023 Platba 1100/000000-2612478602 20.00
+Prijatá platba: VP23110253650790
+Referencia platiteľa: /VS813042/SS/KS
+Suma:20.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK7611000000002612478602
+Bučko Martin
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 5600/000000-2713001002 20.44
+Prijatá platba: PP23110223444946
+Referencia banky platiteľa: 2023-11-02/O:64VNDB
+Referencia platiteľa: /VS801034/SS01102314/KS
+Suma:20.44EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK1356000000002713001002
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 2
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+ORSAG PETER
+---------------------------------------------------------------------------------------------
+02.11.2023 PLATBA 5600/000000-2713001002 20.44
+Prijatá platba: PP23110223445005
+Referencia banky platiteľa: 2023-11-02/O:64VNEB
+Referencia platiteľa: /VS801034/SS01112314/KS
+Suma:20.44EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK1356000000002713001002
+ORSAG PETER
+---------------------------------------------------------------------------------------------
+02.11.2023 Platba 1100/000000-2935046361 24.00
+Prijatá platba: VP23110250942651
+Referencia platiteľa: /VS807006/SS01102329/KS0308
+Suma:24.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK7711000000002935046361
+Labaš Lucia, Ing.
+---------------------------------------------------------------------------------------------
+02.11.2023 Platba 0900/000000-5197620053 54.00
+Prijatá platba: PO23110262643932
+Referencia banky platiteľa: 16543237742-20231102170522.563472
+Referencia platiteľa: /VS813041/SS1112357/KS308
+Suma:54.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK8709000000005197620053
+Pavol Cintula
+---------------------------------------------------------------------------------------------
+02.11.2023 Platba 1100/000000-2947133382 300.00-
+Odoslaná platba: VP23110250937966
+Referencia platiteľa: /VS2023008/SS/KS
+Suma:300.00EUR Kurz:1.00000000 Valuta:02.11.2023
+Banka príjemcu: TATRSKBXXXX
+Príjemca: SK2611000000002947133382
+Martin Malík
+Detail: Martin Malik: - Yellow INTERNET, s.r.o. - 2023/09 - ciastkova
+uhrada
+---------------------------------------------------------------------------------------------
+03.11.2023 Platba 0900/000000-0254165518 5.00
+Prijatá platba: PO23110362685304
+Referencia banky platiteľa: 16556367012-20231103064312.751855
+Referencia platiteľa: /VS813011/SS/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK8609000000000254165518
+Jaroslav Hlavenka
+---------------------------------------------------------------------------------------------
+03.11.2023 PLATBA 8360/520700-4200167444 10.00
+Prijatá platba: PP23110323721776
+Referencia banky platiteľa: 01000003472806609
+Referencia platiteľa: /VS0000804033/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:BREXSKBXXXX
+Platiteľ: SK5183605207004200167444
+VLADIMIR WIEDERMANN
+Detail: TRANSFER
+---------------------------------------------------------------------------------------------
+03.11.2023 PLATBA 0200/000000-2545655954 10.00
+Prijatá platba: PP23110323778925
+Referencia banky platiteľa: 2330714032313086
+Referencia platiteľa: /VS1102344/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK2502000000002545655954
+Branislav Krcha
+---------------------------------------------------------------------------------------------
+03.11.2023 PLATBA 0200/000000-2545655954 10.00
+Prijatá platba: PP23110323779081
+Referencia banky platiteľa: 2330714032314384
+Referencia platiteľa: /VS1112344/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK2502000000002545655954
+Branislav Krcha
+---------------------------------------------------------------------------------------------
+03.11.2023 TPP 1100/000000-2930301757 10.00
+Platba trvalým príkazom: VP23110356088270
+Referencia platiteľa: /VS803009/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK7411000000002930301757
+Billík René
+---------------------------------------------------------------------------------------------
+03.11.2023 TPP 1100/000000-2942034529 10.00
+Platba trvalým príkazom: VP23110356112165
+Referencia platiteľa: /VS814019/SS1123/KS308
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 3
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Suma:10.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK6111000000002942034529
+Hailstones s.r.o.
+Detail: Hailstones
+---------------------------------------------------------------------------------------------
+03.11.2023 PLATBA 1111/000000-1492433009 10.00
+Prijatá platba: PP23110323593329
+Referencia banky platiteľa: 20231102-IZ607963520
+Referencia platiteľa: /VS814034/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK1011110000001492433009
+ELENA JAMARIKOVA
+---------------------------------------------------------------------------------------------
+03.11.2023 PLATBA 5600/000000-9222640004 15.00
+Prijatá platba: PP23110323660881
+Referencia banky platiteľa: 2023-11-02/O:64YDT8
+Referencia platiteľa: /VS813006/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK4356000000009222640004
+GASPARKOVA LENKA
+---------------------------------------------------------------------------------------------
+03.11.2023 TPP 1100/000000-2935432369 15.00
+Platba trvalým príkazom: VP23110356100301
+Referencia platiteľa: /VS813017/SS1082154/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK2611000000002935432369
+Foriška Richard
+Detail: Richard Foriska
+---------------------------------------------------------------------------------------------
+03.11.2023 PLATBA 1111/000000-6842585129 15.00
+Prijatá platba: PP23110323596933
+Referencia banky platiteľa: 20231102-IZ607998421
+Referencia platiteľa: /VS819017/SS/KS0308
+Suma:15.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK6711110000006842585129
+PAVOL TULAK
+Detail: tulak
+---------------------------------------------------------------------------------------------
+03.11.2023 PLATBA 5600/000000-9222640004 20.00
+Prijatá platba: PP23110323660870
+Referencia banky platiteľa: 2023-11-02/O:64YDSZ
+Referencia platiteľa: /VS813003/SS/KS
+Suma:20.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK4356000000009222640004
+GASPARKOVA LENKA
+---------------------------------------------------------------------------------------------
+03.11.2023 Platba 0900/000000-0250950623 37.37
+Prijatá platba: PO23110362739587
+Referencia banky platiteľa: 16579109852-20231103133921.020293
+Referencia platiteľa: /VS804022/SS/KS308
+Suma:37.37EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK5509000000000250950623
+Lenka Strniskova
+---------------------------------------------------------------------------------------------
+03.11.2023 Platba 0900/000000-0250950623 37.37
+Prijatá platba: PO23110362739651
+Referencia banky platiteľa: 16579143042-20231103133954.257468
+Referencia platiteľa: /VS804022/SS/KS308
+Suma:37.37EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK5509000000000250950623
+Lenka Strniskova
+---------------------------------------------------------------------------------------------
+03.11.2023 PLATBA 1111/000000-1670653005 48.00
+Prijatá platba: PP23110323638763
+Referencia banky platiteľa: 20231102-IZ608183281
+Referencia platiteľa: /VS802014/SS/KS
+Suma:48.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK3411110000001670653005
+DANA HLAVNOVA
+---------------------------------------------------------------------------------------------
+03.11.2023 Platba 1100/000000-2932475742 950.00-
+Odoslaná platba: VP23110355981263
+Suma:950.00EUR Kurz:1.00000000 Valuta:03.11.2023
+Banka príjemcu: TATRSKBXXXX
+Príjemca: SK8911000000002932475742
+Holkovičová Katarína
+Detail: Pozicka konatela
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 4
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 7500/000000-4007474936 5.00
+Prijatá platba: PP23110623963232
+Referencia banky platiteľa: 20231103-PRSCT00027238
+Referencia platiteľa: /VS804027/SS01112378/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK6475000000004007474936
+KLACANSKY TIBOR
+Detail: Yellow INTERNET
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 0200/000000-2763607555 5.00
+Prijatá platba: PP23110624044710
+Referencia banky platiteľa: 2330714033231728
+Referencia platiteľa: /VS814010/SS/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK7502000000002763607555
+Peter Hrúz
+Detail: internet Hrúz, Kunov
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 0900/000000-0252512192 5.00
+Prijatá platba: PP23110624015555
+Referencia banky platiteľa: FSY0013542332-20231104
+Referencia platiteľa: /VS814025/SS/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK0309000000000252512192
+Martin Hroch
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 8360/520700-4207797342 10.00
+Prijatá platba: PP23110624100345
+Referencia banky platiteľa: 01000003474069954
+Referencia platiteľa: /VS0000813036/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:BREXSKBXXXX
+Platiteľ: SK4783605207004207797342
+MICHAELA BADUROVA
+Detail: PLATBA
+---------------------------------------------------------------------------------------------
+06.11.2023 Platba 0900/000000-0250907887 10.00
+Prijatá platba: PO23110662938644
+Referencia banky platiteľa: 16664171702-20231106050726.280309
+Referencia platiteľa: /VS1154/SS10921205/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK1509000000000250907887
+Bohumila Stankova
+Detail: Stankova Bohumila
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 0900/000000-0010925795 10.00
+Prijatá platba: PP23110623997457
+Referencia banky platiteľa: FSY0013691326-20231104
+Referencia platiteľa: /VS802000/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK1609000000000010925795
+Daša Staneková
+Detail: faktúra november 2023 Staneková
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 0200/000000-6015149112 10.00
+Prijatá platba: PP23110624028268
+Referencia banky platiteľa: 2331014032278116
+Referencia platiteľa: /VS803002/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK3202000000006015149112
+Zlatica Porubanová
+Detail: yellownet
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 0900/000000-0252587880 10.00
+Prijatá platba: PP23110624019497
+Referencia banky platiteľa: FSY0013840290-20231105
+Referencia platiteľa: /VS809003/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK2309000000000252587880
+Ivan Brožek
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 0900/000000-0251769797 10.00
+Prijatá platba: PP23110624000022
+Referencia banky platiteľa: FSY0013976421-20231105
+Referencia platiteľa: /VS813010/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK0609000000000251769797
+Eva Ročáková-Hricová
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 5
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Detail: Eva Hricova
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 6500/000000-0017273013 10.44
+Prijatá platba: PP23110624076808
+Referencia banky platiteľa: 13023-20231105-1096062475
+Referencia platiteľa: /VS814029/SS/KS
+Suma:10.44EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK4565000000000017273013
+Hutova Elena
+Detail: Elenka Hutova
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 1111/000000-1590503007 15.00
+Prijatá platba: PP23110623949430
+Referencia banky platiteľa: 20231103-IZ608355249
+Referencia platiteľa: /VS804017/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK5911110000001590503007
+HANA MICOVA
+Detail: Ivan Bukaj 11/23
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 0900/000000-5175420202 15.00
+Prijatá platba: PP23110624017348
+Referencia banky platiteľa: FSY0013856544-20231105
+Referencia platiteľa: /VS807003/SS01062162/KS0308
+Suma:15.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK8409000000005175420202
+Holger Bril
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 7500/000000-0026947243 20.00
+Prijatá platba: PP23110624058569
+Referencia banky platiteľa: BNK23309FKCGBHFK
+Referencia platiteľa: /VS1111/SS/KS0308
+Suma:20.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK8075000000000026947243
+Mgr. MICHAL POKRYVKA
+Detail: Platba internet Pokryvka Dojc 453 -2 mesiace, 10, 11/ 23
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 0900/000000-5051109252 20.00
+Prijatá platba: PP23110624028593
+Referencia banky platiteľa: FSY0014179634-20231105
+Referencia platiteľa: /VS3146/SS/KS0308
+Suma:20.00EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK8509000000005051109252
+Tibor Malík
+---------------------------------------------------------------------------------------------
+06.11.2023 PLATBA 5600/000000-9631133003 25.58
+Prijatá platba: PP23110624095612
+Referencia banky platiteľa: 2023-11-06/O:651LOQ
+Referencia platiteľa: /VS804001/SS011123247/KS
+Suma:25.58EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK5956000000009631133003
+BUCAKOVA JANOVICKOVA
+Detail: Bucak
+---------------------------------------------------------------------------------------------
+06.11.2023 Platba 0900/000000-5035600973 26.17
+Prijatá platba: PO23110663058956
+Referencia banky platiteľa: 16709665222-20231106203209.718993
+Referencia platiteľa: /VS815007/SS/KS308
+Suma:26.17EUR Kurz:1.00000000 Valuta:06.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK3209000000005035600973
+Martin Vidovic
+---------------------------------------------------------------------------------------------
+07.11.2023 TPP 1100/000000-8010340638 10.00
+Platba trvalým príkazom: VP23110760153856
+Referencia platiteľa: /VS804036/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:07.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK6411000000008010340638
+Nosko Miroslav
+---------------------------------------------------------------------------------------------
+07.11.2023 PLATBA 1111/000000-1496362009 10.00
+Prijatá platba: PP23110724290588
+Referencia banky platiteľa: 20231106-IZ608382182
+Referencia platiteľa: /VS812005/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:07.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK9011110000001496362009
+CERNEKOVA NIKOLA
+Detail: Cernekova
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 6
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+07.11.2023 PLATBA 0200/002014-0015805012 14.84
+Prijatá platba: PP23110724419485
+Referencia banky platiteľa: 2331114036037338
+Referencia platiteľa: /VS1031000001/SS6010000857/KS0998
+Suma:14.84EUR Kurz:1.00000000 Valuta:07.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+07.11.2023 PLATBA 5600/000000-9277915001 15.00
+Prijatá platba: PP23110724354989
+Referencia banky platiteľa: 2023-11-06/O:652NWQ
+Referencia platiteľa: /VS804038/SS/KS0308
+Suma:15.00EUR Kurz:1.00000000 Valuta:07.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK5256000000009277915001
+KUTLAKOVA ANNA-MARIA
+Detail: Jan Kutlak
+---------------------------------------------------------------------------------------------
+07.11.2023 PLATBA 0900/000000-0011291448 15.00
+Prijatá platba: PP23110724426096
+Referencia banky platiteľa: FSY0015329114-20231107
+Referencia platiteľa: /VS813014/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:07.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK4509000000000011291448
+Martin Maťuch
+Detail: Martin Maťuch
+---------------------------------------------------------------------------------------------
+07.11.2023 PLATBA 1111/000000-1273304004 20.00
+Prijatá platba: PP23110724290926
+Referencia banky platiteľa: 20231106-IZ608408181
+Suma:20.00EUR Kurz:1.00000000 Valuta:07.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK5811110000001273304004
+Mednansky Andrej
+---------------------------------------------------------------------------------------------
+07.11.2023 Platba 1100/000000-2941155388 300.00-
+Odoslaná platba: VP23110760127993
+Referencia platiteľa: /VS2023002/SS/KS
+Suma:300.00EUR Kurz:1.00000000 Valuta:07.11.2023
+Banka príjemcu: TATRSKBXXXX
+Príjemca: SK9511000000002941155388
+Ondrej Jankovič
+Detail: Ondrej Jankovic: 2023002 - Yellow INTERNET, s.r.o. - 2023/09 -
+doplatok
+---------------------------------------------------------------------------------------------
+08.11.2023 TPP 1100/000000-8017153544 5.00
+Platba trvalým príkazom: VP23110861318286
+Referencia platiteľa: /VS809002/SS/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:08.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK7411000000008017153544
+Ráček Marek Ing.
+Detail: YellowNET Racek Rovensko 121
+---------------------------------------------------------------------------------------------
+08.11.2023 PLATBA 0200/000000-0869048182 5.00
+Prijatá platba: PP23110824752547
+Referencia banky platiteľa: 2331214027809242
+Referencia platiteľa: /VS820003/SS11123201/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:08.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK8002000000000869048182
+Štefan Ladovič
+---------------------------------------------------------------------------------------------
+08.11.2023 PLATBA 0900/000000-0037182135 10.00
+Prijatá platba: PP23110824746907
+Referencia banky platiteľa: FSY0016311178-20231108
+Referencia platiteľa: /VS3044/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:08.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK3809000000000037182135
+Elena Jurenová
+Detail: Jurenova Elena
+---------------------------------------------------------------------------------------------
+08.11.2023 PLATBA 5600/000000-2127046005 10.00
+Prijatá platba: PP23110824734644
+Referencia banky platiteľa: 2023-11-07/O:657VVZ
+Referencia platiteľa: /VS813025/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:08.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK5756000000002127046005
+HURBAN JURAJ
+---------------------------------------------------------------------------------------------
+08.11.2023 Platba 0200/000000-3462888351 15.44
+Prijatá platba: PO23110863307641
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 7
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Referencia banky platiteľa: 2331250000056087
+Referencia platiteľa: /VS813038/SS/KS
+Suma:15.44EUR Kurz:1.00000000 Valuta:08.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK7302000000003462888351
+Jaroslava Surinova
+---------------------------------------------------------------------------------------------
+08.11.2023 Platba 0200/000000-3462888351 15.44
+Prijatá platba: PO23110863307309
+Referencia banky platiteľa: 2331250000055884
+Referencia platiteľa: /VS813038/SS/KS0308
+Suma:15.44EUR Kurz:1.00000000 Valuta:08.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK7302000000003462888351
+Jaroslava Surinova
+---------------------------------------------------------------------------------------------
+08.11.2023 Platba 1100/000000-8011262256 17.64
+Prijatá platba: VP23110860556231
+Referencia platiteľa: /VS801016/SS/KS0308
+Suma:17.64EUR Kurz:1.00000000 Valuta:08.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK7911000000008011262256
+Kratochvíl Bedřich
+---------------------------------------------------------------------------------------------
+08.11.2023 PLATBA PP23110824764093 20.00
+Prijatá platba: PP23110824764093
+Referencia banky platiteľa: 26257799442
+Referencia platiteľa: /VS802004/SS010423181/KS0308
+Suma:20.00EUR Kurz:1.00000000 Valuta:08.11.2023
+Banka platiteľa:FIOBCZPPXXX
+Platiteľ: CZ2020100000002000949194
+Jitka Valkova
+---------------------------------------------------------------------------------------------
+08.11.2023 PLATBA PP23110824764087 20.00
+Prijatá platba: PP23110824764087
+Referencia banky platiteľa: 26257798428
+Referencia platiteľa: /VS802004/SS010423181/KS0308
+Suma:20.00EUR Kurz:1.00000000 Valuta:08.11.2023
+Banka platiteľa:FIOBCZPPXXX
+Platiteľ: CZ2020100000002000949194
+Jitka Valkova
+---------------------------------------------------------------------------------------------
+09.11.2023 Platba 1100/000000-2914919346 10.00
+Prijatá platba: VP23110962634306
+Referencia platiteľa: /VS2184/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:09.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK7711000000002914919346
+Vachová Veronika
+Detail: Veronika Vachova
+---------------------------------------------------------------------------------------------
+09.11.2023 PLATBA 0900/000000-0250950623 10.00
+Prijatá platba: PP23110925075600
+Referencia banky platiteľa: FSY0017096295-20231109
+Referencia platiteľa: /VS804022/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:09.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK5509000000000250950623
+Lenka Strnisková
+Detail: Internet Továrenská, byt č.4
+---------------------------------------------------------------------------------------------
+09.11.2023 PLATBA 5600/000000-9246692001 10.00
+Prijatá platba: PP23110925004352
+Referencia banky platiteľa: 2023-11-08/O:6598RS
+Referencia platiteľa: /VS819007/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:09.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK6656000000009246692001
+KRCHNAVA DAGMARA
+Detail: Krchnavy Prietrz
+---------------------------------------------------------------------------------------------
+09.11.2023 TPP 1100/000000-8015099361 13.30
+Platba trvalým príkazom: VP23110962572210
+Referencia platiteľa: /VS7061/SS1082135/KS308
+Suma:13.30EUR Kurz:1.00000000 Valuta:09.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK6411000000008015099361
+Dobišová Iveta
+---------------------------------------------------------------------------------------------
+09.11.2023 Platba 1100/000000-2931718546 15.00
+Prijatá platba: VP23110961504348
+Referencia platiteľa: /VS804019/SS/KS0308
+Suma:15.00EUR Kurz:1.00000000 Valuta:09.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK7911000000002931718546
+Dikalov Oleksandr
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 8
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+09.11.2023 PLATBA 7500/000000-4000726192 15.44
+Prijatá platba: PP23110925130977
+Referencia banky platiteľa: 20231108-PRSCT00007257
+Referencia platiteľa: /VS801003/SS/KS
+Suma:15.44EUR Kurz:1.00000000 Valuta:09.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK0375000000004000726192
+SKACAN MICHAL
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 6500/000000-0016650577 5.00
+Prijatá platba: PP23111025504899
+Referencia banky platiteľa: 8231-20231110-1098333415
+Referencia platiteľa: /VS0000819010/SS0000000000/KS0000
+Suma:5.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK8265000000000016650577
+Kovar Peter
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-8018155891 5.00
+Platba trvalým príkazom: VP23111064112922
+Referencia platiteľa: /VS807000/SS/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK9311000000008018155891
+Štefánik Jozef
+Detail: Štefánik Jozef
+---------------------------------------------------------------------------------------------
+10.11.2023 Platba 0200/000000-3462382553 5.00
+Prijatá platba: PO23111063596458
+Referencia banky platiteľa: 2331450000062163
+Referencia platiteľa: /VS814001/SS/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK8602000000003462382553
+Jana Kalmankova
+Detail: Kalmanek Marian
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0900/000000-0250103723 5.00
+Prijatá platba: PP23111025449449
+Referencia banky platiteľa: FSY0018080890-20231110
+Referencia platiteľa: /VS814003/SS/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK6009000000000250103723
+Pavol Bartoň
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-2618891414 5.00
+Platba trvalým príkazom: VP23111063977668
+Referencia platiteľa: /VS814013/SS/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK2511000000002618891414
+VACHOVÁ MARTA
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-2610089240 5.00
+Platba trvalým príkazom: VP23111063874546
+Referencia platiteľa: /VS814018/SS/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK9011000000002610089240
+PÁLKA PETER
+Detail: Palka , Kunov III
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0900/000000-0251020487 5.00
+Prijatá platba: PP23111025423118
+Referencia banky platiteľa: FSY0018391248-20231110
+Referencia platiteľa: /VS9045/SS010523302/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK8609000000000251020487
+Anna Ondrašková
+---------------------------------------------------------------------------------------------
+10.11.2023 Platba 0900/000000-0037043215 10.00
+Prijatá platba: PO23111063576920
+Referencia banky platiteľa: 16898474012-20231110135211.239496
+Suma:10.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK8209000000000037043215
+Jaroslava Vrablecova
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 6500/000000-0010074521 10.00
+Prijatá platba: PP23111025492571
+Referencia banky platiteľa: 51653-20231110-1098312503
+Referencia platiteľa: /VS0000802001/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:POBNSKBA
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 9
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Platiteľ: SK4165000000000010074521
+Tomanek Stefan
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-2614100865 10.00
+Platba trvalým príkazom: VP23111063922104
+Referencia platiteľa: /VS804015/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK0411000000002614100865
+Smieško Peter, Mgr.
+Detail: Yellow net Senica
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-2917933522 10.00
+Platba trvalým príkazom: VP23111064021924
+Referencia platiteľa: /VS804018/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK3411000000002917933522
+Gabrišová Kristína
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 1111/000000-1431696016 10.00
+Prijatá platba: PP23111025289337
+Referencia banky platiteľa: 20231109-IZ609081398
+Referencia platiteľa: /VS804034/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK4011110000001431696016
+BIELIK JOZEF
+Detail: JOZEF BIELIK-SENICA
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0200/000000-3443044751 10.00
+Prijatá platba: PP23111025478661
+Referencia banky platiteľa: 2331314043253462
+Referencia platiteľa: /VS810008/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK0402000000003443044751
+Kristína Bittnerová
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0900/000000-0037025543 10.00
+Prijatá platba: PP23111025443893
+Referencia banky platiteľa: FSY0018105705-20231110
+Referencia platiteľa: /VS810011/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK8309000000000037025543
+Pavol Hollý
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-2930094479 10.00
+Platba trvalým príkazom: VP23111064033282
+Referencia platiteľa: /VS819020/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK6811000000002930094479
+Koniariková Lenka
+Detail: koniarik
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-2618343952 15.00
+Platba trvalým príkazom: VP23111063971760
+Referencia platiteľa: /VS801020/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK5711000000002618343952
+Sivák Richard
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 7500/000000-4029231767 15.00
+Prijatá platba: PP23111025340924
+Referencia banky platiteľa: 20231109-PRSCT00017011
+Referencia platiteľa: /VS801021/SS011221227/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK5275000000004029231767
+STORA VLADIMIR
+Detail: Vladimir Stora
+---------------------------------------------------------------------------------------------
+10.11.2023 Platba 0900/000000-0274027796 15.00
+Prijatá platba: PO23111063639016
+Referencia banky platiteľa: 16923775742-20231110210059.551917
+Referencia platiteľa: /VS801037/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK5509000000000274027796
+Silvia Varcekova
+---------------------------------------------------------------------------------------------
+10.11.2023 Platba 0900/000000-0250065667 15.00
+Prijatá platba: PO23111063605976
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 10
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Referencia banky platiteľa: 16911629102-20231110164020.817514
+Referencia platiteľa: /VS803020/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK5109000000000250065667
+Stanislav Ralbovsky
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-2611814731 15.00
+Platba trvalým príkazom: VP23111063894129
+Referencia platiteľa: /VS808007/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK6011000000002611814731
+Valachovič Vladimír
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-2936247958 15.00
+Platba trvalým príkazom: VP23111064064662
+Referencia platiteľa: /VS813018/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK6311000000002936247958
+Bieliková Silvia
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-2614760513 15.00
+Platba trvalým príkazom: VP23111063928297
+Referencia platiteľa: /VS815008/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK6611000000002614760513
+Nádašský Peter
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0200/000000-2420349953 15.00
+Prijatá platba: PP23111025481393
+Referencia banky platiteľa: 2331314043258831
+Referencia platiteľa: /VS819003/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK2202000000002420349953
+Tatiana Rýzková
+Detail: internet
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0900/000000-5031029554 15.00
+Prijatá platba: PP23111025446189
+Referencia banky platiteľa: FSY0018358553-20231110
+Referencia platiteľa: /VS819006/SS010920184/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK1609000000005031029554
+Pavol Hauptman
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0900/000000-0250036217 15.00
+Prijatá platba: PP23111025453723
+Referencia banky platiteľa: FSY0018369417-20231110
+Referencia platiteľa: /VS819018/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK9209000000000250036217
+Jarmila Končitá
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0900/000000-0174948248 15.44
+Prijatá platba: PP23111025469126
+Referencia banky platiteľa: FSY0018248195-20231110
+Referencia platiteľa: /VS3422/SS010423264/KS
+Suma:15.44EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK8009000000000174948248
+Jozef Turanský
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 5600/000000-9242798001 15.44
+Prijatá platba: PP23111025353010
+Referencia banky platiteľa: 2023-11-09/O:65DCUY
+Referencia platiteľa: /VS807007/SS/KS0308
+Suma:15.44EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK5756000000009242798001
+KRCOVA JANA
+Detail: Krcova Jana Kovalov 24
+---------------------------------------------------------------------------------------------
+10.11.2023 TPP 1100/000000-8018252544 17.09
+Platba trvalým príkazom: VP23111064113994
+Referencia platiteľa: /VS812003/SS/KS
+Suma:17.09EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK5311000000008018252544
+Kalamenová Ružena
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 11
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0200/002014-0015805012 19.68
+Prijatá platba: PP23111025485577
+Referencia banky platiteľa: 2331414042665653
+Referencia platiteľa: /VS1031300002/SS6010001003/KS0998
+Suma:19.68EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0900/000000-0253128635 20.00
+Prijatá platba: PP23111025433491
+Referencia banky platiteľa: FSY0018316956-20231110
+Referencia platiteľa: /VS813044/SS/KS0308
+Suma:20.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK7809000000000253128635
+Martin Filípek
+---------------------------------------------------------------------------------------------
+10.11.2023 PLATBA 0900/000000-0250329845 27.09
+Prijatá platba: PP23111025460921
+Referencia banky platiteľa: FSY0018382958-20231110
+Referencia platiteľa: /VS819012/SS/KS
+Suma:27.09EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK4309000000000250329845
+Benedikt Fatura
+Detail: Fatura Jablonica + Rehuše
+---------------------------------------------------------------------------------------------
+10.11.2023 Platba 1100/000000-2947133382 500.00-
+Odoslaná platba: VP23111064145430
+Referencia platiteľa: /VS2023008/SS/KS
+Suma:500.00EUR Kurz:1.00000000 Valuta:10.11.2023
+Banka príjemcu: TATRSKBXXXX
+Príjemca: SK2611000000002947133382
+Martin Malík
+Detail: Martin Malik: - Yellow INTERNET, s.r.o. - 2023/09 - ciastkova
+uhrada
+---------------------------------------------------------------------------------------------
+11.11.2023 Platba 1100/000000-8010151837 10.00
+Prijatá platba: VP23111164227698
+Referencia platiteľa: /VS802016/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:11.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK5011000000008010151837
+Valach Ľubomír
+Detail: Valachova Lucia
+---------------------------------------------------------------------------------------------
+13.11.2023 Platba 0900/000000-0253391134 12.11.2023 5.00
+Prijatá platba: PO23111263755706
+Referencia banky platiteľa: 16938043032-20231112125527.044622
+Referencia platiteľa: /VS814028/SS/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:12.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK0709000000000253391134
+Vlasta Majdanova
+Detail: Vlasta Majdanova,ul.Sotinska 1475/17,905 01 Senica
+---------------------------------------------------------------------------------------------
+13.11.2023 Platba 0900/000000-0253391134 12.11.2023 12.09
+Prijatá platba: PO23111263754213
+Referencia banky platiteľa: 16937378402-20231112123746.219997
+Referencia platiteľa: /VS804020/SS/KS308
+Suma:12.09EUR Kurz:1.00000000 Valuta:12.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK0709000000000253391134
+Vlasta Majdanova
+Detail: byt c.41,Robotnicka 58,Senica
+---------------------------------------------------------------------------------------------
+13.11.2023 Platba 0900/000000-5163530295 12.11.2023 20.50
+Prijatá platba: PO23111263759226
+Referencia banky platiteľa: 16939552472-20231112133539.656945
+Referencia platiteľa: /VS813045/SS/KS308
+Suma:20.50EUR Kurz:1.00000000 Valuta:12.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK5909000000005163530295
+Marek Pongrac
+Detail: 11 mesiac
+---------------------------------------------------------------------------------------------
+13.11.2023 Platba 0900/000000-5048447509 5.00
+Prijatá platba: PO23111363952040
+Referencia banky platiteľa: 17010477452-20231113200155.967967
+Suma:5.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK4009000000005048447509
+Stanislava Lezo
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 6500/000000-0015853778 5.00
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 12
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Prijatá platba: PP23111326208906
+Referencia banky platiteľa: 13691-20231112-1099336518
+Referencia platiteľa: /VS/SS/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK2565000000000015853778
+Jonasova Anna
+Detail: Jan Jonas
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 7500/300003-0017546093 5.00
+Prijatá platba: PP23111326162224
+Referencia banky platiteľa: BNK23315KLDCMMKD
+Referencia platiteľa: /VS801030/SS/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK2775003000030017546093
+Stefan Brenkus
+Detail: Internet
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 8330/000000-2602568233 5.00
+Prijatá platba: PP23111326251386
+Referencia banky platiteľa: 26263999346
+Referencia platiteľa: /VS804032/SS01032352/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:FIOZSKBAXXX
+Platiteľ: SK6883300000002602568233
+Blazena Oravcova
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-0250028153 5.00
+Prijatá platba: PP23111326084645
+Referencia banky platiteľa: FSY0019970171-20231112
+Referencia platiteľa: /VS814004/SS/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK5509000000000250028153
+Ján Bartoň
+---------------------------------------------------------------------------------------------
+13.11.2023 Platba 0900/000000-0281761948 5.00
+Prijatá platba: PO23111363889446
+Referencia banky platiteľa: 16986939232-20231113133318.776199
+Referencia platiteľa: /VS820007/SS/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK3609000000000281761948
+Andrea Knoblochova
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0200/000000-2562638558 6.61
+Prijatá platba: PP23111326152769
+Referencia banky platiteľa: 2331414045876246
+Referencia platiteľa: /VS10010/SS010523337/KS
+Suma:6.61EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK6602000000002562638558
+Emília Ventúrová
+Detail: YELLOWNET
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 6500/000000-0014285078 10.00
+Prijatá platba: PP23111326194750
+Referencia banky platiteľa: 10006-20231113-1099683494
+Referencia platiteľa: /VS0000002100/SS0000000000/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK6965000000000014285078
+Vajdova Edita
+Detail: lnternet
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 6500/000000-0002411356 10.00
+Prijatá platba: PP23111326214526
+Referencia banky platiteľa: 7761-20231112-1099327804
+Referencia platiteľa: /VS0000004038/SS0000000000/KS0000
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK3465000000000002411356
+Stefka Emil
+Detail: Stefka Emil
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 6500/000000-0016456678 10.00
+Prijatá platba: PP23111326210658
+Referencia banky platiteľa: 15150-20231112-1099338237
+Referencia platiteľa: /VS0000004184/SS0010623271/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK7165000000000016456678
+Farkas Anton
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 7500/000000-4029298259 10.00
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 13
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Prijatá platba: PP23111325954633
+Referencia banky platiteľa: 20231110-PRSCT00054759
+Referencia platiteľa: /VS801035/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK4475000000004029298259
+MATTA JAKUB
+Detail: Internet - Matta, Beckerova
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0200/000000-1836504051 10.00
+Prijatá platba: PP23111326126094
+Referencia banky platiteľa: 2331414045673420
+Referencia platiteľa: /VS802006/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK9702000000001836504051
+Ján Kir
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-0250367155 10.00
+Prijatá platba: PP23111326057595
+Referencia banky platiteľa: FSY0019491418-20231111
+Referencia platiteľa: /VS803011/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK1809000000000250367155
+Anton Kozánek
+Detail: Mária Kozánková
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-0037190944 10.00
+Prijatá platba: PP23111326065712
+Referencia banky platiteľa: FSY0010024713-20231112
+Referencia platiteľa: /VS803018/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK3909000000000037190944
+Pavel Macháček
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0200/000000-4422395151 10.00
+Prijatá platba: PP23111326161235
+Referencia banky platiteľa: 2331414045652679
+Referencia platiteľa: /VS804021/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK3702000000004422395151
+Filip Huščava
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 6500/000000-3651418252 10.00
+Prijatá platba: PP23111326207905
+Referencia banky platiteľa: 17857-20231112-1099342615
+Referencia platiteľa: /VS804024/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK8965000000003651418252
+Krc Marek
+Detail: Marek Krc, Senica, ul. Rovenska 675/16, platba za internet
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-0251938036 10.00
+Prijatá platba: PP23111326087513
+Referencia banky platiteľa: FSY0019502817-20231111
+Referencia platiteľa: /VS804040/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK6309000000000251938036
+Ondrej Hučko
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 7500/000000-4003205341 10.00
+Prijatá platba: PP23111326176972
+Referencia banky platiteľa: 20231112-PRSCT00007071
+Referencia platiteľa: /VS810009/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK6175000000004003205341
+JEZOVA VIERA
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-5122087813 10.00
+Prijatá platba: PP23111326089868
+Referencia banky platiteľa: FSY0010424356-20231113
+Referencia platiteľa: /VS812000/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK8109000000005122087813
+Branislav Vojtek
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-5037938855 10.00
+Prijatá platba: PP23111326050465
+Referencia banky platiteľa: FSY0019838508-20231112
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 14
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Referencia platiteľa: /VS813008/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK6509000000005037938855
+Patrícia Žáčiková
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 7500/000000-4027903427 10.00
+Prijatá platba: PP23111326183130
+Referencia banky platiteľa: 20231112-PRSCT00027469
+Referencia platiteľa: /VS813009/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK6475000000004027903427
+LINKOVA PATRICIA
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-5131305210 10.00
+Prijatá platba: PP23111326105457
+Referencia banky platiteľa: FSY0010416918-20231113
+Referencia platiteľa: /VS813032/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK6109000000005131305210
+Vladimíra Ferenčíková
+---------------------------------------------------------------------------------------------
+13.11.2023 TPP 1100/000000-8011312110 10.00
+Platba trvalým príkazom: VP23111366848698
+Referencia platiteľa: /VS813033/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK9011000000008011312110
+Ferenčík Jozef
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-0037023820 10.00
+Prijatá platba: PP23111326053787
+Referencia banky platiteľa: FSY0019456009-20231111
+Referencia platiteľa: /VS814007/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK4409000000000037023820
+Oľga Blahová
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0200/000000-3720354257 10.00
+Prijatá platba: PP23111326129796
+Referencia banky platiteľa: 2331414045746363
+Referencia platiteľa: /VS814020/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK1002000000003720354257
+Miroslav Havel
+Detail: Havel
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 7500/000000-4022722707 10.00
+Prijatá platba: PP23111325916757
+Referencia banky platiteľa: BNK23314DJ0G0DKJ
+Referencia platiteľa: /VS819002/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK7275000000004022722707
+Ing. Jan Zavodny
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-0037054950 10.00
+Prijatá platba: PP23111326096044
+Referencia banky platiteľa: FSY0019970036-20231112
+Referencia platiteľa: /VS819008/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK3909000000000037054950
+Viera Rehušová
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 1111/000000-1181426004 10.00
+Prijatá platba: PP23111325912699
+Referencia banky platiteľa: 20231110-IZ609309809
+Referencia platiteľa: /VS820012/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK2511110000001181426004
+MURIN PETER
+---------------------------------------------------------------------------------------------
+13.11.2023 Platba 0900/000000-0252026784 10.00
+Prijatá platba: PO23111363934109
+Referencia banky platiteľa: 17004865782-20231113175920.874638
+Referencia platiteľa: /VS9022/SS10923319/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK5809000000000252026784
+Andrea Zakova
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 15
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Detail: Slavomir Zak
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 5600/000000-9260404002 13.30
+Prijatá platba: PP23111325987722
+Referencia banky platiteľa: 2023-11-10/O:65GVMZ
+Referencia platiteľa: /VS2085/SS/KS0308
+Suma:13.30EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK1356000000009260404002
+BURDA MARTIN
+Detail: Pladba za internet
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-0252655767 13.30
+Prijatá platba: PP23111326114749
+Referencia banky platiteľa: FSY0010502545-20231113
+Referencia platiteľa: /VS9029/SS010121123/KS0308
+Suma:13.30EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK8309000000000252655767
+Petra Pantúčková
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-5176307906 15.00
+Prijatá platba: PP23111326108793
+Referencia banky platiteľa: FSY0010421102-20231113
+Suma:15.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK9709000000005176307906
+Renáta Tomšejová
+---------------------------------------------------------------------------------------------
+13.11.2023 TPP 1100/000000-2910876991 15.00
+Platba trvalým príkazom: VP23111366763660
+Suma:15.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK3811000000002910876991
+Hladká Jana
+Detail: Hladky Vlastimil,Smrdaky c.9,zak.cislo 10071
+---------------------------------------------------------------------------------------------
+13.11.2023 DE23111362420 140002311132AEI- 15.00
+Prijatá platba: DE23111362420
+Referencia banky platiteľa: 140002311132AEI-C80B0NGHYYMM
+Suma:15.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:BAWAATWW
+Platiteľ: AT501400006210018610
+Jaroslav Jaroska
+Detail: (CdtrRefInf)(Tp)(CdOrPrtry)(Cd)SCOR(/Cd)(/CdOrPrtry)(/Tp)(Ref)
+13032(/Ref)(/CdtrRefInf)
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 1111/000000-1346410001 15.00
+Prijatá platba: PP23111325894838
+Referencia banky platiteľa: 20231110-IZ609319336
+Referencia platiteľa: /VS801010/SS/KS0308
+Suma:15.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK6311110000001346410001
+VILIAM FODOR
+Detail: Viliam Fodor
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 1111/000000-1736704064 15.00
+Prijatá platba: PP23111325893175
+Referencia banky platiteľa: 20231110-IZ609335185
+Referencia platiteľa: /VS801013/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK0311110000001736704064
+TOMAS SALIK
+Detail: Tomas Salik
+---------------------------------------------------------------------------------------------
+13.11.2023 TPP 1100/000000-8012356991 15.00
+Platba trvalým príkazom: VP23111366784162
+Referencia platiteľa: /VS801033/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK7411000000008012356991
+Chorvát Tomáš
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-0037017842 15.00
+Prijatá platba: PP23111326068027
+Referencia banky platiteľa: FSY0010013994-20231112
+Referencia platiteľa: /VS804013/SS/KS0308
+Suma:15.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK4209000000000037017842
+Zlatica Hagerová
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0200/000000-3967252156 15.00
+Prijatá platba: PP23111326155695
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 16
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Referencia banky platiteľa: 2331414045856795
+Referencia platiteľa: /VS813002/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK6302000000003967252156
+Štefan Lasica
+Detail: platba za internet
+---------------------------------------------------------------------------------------------
+13.11.2023 Platba 0200/000000-1192756156 15.00
+Prijatá platba: PO23111363945928
+Referencia banky platiteľa: 2331750000077380
+Referencia platiteľa: /VS819001/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK3902000000001192756156
+Zdenka Iskrova
+---------------------------------------------------------------------------------------------
+13.11.2023 Platba 0200/000000-1192756156 15.00
+Prijatá platba: PO23111363946287
+Referencia banky platiteľa: 2331750000077600
+Referencia platiteľa: /VS819001/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK3902000000001192756156
+Zdenka Iskrova
+Detail: platba za 10/2023
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 7500/000000-4007553300 17.64
+Prijatá platba: PP23111326180112
+Referencia banky platiteľa: 20231112-PRSCT00010006
+Referencia platiteľa: /VS819019/SS/KS0308
+Suma:17.64EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK9775000000004007553300
+KONIARIKOVA JANA
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 7500/000000-0026947243 19.83
+Prijatá platba: PP23111326165386
+Referencia banky platiteľa: BNK23315GFLGJGMK
+Referencia platiteľa: /VS1019/SS/KS0308
+Suma:19.83EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK8075000000000026947243
+Mgr. MICHAL POKRYVKA
+Detail: Platba internet pokryvka dojc 377,oktober az december 2023
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 7500/000000-4012736187 20.00
+Prijatá platba: PP23111326185384
+Referencia banky platiteľa: 20231112-PRSCT00014362
+Referencia platiteľa: /VS80106/SS/KS0308
+Suma:20.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK7175000000004012736187
+SKURKA DUSAN
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0200/000000-2666793958 20.00
+Prijatá platba: PP23111326141173
+Referencia banky platiteľa: 2331414045872955
+Referencia platiteľa: /VS804009/SS/KS308
+Suma:20.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK3902000000002666793958
+Filip Šulek
+Detail: Šulek
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0900/000000-0253465690 20.00
+Prijatá platba: PP23111326117751
+Referencia banky platiteľa: FSY0010440495-20231113
+Referencia platiteľa: /VS804039/SS/KS
+Suma:20.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK3609000000000253465690
+Marianna Černeková
+Detail: Marianna Cernekova
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0200/000000-2563485856 20.44
+Prijatá platba: PP23111326126295
+Referencia banky platiteľa: 2331414045841398
+Suma:20.44EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK8202000000002563485856
+Anton Kozánek
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 6500/000000-0011989977 24.00
+Prijatá platba: PP23111326196791
+Referencia banky platiteľa: 17816-20231113-1099692229
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 17
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Referencia platiteľa: /VS4061/SS/KS0308
+Suma:24.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK2565000000000011989977
+Holy Miroslav
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0200/000000-4206723851 24.00
+Prijatá platba: PP23111326135501
+Referencia banky platiteľa: 2331414045739349
+Referencia platiteľa: /VS815006/SS/KS
+Suma:24.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK8802000000004206723851
+Tomáš Čerňák
+---------------------------------------------------------------------------------------------
+13.11.2023 TPP 1100/000000-8012301798 25.00
+Platba trvalým príkazom: VP23111366784052
+Referencia platiteľa: /VS807008/SS/KS308
+Suma:25.00EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK7411000000008012301798
+Hyža Martin
+Detail: Martin Hyza
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 0200/000000-4484337053 25.03
+Prijatá platba: PP23111326157910
+Referencia banky platiteľa: 2331414045698333
+Referencia platiteľa: /VS801023/SS/KS308
+Suma:25.03EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK0302000000004484337053
+Peter Kačaba
+---------------------------------------------------------------------------------------------
+13.11.2023 PLATBA 7500/000000-4020114177 27.09
+Prijatá platba: PP23111325929364
+Referencia banky platiteľa: 20231110-PRSCT00037391
+Referencia platiteľa: /VS801027/SS/KS0308
+Suma:27.09EUR Kurz:1.00000000 Valuta:13.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK4075000000004020114177
+KONECNY DOMINIK
+---------------------------------------------------------------------------------------------
+14.11.2023 TPP 1100/000000-8018237950 5.00
+Platba trvalým príkazom: VP23111468670068
+Referencia platiteľa: /VS801014/SS/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK7711000000008018237950
+Vizváryová Otília
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 6500/000000-0013009899 5.00
+Prijatá platba: PP23111426781784
+Referencia banky platiteľa: 10492-20231114-1100293183
+Referencia platiteľa: /VS809013/SS/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK4365000000000013009899
+Surova Zuzana
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 1111/000000-1666623006 5.00
+Prijatá platba: PP23111426423013
+Referencia banky platiteľa: 20231113-IZ609634058
+Referencia platiteľa: /VS814006/SS/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK6311110000001666623006
+DENISA MICHALICOVA
+Detail: Igor Michalica
+---------------------------------------------------------------------------------------------
+14.11.2023 TPP 1100/000000-2610890994 5.00
+Platba trvalým príkazom: VP23111468620688
+Referencia platiteľa: /VS814033/SS/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK2811000000002610890994
+Blahová Jana
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 0900/000000-0037024110 10.00
+Prijatá platba: PP23111426527480
+Referencia banky platiteľa: FSY0011672438-20231114
+Suma:10.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK7109000000000037024110
+Peter Surový
+---------------------------------------------------------------------------------------------
+14.11.2023 TPP 1100/000000-2910985565 10.00
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 18
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Platba trvalým príkazom: VP23111468645488
+Suma:10.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK7411000000002910985565
+Gavorníková Nela, In
+Detail: Internet N. Michalkova
+---------------------------------------------------------------------------------------------
+14.11.2023 Platba 0900/000000-0251870414 10.00
+Prijatá platba: PO23111464080355
+Referencia banky platiteľa: 17056434632-20231114160651.309772
+Referencia platiteľa: /VS4082/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK2609000000000251870414
+Jana Zichova
+---------------------------------------------------------------------------------------------
+14.11.2023 Platba 1100/000000-8012307663 10.00
+Prijatá platba: VP23111468009431
+Referencia platiteľa: /VS4086/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK2311000000008012307663
+Vašková Oľga, Ing.
+Detail: Vaskova
+---------------------------------------------------------------------------------------------
+14.11.2023 Platba 0200/000000-0931649182 10.00
+Prijatá platba: PO23111463990445
+Referencia banky platiteľa: 2331850000008795
+Referencia platiteľa: /VS809012/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK2002000000000931649182
+Miroslav Kadlecik
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 5600/000000-9228101001 10.00
+Prijatá platba: PP23111426515631
+Referencia banky platiteľa: 2023-11-13/O:65NFYD
+Referencia platiteľa: /VS813013/SS010121212/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK1156000000009228101001
+JEDINY STANISLAV
+Detail: Jedina Borsky Mikulas
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 0200/000000-2158015455 10.00
+Prijatá platba: PP23111426759749
+Referencia banky platiteľa: 2331714049916473
+Referencia platiteľa: /VS813027/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK9402000000002158015455
+Mária Filípková
+Detail: Mária Filípková
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 0900/000000-5032947162 10.00
+Prijatá platba: PP23111426532503
+Referencia banky platiteľa: FSY0011668515-20231114
+Referencia platiteľa: /VS813043/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK9609000000005032947162
+Romana Kubíková
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 5600/000000-4607919003 10.00
+Prijatá platba: PP23111426516899
+Referencia banky platiteľa: 2023-11-13/O:65NLG1
+Referencia platiteľa: /VS819023/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK7756000000004607919003
+KRAJCIR MICHAL
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 0200/000000-2438384159 10.44
+Prijatá platba: PP23111426763969
+Referencia banky platiteľa: 2331714049793466
+Referencia platiteľa: /VS814016/SS/KS308
+Suma:10.44EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK6702000000002438384159
+Lucia Ovečková
+Detail: yellownet
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 1111/000000-1496780008 15.00
+Prijatá platba: PP23111426443186
+Referencia banky platiteľa: 20231113-IZ609626696
+Referencia platiteľa: /VS801001/SS/KS0308
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 19
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Suma:15.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK6711110000001496780008
+BIBZA VLADIMIR
+Detail: yellownet
+---------------------------------------------------------------------------------------------
+14.11.2023 Platba 1100/000000-2616754854 15.00
+Prijatá platba: VP23111468715554
+Referencia platiteľa: /VS801002/SS/KS0308
+Suma:15.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK8111000000002616754854
+Španka Róbert, Bc.
+---------------------------------------------------------------------------------------------
+14.11.2023 Platba 0900/000000-5069119993 15.00
+Prijatá platba: PO23111464042050
+Referencia banky platiteľa: 17040920442-20231114124826.740863
+Referencia platiteľa: /VS803005/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK8109000000005069119993
+Marek Hrdlica
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 0200/000000-3238508051 15.00
+Prijatá platba: PP23111426789945
+Referencia banky platiteľa: 2331714049878410
+Referencia platiteľa: /VS803015/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK8902000000003238508051
+Gabriel Hájek
+Detail: Gabriel Hájek
+---------------------------------------------------------------------------------------------
+14.11.2023 Platba 0200/000000-3241735255 15.00
+Prijatá platba: PO23111464046546
+Referencia banky platiteľa: 2331850000040903
+Referencia platiteľa: /VS807009/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK0202000000003241735255
+Michaela Bombalova
+---------------------------------------------------------------------------------------------
+14.11.2023 Platba 0900/000000-0252539117 15.00
+Prijatá platba: PO23111464136772
+Referencia banky platiteľa: 19387025561-20231114214554.210570
+Referencia platiteľa: /VS815009/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK4309000000000252539117
+Peter Kristof
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 0200/002014-0015805012 15.28
+Prijatá platba: PP23111426759088
+Referencia banky platiteľa: 2331814049156332
+Referencia platiteľa: /VS1031700001/SS6010001110/KS0998
+Suma:15.28EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+14.11.2023 Platba 0900/000000-5037632813 15.44
+Prijatá platba: PO23111464079888
+Referencia banky platiteľa: 17056253812-20231114160433.536866
+Referencia platiteľa: /VS801026/SS/KS308
+Suma:15.44EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK6009000000005037632813
+Marek Pecha
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 0900/000000-0251459238 16.60
+Prijatá platba: PP23111426567843
+Referencia banky platiteľa: FSY0011634357-20231114
+Referencia platiteľa: /VS3016/SS/KS
+Suma:16.60EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK3109000000000251459238
+Adrian Cintula
+Detail: Adrian Cintula
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 6500/000000-0094867392 17.09
+Prijatá platba: PP23111426805176
+Referencia banky platiteľa: 5094-20231113-1100185330
+Referencia platiteľa: /VS2134/SS011123302/KS
+Suma:17.09EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK0765000000000094867392
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 20
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Vaclavkova Emilia
+Detail: november
+---------------------------------------------------------------------------------------------
+14.11.2023 TPP 1100/000000-2936315930 20.00
+Platba trvalým príkazom: VP23111468658977
+Referencia platiteľa: /VS804023/SS/KS
+Suma:20.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK5911000000002936315930
+Hrnčirík Tomáš
+Detail: Hrnčirík Tomáš
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 7500/000000-4022584965 20.00
+Prijatá platba: PP23111426461515
+Referencia banky platiteľa: 20231113-PRSCT00027294
+Referencia platiteľa: /VS810010/SS/KS0308
+Suma:20.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK2975000000004022584965
+JEZO MATEJ
+Detail: Internet
+---------------------------------------------------------------------------------------------
+14.11.2023 PLATBA 1111/000000-1495578000 31.08
+Prijatá platba: PP23111426443052
+Referencia banky platiteľa: 20231113-IZ609626629
+Referencia platiteľa: /VS807001/SS/KS
+Suma:31.08EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK2311110000001495578000
+DOUPNIK PETER
+---------------------------------------------------------------------------------------------
+14.11.2023 Platba 1100/000000-2946125364 1,150.00-
+Odoslaná platba: VP23111468686264
+Referencia platiteľa: /VS2023025/SS/KS
+Suma:1,150.00EUR Kurz:1.00000000 Valuta:14.11.2023
+Banka príjemcu: TATRSKBXXXX
+Príjemca: SK5811000000002946125364
+René Šuster - DataOn
+Detail: Rene Suster servisne prace ciastkova uhrada
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-5063190027 5.00
+Prijatá platba: PP23111527312861
+Referencia banky platiteľa: FSY0013426305-20231115
+Referencia platiteľa: /VS803016/SS01012363/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK9009000000005063190027
+Valéria Zajíčková
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-0250120806 5.00
+Prijatá platba: PP23111527244395
+Referencia banky platiteľa: FSY0013200638-20231115
+Referencia platiteľa: /VS806003/SS/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK5409000000000250120806
+Ján Formánek
+Detail: Ján Formanek
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 1111/000000-1163893004 5.00
+Prijatá platba: PP23111527114257
+Referencia banky platiteľa: 20231114-IZ609956856
+Referencia platiteľa: /VS809006/SS11220207/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK8211110000001163893004
+JAMRISKA PAVOL
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0200/000000-1985553156 5.00
+Prijatá platba: PP23111527316294
+Referencia banky platiteľa: 2331814053278815
+Referencia platiteľa: /VS813022/SS/KS
+Suma:5.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK7702000000001985553156
+Silvester Černý
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 5600/000000-9218608001 6.61
+Prijatá platba: PP23111527174591
+Referencia banky platiteľa: 2023-11-14/O:65TGF0
+Referencia platiteľa: /VS7086/SS/KS0308
+Suma:6.61EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK5456000000009218608001
+SRAMKOVA LUBICA
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 21
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 6500/000000-0094777952 10.00
+Prijatá platba: PP23111527355832
+Referencia banky platiteľa: 56933-20231115-1100930469
+Referencia platiteľa: /VS0000007131/SS0010322133/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK7265000000000094777952
+Krcova Maria
+Detail: pavol Krc
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 6500/000000-0095685793 10.00
+Prijatá platba: PP23111527340268
+Referencia banky platiteľa: 64334-20231115-1100952922
+Referencia platiteľa: /VS0000813026/SS0000000000/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK7165000000000095685793
+Kubikova Lucia
+Detail: Lucia Kubikova
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-0251238195 10.00
+Prijatá platba: PP23111527230790
+Referencia banky platiteľa: FSY0013465485-20231115
+Referencia platiteľa: /VS13099/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK7309000000000251238195
+Martin Hubáček
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-5116445733 10.00
+Prijatá platba: PP23111527259186
+Referencia banky platiteľa: FSY0013072764-20231115
+Referencia platiteľa: /VS3123/SS010721103/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK6909000000005116445733
+Pavel Konečný
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-0037150117 10.00
+Prijatá platba: PP23111527208723
+Referencia banky platiteľa: FSY0013842198-20231115
+Referencia platiteľa: /VS801005/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK6009000000000037150117
+Peter Duda
+Detail: Duda
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0200/000000-1116679451 10.00
+Prijatá platba: PP23111527387277
+Referencia banky platiteľa: 2331814052596441
+Referencia platiteľa: /VS802003/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK4402000000001116679451
+Janka Gubová
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-0251333168 10.00
+Prijatá platba: PP23111527292219
+Referencia banky platiteľa: FSY0013444294-20231115
+Referencia platiteľa: /VS802007/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK9409000000000251333168
+Viera Cintulová
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-0036997746 10.00
+Prijatá platba: PP23111527307919
+Referencia banky platiteľa: FSY0012984148-20231115
+Referencia platiteľa: /VS810001/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK1609000000000036997746
+Marián Reissmüller
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-5188720909 10.00
+Prijatá platba: PP23111527220435
+Referencia banky platiteľa: FSY0013808549-20231115
+Referencia platiteľa: /VS813028/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK2109000000005188720909
+Monika Vaňková
+Detail: Vanek Miroslav
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 6500/000000-0092838475 10.00
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 22
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Prijatá platba: PP23111527353166
+Referencia banky platiteľa: 72230-20231114-1100679430
+Referencia platiteľa: /VS813034/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK1665000000000092838475
+Zemanova Sara
+Detail: Emilia Zemanova, Zahoracka 1878 Borsky Mikulas. Cislo bytu 8.
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-0350137234 10.00
+Prijatá platba: PP23111527268759
+Referencia banky platiteľa: FSY0013719604-20231115
+Referencia platiteľa: /VS814032/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK2609000000000350137234
+Miroslav Egri
+Detail: Egri Miroslav
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-5186565335 10.00
+Prijatá platba: PP23111527252938
+Referencia banky platiteľa: FSY0013898233-20231115
+Referencia platiteľa: /VS815001/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK3409000000005186565335
+Jakub Šuplata
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0200/000000-1986619153 10.00
+Prijatá platba: PP23111527347356
+Referencia banky platiteľa: 2331914027537090
+Referencia platiteľa: /VS815010/SS/KS308
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK9502000000001986619153
+Libor Mikuš
+---------------------------------------------------------------------------------------------
+15.11.2023 Platba 0200/000000-0933142182 10.00
+Prijatá platba: PO23111564153429
+Referencia banky platiteľa: 2331950000003082
+Referencia platiteľa: /VS820000/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK8602000000000933142182
+Miroslav Svatik
+---------------------------------------------------------------------------------------------
+15.11.2023 TPP 1100/000000-8010317112 10.00
+Platba trvalým príkazom: VP23111570283354
+Referencia platiteľa: /VS820004/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK1311000000008010317112
+Štepanovský Miroslav
+Detail: Štepanovský Miroslav
+---------------------------------------------------------------------------------------------
+15.11.2023 TPP 1100/000000-2611342711 13.30
+Platba trvalým príkazom: VP23111570092014
+Referencia platiteľa: /VS10025/SS10523334/KS308
+Suma:13.30EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK6111000000002611342711
+Vacula Lukáš
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 5600/000000-5739813002 15.00
+Prijatá platba: PP23111527167860
+Referencia banky platiteľa: 2023-11-14/O:65X64Y
+Referencia platiteľa: /VS801000/SS0308/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK7056000000005739813002
+ONDRUSKOVA LENKA
+Detail: Bilka Peter
+---------------------------------------------------------------------------------------------
+15.11.2023 TPP 1100/000000-2613162167 15.00
+Platba trvalým príkazom: VP23111570115318
+Referencia platiteľa: /VS813001/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK1111000000002613162167
+Francová Adriána, In
+Detail: Internet 2
+---------------------------------------------------------------------------------------------
+15.11.2023 Platba 0200/000000-4314342212 15.00
+Prijatá platba: PO23111564166889
+Referencia banky platiteľa: 2331950000010998
+Referencia platiteľa: /VS817000/SS/KS
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 23
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Suma:15.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6302000000004314342212
+Ludovit Ravas
+Detail: do 15.11
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0200/000000-2302269258 15.00
+Prijatá platba: PP23111527326375
+Referencia banky platiteľa: 2331814053288578
+Referencia platiteľa: /VS819011/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK5302000000002302269258
+Dušan Svoboda
+Detail: Dusan Svoboda Prietrz 117
+---------------------------------------------------------------------------------------------
+15.11.2023 TPP 1100/000000-2610965116 15.00
+Platba trvalým príkazom: VP23111570087529
+Referencia platiteľa: /VS819014/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK3811000000002610965116
+Dóša Juraj, PhDr.
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 6500/000000-0002310803 20.00
+Prijatá platba: PP23111527354497
+Referencia banky platiteľa: 22886-20231115-1100882647
+Referencia platiteľa: /VS0000810000/SS/KS
+Suma:20.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK3265000000000002310803
+Khulova Milada
+---------------------------------------------------------------------------------------------
+15.11.2023 TPP 1100/000000-8013328095 20.00
+Platba trvalým príkazom: VP23111570293981
+Referencia platiteľa: /VS804010/SS/KS308
+Suma:20.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK4511000000008013328095
+Majzonová SIlvia
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0200/000000-4484054459 20.99
+Prijatá platba: PP23111527334811
+Referencia banky platiteľa: 2331814053292445
+Referencia platiteľa: /VS804035/SS/KS308
+Suma:20.99EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK2102000000004484054459
+Michal Pollák
+---------------------------------------------------------------------------------------------
+15.11.2023 Platba 0900/000000-5153825989 24.00
+Prijatá platba: PO23111564250958
+Referencia banky platiteľa: 19429694501-20231115160359.090881
+Referencia platiteľa: /VS801009/SS/KS308
+Suma:24.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK1809000000005153825989
+Ervin Cernoch
+Detail: ervin cernoch dojc 279
+---------------------------------------------------------------------------------------------
+15.11.2023 TPP 1100/000000-2915884050 24.00
+Platba trvalým príkazom: VP23111570211590
+Referencia platiteľa: /VS801019/SS/KS308
+Suma:24.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:TATRSKBXXXX
+Platiteľ: SK9111000000002915884050
+Vach Valentín, ml.
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-5173290109 24.00
+Prijatá platba: PP23111527231997
+Referencia banky platiteľa: FSY0013188434-20231115
+Referencia platiteľa: /VS802009/SS/KS
+Suma:24.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK3409000000005173290109
+Rastislav Sabanoš
+Detail: Monika Sabanoš
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 7500/000000-4021526659 25.00
+Prijatá platba: PP23111527141993
+Referencia banky platiteľa: 20231114-PRSCT00101162
+Referencia platiteľa: /VS804004/SS/KS0308
+Suma:25.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK3175000000004021526659
+LEVARSKY VLADIMIR
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 24
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Detail: internet
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0900/000000-5174321106 26.72
+Prijatá platba: PP23111527312875
+Referencia banky platiteľa: FSY0013245031-20231115
+Referencia platiteľa: /VS803014/SS/KS0308
+Suma:26.72EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK7809000000005174321106
+Ľuboš Lopatka
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 0200/002014-0015805012 54.20
+Prijatá platba: PP23111527327636
+Referencia banky platiteľa: 2331914052718712
+Referencia platiteľa: /VS1031800005/SS6010001395/KS0998
+Suma:54.20EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 5600/000000-9200516002 189.00
+Prijatá platba: PP23111527171100
+Referencia banky platiteľa: 2023-11-14/O:65Y1B4
+Referencia platiteľa: /VS804003/SS011023238/KS0308
+Suma:189.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK7856000000009200516002
+MESTO SENICA
+Detail: Pristup do internetu 5GHz-15/8Mbit podla zmluvy c. 804003
+---------------------------------------------------------------------------------------------
+15.11.2023 PLATBA 5600/000000-9200516002 189.00
+Prijatá platba: PP23111527171096
+Referencia banky platiteľa: 2023-11-14/O:65Y1B3
+Referencia platiteľa: /VS804003/SS011123238/KS0308
+Suma:189.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK7856000000009200516002
+MESTO SENICA
+Detail: Pristup do Internetu 5GHz-15/8Mbit podla zmluvy c. 804003
+---------------------------------------------------------------------------------------------
+16.11.2023 Platba 1100/000000-2618088461 15.11.2023 5.00
+Prijatá platba: VP23111670378100
+Referencia platiteľa: /VS15002/SS011123303/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:15.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK6211000000002618088461
+Morávková Tatiana
+Detail: Platba za internet
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 6500/000000-0012448945 5.00
+Prijatá platba: PP23111627831160
+Referencia banky platiteľa: 20116-20231115-1101426579
+Referencia platiteľa: /VS0000819015/SS0011123106/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK2765000000000012448945
+Svatikova Zdenka
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-1653624456 5.00
+Prijatá platba: PP23111627799705
+Referencia banky platiteľa: 2331914055545529
+Referencia platiteľa: /VS819009/SS/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK5202000000001653624456
+Vladimír Martiš
+Detail: internet
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-2569486251 5.00
+Prijatá platba: PP23111627796945
+Referencia banky platiteľa: 2331914055625928
+Referencia platiteľa: /VS820008/SS/KS308
+Suma:5.00EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK7802000000002569486251
+Andrej Prosnan
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-3373185654 6.61
+Prijatá platba: PP23111627807347
+Referencia banky platiteľa: 2331914055799285
+Referencia platiteľa: /VS6012/SS/KS308
+Suma:6.61EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK6802000000003373185654
+RÍMSKOKATOLÍCKA CIRKEV, FARNOSŤ ČÁR
+Y
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 25
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Detail: fara cary
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-2702513758 9.96
+Prijatá platba: PP23111627804710
+Referencia banky platiteľa: 2331914055806758
+Referencia platiteľa: /VS3027/SS/KS
+Suma:9.96EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK6402000000002702513758
+Eva Kučerová
+Detail: INTERNET
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0900/000000-5193051965 10.00
+Prijatá platba: PP23111627682750
+Referencia banky platiteľa: FSY0013783664-20231115
+Referencia platiteľa: /VS802015/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK5309000000005193051965
+Patrik Šebesta
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-4286869753 10.00
+Prijatá platba: PP23111627815775
+Referencia banky platiteľa: 2331914055732662
+Referencia platiteľa: /VS803006/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK7502000000004286869753
+Peter Ralbovský
+Detail: ralbovsky peter
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-3833459055 10.00
+Prijatá platba: PP23111627833196
+Referencia banky platiteľa: 2331914055791110
+Referencia platiteľa: /VS819005/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK2702000000003833459055
+Petr Pavlík
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 6500/000000-0014551778 13.30
+Prijatá platba: PP23111627843046
+Referencia banky platiteľa: 44964-20231116-1101764568
+Referencia platiteľa: /VS0000007081/SS/KS
+Suma:13.30EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK6165000000000014551778
+Subova Hedviga
+---------------------------------------------------------------------------------------------
+16.11.2023 Platba 0200/000000-3039349182 13.30
+Prijatá platba: PO23111664446111
+Referencia banky platiteľa: 2332050000075462
+Referencia platiteľa: /VS9030/SS/KS
+Suma:13.30EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK7402000000003039349182
+Peter Kacko, Martina Kackova
+Detail: Vasica Lubomir Rovensko 145
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-2880143155 15.00
+Prijatá platba: PP23111627779983
+Referencia banky platiteľa: 2331914055627134
+Referencia platiteľa: /VS802011/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK4302000000002880143155
+Viliam Miklošovič
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-1782243182 15.00
+Prijatá platba: PP23111627821768
+Referencia banky platiteľa: 2331914055687074
+Referencia platiteľa: /VS815012/SS111224/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK8302000000001782243182
+Monika Seemannová
+Detail: Kovar Patrik
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-3132746182 15.00
+Prijatá platba: PP23111627820730
+Referencia banky platiteľa: 2331914055686814
+Referencia platiteľa: /VS819022/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK6502000000003132746182
+Vojtech Valko
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 26
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-3959850156 15.44
+Prijatá platba: PP23111627835578
+Referencia banky platiteľa: 2332014056658715
+Referencia platiteľa: /VS3396/SS/KS308
+Suma:15.44EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK1602000000003959850156
+Zuzana Andrášová
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/000000-0828545182 20.00
+Prijatá platba: PP23111627807763
+Referencia banky platiteľa: 2331914055801596
+Referencia platiteľa: /VS4198/SS/KS
+Suma:20.00EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK7302000000000828545182
+Bernard Vaca
+Detail: Yellownet
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 7500/000000-4007803621 22.09
+Prijatá platba: PP23111627645516
+Referencia banky platiteľa: 20231115-PRSCT00033536
+Referencia platiteľa: /VS801024/SS/KS0308
+Suma:22.09EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK0275000000004007803621
+JANAK MARTIN
+---------------------------------------------------------------------------------------------
+16.11.2023 PLATBA 0200/002014-0015805012 183.58
+Prijatá platba: PP23111627825076
+Referencia banky platiteľa: 2332014054854437
+Referencia platiteľa: /VS1031900016/SS6010001229/KS0998
+Suma:183.58EUR Kurz:1.00000000 Valuta:16.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+18.11.2023 Platba 0200/000000-1830139751 10.00
+Prijatá platba: PO23111864557003
+Referencia banky platiteľa: 2332250000008473
+Referencia platiteľa: /VS9037/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:18.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK1802000000001830139751
+Stanislav Ivacek
+---------------------------------------------------------------------------------------------
+20.11.2023 Platba 1100/000000-2947133382 4.00
+Prijatá platba: VP23112076088018
+Suma:4.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK2611000000002947133382
+Martin Malík
+---------------------------------------------------------------------------------------------
+20.11.2023 PLATBA 0900/000000-5153276350 5.00
+Prijatá platba: PP23112028214923
+Referencia banky platiteľa: FSY0016107611-20231116
+Referencia platiteľa: /VS807005/SS011023122/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK4709000000005153276350
+Lýdia Ližičiarová
+Detail: Ližičiarová (Koválov) - YellowNet
+---------------------------------------------------------------------------------------------
+20.11.2023 PLATBA 0900/000000-5153276350 5.00
+Prijatá platba: PP23112028214140
+Referencia banky platiteľa: FSY0016106850-20231116
+Referencia platiteľa: /VS807005/SS011123124/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK4709000000005153276350
+Lýdia Ližičiarová
+Detail: Ližičiarová (Koválov) - YellowNet
+---------------------------------------------------------------------------------------------
+20.11.2023 PLATBA 0900/000000-0037052824 10.00
+Prijatá platba: PP23112028206751
+Referencia banky platiteľa: FSY0016973677-20231117
+Suma:10.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK1709000000000037052824
+Stanislav Holoďák
+Detail: Stanislav Holoďák, Hlboké 193
+---------------------------------------------------------------------------------------------
+20.11.2023 PLATBA 7500/000000-4017738157 10.00
+Prijatá platba: PP23112028333549
+Referencia banky platiteľa: BNK23323HDHCHKDD
+Referencia platiteľa: /VS2079/SS010523345/KS
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 27
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Suma:10.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK7875000000004017738157
+Jana Zanatova
+Detail: Jana Zanatova /Zaja2079
+---------------------------------------------------------------------------------------------
+20.11.2023 Platba 1100/000000-2618342546 10.00
+Prijatá platba: VP23112075325300
+Referencia platiteľa: /VS2080/SS010923342/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:TATRSKBX
+Platiteľ: SK9211000000002618342546
+Ráčková Ingrid
+Detail: Antonia Buzkova
+---------------------------------------------------------------------------------------------
+20.11.2023 PLATBA 5600/000000-3261840001 10.00
+Prijatá platba: PP23112028407316
+Referencia banky platiteľa: 2023-11-20/O:669T1P
+Referencia platiteľa: /VS813035/SS/KS0308
+Suma:10.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK8356000000003261840001
+MAJKOVA ZUZANA
+---------------------------------------------------------------------------------------------
+20.11.2023 PLATBA 0200/000000-2930814253 10.00
+Prijatá platba: PP23112028301238
+Referencia banky platiteľa: 2332414059841464
+Referencia platiteľa: /VS820001/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK1902000000002930814253
+Miriama Mertelová
+Detail: Drahos
+---------------------------------------------------------------------------------------------
+20.11.2023 PLATBA 0900/000000-5185672948 15.00
+Prijatá platba: PP23112028266203
+Referencia banky platiteľa: FSY0018603539-20231120
+Suma:15.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK7109000000005185672948
+Denisa Pacalajová
+---------------------------------------------------------------------------------------------
+20.11.2023 PLATBA 0900/000000-0250846957 15.00
+Prijatá platba: PP23112028192806
+Referencia banky platiteľa: FSY0016918212-20231117
+Referencia platiteľa: /VS10083/SS/KS
+Suma:15.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK0509000000000250846957
+Zdenko Pavlík
+Detail: Pavlík Zdenko
+---------------------------------------------------------------------------------------------
+20.11.2023 PLATBA 6500/000000-0095376931 26.04
+Prijatá platba: PP23112028384070
+Referencia banky platiteľa: 25529-20231120-1103535675
+Referencia platiteľa: /VS0000001098/SS0001112083/KS
+Suma:26.04EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK6165000000000095376931
+Machova Zuzana
+Detail: Zuzana Machova
+---------------------------------------------------------------------------------------------
+20.11.2023 Platba 0200/000000-2665527658 31.08
+Prijatá platba: PO23112064704324
+Referencia banky platiteľa: 2332450000001695
+Referencia platiteľa: /VS813021/SS/KS0308
+Suma:31.08EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6402000000002665527658
+Stanislav Vojt
+Detail: DO2023-06-16/SP
+---------------------------------------------------------------------------------------------
+20.11.2023 PLATBA 0200/002014-0015805012 146.13
+Prijatá platba: PP23112028334717
+Referencia banky platiteľa: 2332414057454715
+Referencia platiteľa: /VS1032000012/SS6010001090/KS0998
+Suma:146.13EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+20.11.2023 Platba 1100/000000-2947133382 1,104.00-
+Odoslaná platba: VP23112076002727
+Referencia platiteľa: /VS2023009/SS/KS
+Suma:1,104.00EUR Kurz:1.00000000 Valuta:20.11.2023
+Banka príjemcu: TATRSKBXXXX
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 28
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Príjemca: SK2611000000002947133382
+Martin Malík
+Detail: Martin Malik: - Yellow INTERNET, s.r.o. - 2023/09 - ciastkova
+uhrada
+---------------------------------------------------------------------------------------------
+21.11.2023 PLATBA 5600/000000-5221923004 10.00
+Prijatá platba: PP23112128743848
+Referencia banky platiteľa: 2023-11-20/O:66BK43
+Referencia platiteľa: /VS0000081800/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:21.11.2023
+Banka platiteľa:KOMASK2X
+Platiteľ: SK6056000000005221923004
+KOVAC JURAJ
+Detail: JURAJ KOVAC
+---------------------------------------------------------------------------------------------
+21.11.2023 PLATBA 7500/000000-4007370010 13.30
+Prijatá platba: PP23112128669591
+Referencia banky platiteľa: 20231120-PRSCT00023702
+Referencia platiteľa: /VS1033/SS01122057/KS
+Suma:13.30EUR Kurz:1.00000000 Valuta:21.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK8475000000004007370010
+HREBENAROVA BOHUMILA
+---------------------------------------------------------------------------------------------
+21.11.2023 PLATBA 0200/000000-4187203454 15.44
+Prijatá platba: PP23112128757183
+Referencia banky platiteľa: 2332414063165198
+Referencia platiteľa: /VS809005/SS/KS308
+Suma:15.44EUR Kurz:1.00000000 Valuta:21.11.2023
+Banka platiteľa:SUBASKBXXXX
+Platiteľ: SK4602000000004187203454
+Andrej Surový
+Detail: faktura
+---------------------------------------------------------------------------------------------
+21.11.2023 Platba 0900/000000-0252643918 20.44
+Prijatá platba: PO23112164982589
+Referencia banky platiteľa: 19501961541-20231121220217.416442
+Suma:20.44EUR Kurz:1.00000000 Valuta:21.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK0309000000000252643918
+Klaudia Zifcsakova
+---------------------------------------------------------------------------------------------
+21.11.2023 DE23112156767 201112311182AIP- 20.44
+Prijatá platba: DE23112156767
+Referencia banky platiteľa: 201112311182AIP-00HB7N7IWAB2
+Suma:20.44EUR Kurz:1.00000000 Valuta:21.11.2023
+Banka platiteľa:GIBAATWWXXX
+Platiteľ: AT302011183960503800
+Miroslav Nestarec
+---------------------------------------------------------------------------------------------
+21.11.2023 PLATBA 0200/002014-0015805012 261.72
+Prijatá platba: PP23112128769864
+Referencia banky platiteľa: 2332514062267022
+Referencia platiteľa: /VS1032400017/SS6010001364/KS0998
+Suma:261.72EUR Kurz:1.00000000 Valuta:21.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+22.11.2023 PLATBA 0900/000000-5124450620 15.00
+Prijatá platba: PP23112228987876
+Referencia banky platiteľa: FSY0010925145-20231122
+Referencia platiteľa: /VS1134/SS/KS0308
+Suma:15.00EUR Kurz:1.00000000 Valuta:22.11.2023
+Banka platiteľa:GIBASKBX
+Platiteľ: SK2809000000005124450620
+Zuzana Magočová
+---------------------------------------------------------------------------------------------
+22.11.2023 Platba 0900/000000-5031474148 15.00
+Prijatá platba: PO23112265016998
+Referencia banky platiteľa: 19514090521-20231122101342.476003
+Referencia platiteľa: /VS803008/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:22.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK1909000000005031474148
+Romana Valuskova
+---------------------------------------------------------------------------------------------
+22.11.2023 PLATBA 1111/000000-1076088082 15.00
+Prijatá platba: PP23112228946615
+Referencia banky platiteľa: 20231121-IZ611272699
+Referencia platiteľa: /VS808006/SS/KS308
+Suma:15.00EUR Kurz:1.00000000 Valuta:22.11.2023
+Banka platiteľa:UNCRSKBXXXX
+Platiteľ: SK1411110000001076088082
+JAN GAZI
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 29
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+22.11.2023 PLATBA 6500/000000-0094724340 20.00
+Prijatá platba: PP23112228992827
+Referencia banky platiteľa: 32217-20231122-1104772314
+Referencia platiteľa: /VS820005/SS/KS0308
+Suma:20.00EUR Kurz:1.00000000 Valuta:22.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK6565000000000094724340
+Popovic Jan
+---------------------------------------------------------------------------------------------
+22.11.2023 PLATBA 0200/002014-0015805012 169.11
+Prijatá platba: PP23112228985463
+Referencia banky platiteľa: 2332614066088399
+Referencia platiteľa: /VS1032500013/SS6010001452/KS0998
+Suma:169.11EUR Kurz:1.00000000 Valuta:22.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+23.11.2023 PLATBA 7500/300003-0017794409 5.00
+Prijatá platba: PP23112329183342
+Referencia banky platiteľa: BNK23326DFKGJHMG
+Referencia platiteľa: /VS809009/SS011123155/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:23.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK3875003000030017794409
+RNDr. Eva Ilcikova
+Detail: Internet basic
+---------------------------------------------------------------------------------------------
+23.11.2023 PLATBA 0200/002014-0015805012 59.11
+Prijatá platba: PP23112329246776
+Referencia banky platiteľa: 2332714067656568
+Referencia platiteľa: /VS1032600005/SS6010001011/KS0998
+Suma:59.11EUR Kurz:1.00000000 Valuta:23.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+23.11.2023 Platba 1100/000000-2942459340 1,000.00-
+Odoslaná platba: VP23112380925165
+Suma:1,000.00EUR Kurz:1.00000000 Valuta:23.11.2023
+Banka príjemcu: TATRSKBXXXX
+Príjemca: SK2611000000002942459340
+YellowNET, s.r.o.
+---------------------------------------------------------------------------------------------
+24.11.2023 PLATBA 0200/002014-0015805012 44.32
+Prijatá platba: PP23112429437781
+Referencia banky platiteľa: 2332814069467989
+Referencia platiteľa: /VS1032700004/SS6010000884/KS0998
+Suma:44.32EUR Kurz:1.00000000 Valuta:24.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+25.11.2023 Platba 0900/000000-5064322626 10.00
+Prijatá platba: PO23112565392025
+Referencia banky platiteľa: 17316548262-20231125152411.955792
+Referencia platiteľa: /VS3346/SS/KS
+Suma:10.00EUR Kurz:1.00000000 Valuta:25.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK4009000000005064322626
+Jaroslav Simek
+---------------------------------------------------------------------------------------------
+27.11.2023 PLATBA 6500/000000-0096690156 5.00
+Prijatá platba: PP23112729772234
+Referencia banky platiteľa: 3893-20231124-1106042533
+Referencia platiteľa: /VS801015/SS011023132/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:27.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK7565000000000096690156
+Cmelikova Zuzana
+---------------------------------------------------------------------------------------------
+27.11.2023 PLATBA 6500/000000-0096690156 5.00
+Prijatá platba: PP23112729772251
+Referencia banky platiteľa: 3902-20231124-1106042878
+Referencia platiteľa: /VS801015/SS011123134/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:27.11.2023
+Banka platiteľa:POBNSKBA
+Platiteľ: SK7565000000000096690156
+Cmelikova Zuzana
+---------------------------------------------------------------------------------------------
+27.11.2023 PLATBA 0200/002014-0015805012 65.64
+Prijatá platba: PP23112729733324
+Referencia banky platiteľa: 2333114071349543
+Referencia platiteľa: /VS1032800006/SS6010000748/KS0998
+Suma:65.64EUR Kurz:1.00000000 Valuta:27.11.2023
+Banka platiteľa:SUBASKBX
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 30
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Dátum sprac. Popis Dátum zúčt. Suma
+---------------------------------------------------------------------------------------------
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+28.11.2023 Platba 0900/000000-0251066848 10.00
+Prijatá platba: PO23112865735928
+Referencia banky platiteľa: 19697242371-20231128195841.664690
+Suma:10.00EUR Kurz:1.00000000 Valuta:28.11.2023
+Banka platiteľa:GIBASKBXXXX
+Platiteľ: SK2709000000000251066848
+Jana Labasova
+Detail: labas, november
+---------------------------------------------------------------------------------------------
+28.11.2023 DE23112853807 201112311262AIP- 20.44
+Prijatá platba: DE23112853807
+Referencia banky platiteľa: 201112311262AIP-00C8SUX8H8FU
+Suma:20.44EUR Kurz:1.00000000 Valuta:28.11.2023
+Banka platiteľa:GIBAATWWXXX
+Platiteľ: AT302011183960503800
+Miroslav Nestarec
+---------------------------------------------------------------------------------------------
+28.11.2023 PLATBA 0200/002014-0015805012 29.52
+Prijatá platba: PP23112830038538
+Referencia banky platiteľa: 2333214075026666
+Referencia platiteľa: /VS1033100003/SS6010000747/KS0998
+Suma:29.52EUR Kurz:1.00000000 Valuta:28.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+29.11.2023 PLATBA 7500/000000-4008540886 5.00
+Prijatá platba: PP23112930168451
+Referencia banky platiteľa: BNK23332C0CFDKB0
+Referencia platiteľa: /VS814011/SS/KS0308
+Suma:5.00EUR Kurz:1.00000000 Valuta:29.11.2023
+Banka platiteľa:CEKOSKBX
+Platiteľ: SK9075000000004008540886
+Tibor Tikl
+Detail: Net basic
+---------------------------------------------------------------------------------------------
+30.11.2023 PLATBA 0200/002014-0015805012 9.84
+Prijatá platba: PP23113030457948
+Referencia banky platiteľa: 2333414079442348
+Referencia platiteľa: /VS1033300001/SS6010000570/KS0998
+Suma:9.84EUR Kurz:1.00000000 Valuta:30.11.2023
+Banka platiteľa:SUBASKBX
+Platiteľ: SK6902000020140015805012
+SLOVENSKÁ POŠTA, A.S.
+---------------------------------------------------------------------------------------------
+30.11.2023 Poplatok za balík 19.00-
+Tatra Business Premium ......................................... 19.00 EUR
+SPOLU DB: 8 5,323.00
+CR: 275 4,847.26
+Zostatok na účte ku dňu vystavenia výpisu: 325.31
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 31
+Podnikateľský účet 2946082827 Majiteľ Yellow INTERNET, s.r.o. Dátum 30.11.2023
+---------------------------------------------------------------------------------------------
+Týmto potvrdzujeme, že Váš vklad je chránený v zmysle Zákona o ochrane
+vkladov. Bližšie informácie sú uvedené v Informačnom formulári pre vklada-
+teľa, ktorý od nás dostanete raz ročne, na našej internetovej stránke
+www.tatrabanka.sk, v našich obchodných priestoroch a tiež na internetovej
+stránke Fondu ochrany vkladov www.fovsr.sk.
+---------------------------------------------------------------------------------------------
+Mena EUR Výpis číslo: 11 Strana: 32

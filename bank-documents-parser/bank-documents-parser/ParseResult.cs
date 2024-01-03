@@ -2,13 +2,13 @@
 {
     public class ParseResult
     {
-        ParseResultEnum Result { get; }
+        public ParseResultEnum Result { get; }
 
-        Exception? Exception { get; } = default;
+        public Exception? Exception { get; } = default;
 
-        string? RawText { get; }
+        public string? RawText { get; }
 
-        Payment[]? Payments { get; }
+        public Payment[]? Payments { get; }
 
         public ParseResult(string rawText, Payment[] payments)
         {

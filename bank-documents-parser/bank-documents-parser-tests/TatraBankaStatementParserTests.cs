@@ -1,4 +1,4 @@
-using bank_documents_parser;
+﻿using bank_documents_parser;
 
 namespace bank_documents_parser_tests
 {
@@ -8,6 +8,7 @@ namespace bank_documents_parser_tests
         private readonly string ParserTestDataPath = Path.GetFullPath("../../../TestData/TatraBanka");
         private readonly string[] TestDataFiles;
         private readonly string[] TempDataFiles;
+        private readonly string Password = "023076netware";
 
         public TatraBankaStatementParserTests()
         {
@@ -33,18 +34,18 @@ namespace bank_documents_parser_tests
         public void Ctor_WithAPath_ValidatesDirectory()
         {
             Assert.Throws<ArgumentNullException>(
-                () => new TatraBankaStatementParser(directory: null));
+                () => new TatraBankaStatementParser(directory: null, password: null));
 
             Assert.Throws<ApplicationException>(
-                () => new TatraBankaStatementParser(directory: "c:/invalid-folder"));
+                () => new TatraBankaStatementParser(directory: "c:/invalid-folder", password: null));
 
-            var parser = new TatraBankaStatementParser(TempDir);
+            var parser = new TatraBankaStatementParser(TempDir, null);
 
             Assert.NotNull(parser);
         }
 
         [Fact]
-        public void GetFiles_ReturnsListOfFilesMatchingFilePattern()
+        public void GetBankStatementsFiles_ReturnsListOfFilesMatchingFilePattern()
         {
             // Arrange
             //82827_00_3685_2023-12-01.pdf
@@ -64,20 +65,65 @@ namespace bank_documents_parser_tests
         }
 
         [Fact]
-        public void TryParse_ValidatesArguments()
+        public void TryParseRaw_ValidatesFile()
+        {
+            // Arrange
+            var parser = GivenParser();
+
+            // Act, Assert
+            Assert.Throws<ArgumentNullException>(() => parser.TryParseRaw(file: default));
+            Assert.Throws<ArgumentNullException>(() => parser.TryParseRaw(file: string.Empty));
+            Assert.Throws<ApplicationException>(() => parser.TryParseRaw(file: "c:/not-valid-file.pdf"));
+        }
+
+        [Fact]
+        public void TryParseRaw_ReturnsTextExtractedFromPdfFile()
         {
             // Arrange
             var parser = GivenParser();
             var files = parser.GetBankStatementsFiles();
-            using var file = new FileStream(files[0], FileMode.Open, FileAccess.Read);
 
             // Act
-            var actual = parser.TryParse(file);
+            var actual = parser.TryParseRaw(files[0]);
 
             // Assert
             Assert.NotNull(actual);
+            Assert.True(actual.Length > 1000);
+            Assert.StartsWith("Podnikateľský účet 2946082827 Mena EUR Dátum 30.11.2023", actual);
+            Assert.EndsWith("Mena EUR Výpis číslo: 11 Strana: 32", actual);
         }
 
-        IBankStatementParser GivenParser() => new TatraBankaStatementParser(TempDir);
+        [Fact]
+        public void TryParsePayments_ValidatesArguments()
+        {
+            // Arrange
+            var parser = GivenParser();
+
+            // Act
+            Assert.Throws<ArgumentNullException>(() => parser.TryParsePayments(text: default, origin: "test"));
+        }
+
+        [Fact]
+        public void TryParsePayments_ReturnsPaymentsExtractedFromRawPdfText()
+        {
+            // Arrange
+            var parser = GivenParser();
+            var files = parser.GetBankStatementsFiles();
+            var text = parser.TryParseRaw(files[0]);
+
+            // Act
+            var actual = parser.TryParsePayments(text, origin: "test");
+
+            // Assert
+            Assert.NotNull(actual);
+            Assert.Equal(ParseResultEnum.Success, actual.Result);
+            Assert.Equal(275, actual.Payments.Length);
+            Assert.NotNull(actual.RawText);
+            Assert.StartsWith("Podnikateľský účet 2946082827 Mena EUR Dátum 30.11.2023", actual.RawText);
+            Assert.EndsWith("Mena EUR Výpis číslo: 11 Strana: 32", actual.RawText);
+            Assert.Null(actual.Exception);
+        }
+
+        IBankStatementParser GivenParser() => new TatraBankaStatementParser(TempDir, Password);
     }
 }
