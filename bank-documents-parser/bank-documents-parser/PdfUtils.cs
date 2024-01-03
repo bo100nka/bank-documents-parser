@@ -5,12 +5,13 @@ namespace bank_documents_parser
 {
     public static class PdfUtils
     {
+        private static readonly object context = nameof(PdfUtils);
         public static string? Parse(string file, string? password)
         {
             try
             {
                 var result = default(string?);
-                Log.Info($"Opening PDF {file}...");
+                Log.Info(context, $"Opening PDF {file}...");
 
                 using (var pdf = PdfDocument.Open(file, new ParsingOptions { Password = password }))
                 {
@@ -35,7 +36,7 @@ namespace bank_documents_parser
             }
             catch (Exception ex)
             {
-                Log.Error(ex);
+                Log.Error(context, ex);
             }
 
             return default;

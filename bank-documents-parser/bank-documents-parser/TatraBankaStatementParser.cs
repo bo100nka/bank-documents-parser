@@ -4,29 +4,35 @@ namespace bank_documents_parser
 {
     public class TatraBankaStatementParser : IBankStatementParser
     {
+        private readonly object context = nameof(TatraBankaStatementParser);
+        private readonly AppSettings appSettings;
         private readonly string Root;
         private readonly string? Password;
-        private readonly string SearchPattern = "*_????-??-??.pdf";
+        private readonly string SearchPattern;
 
-        public TatraBankaStatementParser(string directory, string password)
+        public TatraBankaStatementParser(AppSettings appSettings)
         {
-            Log.Info($"TB: Starting with folder {directory}{(password == null ? null : " and password")}");
-            Root = directory ?? throw new ArgumentNullException(nameof(directory));
-            Password = password;
+            if (appSettings == null)
+                throw new ArgumentNullException(nameof(appSettings));
 
+            Root = appSettings.TatraBankaDirectory ?? throw new ArgumentNullException(nameof(appSettings.TatraBankaDirectory));
+            Password = appSettings.TatraBankaPdfPassword;
+            SearchPattern = appSettings.TatraBankaStatementsFilePattern ?? throw new ArgumentNullException(nameof(appSettings.TatraBankaStatementsFilePattern));
+
+            Log.Info(context, $"Starting with folder {appSettings.TatraBankaDirectory}{(appSettings.TatraBankaPdfPassword == null ? null : " and password")}");
             if (!Path.Exists(Root))
-                throw new ApplicationException($"Directory {directory} does not exist!");
+                throw new ApplicationException($"Directory {Root} does not exist!");
         }
 
         public string[] GetBankStatementsFiles()
         {
-            Log.Info($"TB: Getting bank statements from {Root}");
+            Log.Info(context, $"Getting bank statements from {Root}");
 
             var result = Directory
                 .EnumerateFiles(Root, SearchPattern, SearchOption.TopDirectoryOnly)
                 .ToArray();
 
-            Log.Info($"TB: Found {result.Length} bank statements in {Root}");
+            Log.Info(context, $"Found {result.Length} bank statements in {Root}");
 
             return result;
         }
@@ -39,9 +45,9 @@ namespace bank_documents_parser
             if (!File.Exists(file))
                 throw new ApplicationException($"Could not find file {file}");
 
-            Log.Info($"Parsing text from {file}...");
+            Log.Info(context, $"Parsing text from {file}...");
             var result = PdfUtils.Parse(file, Password);
-            Log.Info($"Parsed text from {file} ({result?.Length} characters)");
+            Log.Info(context, $"Parsed text from {file} ({result?.Length} characters)");
 
             return result;
         }
@@ -66,19 +72,19 @@ namespace bank_documents_parser
             {
                 var lines = text.Split(Environment.NewLine);
                 
-                Log.Info($"Parsing bank statement records from {origin} with {lines?.Length} lines...");
+                Log.Info(context, $"Parsing bank statement records from {origin} with {lines?.Length} lines...");
                 
                 var filteredText = FilterLines(lines);
                 var payments = ParsePaymentsFromText(origin, filteredText);
                 var result = new ParseResult(text, payments.ToArray());
                 
-                Log.Info($"Parsed {payments?.Count} bank statement records from {origin}.");
+                Log.Info(context, $"Parsed {payments?.Count} bank statement records from {origin}.");
                 
                 return result;
             }
             catch (Exception ex)
             {
-                Log.Error(ex, $"Error while parsing bank statement records from {origin}.");
+                Log.Error(context, ex, $"Error while parsing bank statement records from {origin}.");
                 return new ParseResult(ex);
             }
         }
@@ -91,7 +97,7 @@ namespace bank_documents_parser
 
             while (match.Success)
             {
-                Log.Info($"Found payment #{++counter} at index {match.Index}: {match.Groups["date_process"]} - {match.Groups["account"].Value} - {match.Groups["amount"].Value}");
+                Log.Info(context, $"Found payment #{++counter} at index {match.Index}: {match.Groups["date_process"]} - {match.Groups["account"].Value} - {match.Groups["amount"].Value}");
 
                 var index = match.Index;
                 var date_process = DateTime.ParseExact(match.Groups["date_process"].Value, "dd.MM.yyyy", System.Globalization.CultureInfo.CurrentCulture);

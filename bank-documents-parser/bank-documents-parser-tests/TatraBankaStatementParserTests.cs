@@ -31,15 +31,24 @@ namespace bank_documents_parser_tests
         }
 
         [Fact]
-        public void Ctor_WithAPath_ValidatesDirectory()
+        public void Ctor_ValidatesConfig()
         {
             Assert.Throws<ArgumentNullException>(
-                () => new TatraBankaStatementParser(directory: null, password: null));
+                () => new TatraBankaStatementParser(appSettings: default));
+
+            Assert.Throws<ArgumentNullException>(
+                () => new TatraBankaStatementParser(new AppSettings { }));
+
+            Assert.Throws<ArgumentNullException>(
+                () => new TatraBankaStatementParser(new AppSettings { TatraBankaStatementsFilePattern = "*.pdf" }));
+
+            Assert.Throws<ArgumentNullException>(
+                () => new TatraBankaStatementParser(new AppSettings { TatraBankaDirectory = "c:/some-folder" }));
 
             Assert.Throws<ApplicationException>(
-                () => new TatraBankaStatementParser(directory: "c:/invalid-folder", password: null));
+                () => new TatraBankaStatementParser(new AppSettings { TatraBankaDirectory = "c:/invalid-folder", TatraBankaStatementsFilePattern = "*.pdf" }));
 
-            var parser = new TatraBankaStatementParser(TempDir, null);
+            var parser = new TatraBankaStatementParser(new AppSettings { TatraBankaDirectory = TempDir, TatraBankaStatementsFilePattern = "*.pdf" });
 
             Assert.NotNull(parser);
         }
@@ -124,6 +133,11 @@ namespace bank_documents_parser_tests
             Assert.Null(actual.Exception);
         }
 
-        IBankStatementParser GivenParser() => new TatraBankaStatementParser(TempDir, Password);
+        IBankStatementParser GivenParser() => new TatraBankaStatementParser(new AppSettings 
+        {
+            TatraBankaDirectory = TempDir, 
+            TatraBankaPdfPassword = Password,
+            TatraBankaStatementsFilePattern = "*_????-??-??.pdf",
+        });
     }
 }
