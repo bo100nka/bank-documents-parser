@@ -14,7 +14,7 @@ namespace bank_documents_parser
                 Log.Info(context, $"Opening PDF {file}...");
                 using (var pdf = PdfDocument.Open(file, new ParsingOptions { Password = password }))
                 {
-                    Log.Info(context, $"PDF opened, found {pdf.NumberOfPages}.");
+                    Log.Info(context, $"Opened PDF {file} with {pdf.NumberOfPages} pages.");
 
                     var resultsPerPage = new List<string>();
                     foreach (var page in pdf.GetPages())
