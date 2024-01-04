@@ -4,11 +4,6 @@ using System.Text.Json;
 
 var context = "main";
 
-Log.Raw(new string('*', 120));
-Log.Info(context, "-----------------------");
-Log.Info(context, "Starting...");
-Log.Info(context, "-----------------------");
-
 var jsonOptions = new JsonSerializerOptions 
 {
 	PropertyNameCaseInsensitive = true,
@@ -18,9 +13,14 @@ var jsonOptions = new JsonSerializerOptions
 
 try
 {
-    var current_path = GetCurrentPath();
-    var config_path = GetConfigPath();
-    var appSettings = GetConfig(jsonOptions, config_path, current_path);
+    Log.Raw(new string('*', 120));
+    Log.Info(context, "-----------------------");
+    Log.Info(context, "Starting...");
+    Log.Info(context, "-----------------------");
+
+    var appDir = GetCurrentPath();
+    var workDir = GetWorkingDirectory();
+    var appSettings = CreateIfNotExistsAndReadConfigFile(jsonOptions, workDir, appDir);
 
     if (appSettings == null)
         throw new ApplicationException("Missing or invalid config file (appsettings.json)");
@@ -45,32 +45,32 @@ string? GetCurrentPath()
     return result;
 }
 
-string GetConfigPath()
+string GetWorkingDirectory()
 {
     return Path.Combine("c:", "YellowNET", "appsettings.json");
 }
 
-AppSettings? GetConfig(JsonSerializerOptions jsonOptions, string config_path, string appPath)
+AppSettings? CreateIfNotExistsAndReadConfigFile(JsonSerializerOptions jsonOptions, string configPath, string appPath)
 {
-    var config_dir = Path.GetDirectoryName(config_path);
+    var workDir = Path.GetDirectoryName(configPath);
     
-    Log.Info(context, $"Checking config directory {config_dir}...");
-    if (!Directory.Exists(config_dir))
+    Log.Info(context, $"Checking working directory {workDir}...");
+    if (!Directory.Exists(workDir))
     {
-        Directory.CreateDirectory(config_dir);
-        Log.Info(context, $"Creating new directory {config_dir}...");
+        Directory.CreateDirectory(workDir);
+        Log.Info(context, $"Creating new working directory {workDir}...");
     }
 
-    Log.Info(context, $"Checking config file {config_path}...");
-    if (!File.Exists(config_path))
+    Log.Info(context, $"Checking config file {configPath}...");
+    if (!File.Exists(configPath))
     {
-        File.Copy(Path.Combine(appPath, "appsettings.json"), config_path);
-        Log.Info(context, $"Creating new config file {config_path}...");
+        File.Copy(Path.Combine(appPath, "appsettings.json"), configPath);
+        Log.Info(context, $"Creating new config file {configPath}...");
     }
 
     Log.Info(context, "Reading config file...");
     
-    var result = JsonSerializer.Deserialize<AppSettings>(File.ReadAllText(config_path), jsonOptions);
+    var result = JsonSerializer.Deserialize<AppSettings>(File.ReadAllText(configPath), jsonOptions);
     
     Log.Info(context, $"Using config:\n{JsonSerializer.Serialize(result, jsonOptions)}");
     

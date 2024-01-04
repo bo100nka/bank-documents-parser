@@ -32,7 +32,7 @@
             if (logLevel == null)
                 return new string(message);
 
-            return $"{logLevel}\t{DateTime.Now:o}\t{context}\t{message}";
+            return $"{logLevel}\t{DateTime.Now:yyyy-MM-dd HH:mm:ss.fff}\t{context}\t{message}";
         }
 
         private static void AppendLog(string logLevel, object context, string message)
