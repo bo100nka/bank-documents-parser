@@ -108,4 +108,15 @@ void Initialize(AppSettings? appSettings)
         Log.Info(context, "- only default folder structure and config file will be created and validated.");
         Log.Info(context, $"- turn this feature off in the config file at {GetConfigPath()}");
     }
+
+    ValidateMainConfig(appSettings);
+
+    if (!Directory.Exists(appSettings.OutputDirectory))
+        Directory.CreateDirectory(appSettings.OutputDirectory);
+}
+
+void ValidateMainConfig(AppSettings appSettings)
+{
+    if (appSettings.OutputDirectory == null)
+        throw new ArgumentNullException(nameof(appSettings.OutputDirectory));
 }
