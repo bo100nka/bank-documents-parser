@@ -22,7 +22,7 @@
 
         private static string FormatMessage(string logLevel, object context, string message)
         {
-            return $"{logLevel}:\t{DateTime.Now:o}\t{context}\t{message}";
+            return $"{logLevel}\t{DateTime.Now:o}\t{context}\t{message}";
         }
 
         private static void AppendLog(string logLevel, object context, string message)
