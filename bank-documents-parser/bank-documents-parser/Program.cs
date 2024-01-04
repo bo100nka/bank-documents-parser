@@ -4,6 +4,7 @@ using System.Text.Json;
 
 var context = "main";
 
+Log.Raw(new string('*', 120));
 Log.Info(context, "-----------------------");
 Log.Info(context, "Starting...");
 Log.Info(context, "-----------------------");
@@ -18,8 +19,8 @@ var jsonOptions = new JsonSerializerOptions
 try
 {
     var current_path = GetCurrentPath();
-    var config_path = GetConfigPath(current_path);
-    var appSettings = GetConfig(jsonOptions, config_path);
+    var config_path = GetConfigPath();
+    var appSettings = GetConfig(jsonOptions, config_path, current_path);
 
     if (appSettings == null)
         throw new ApplicationException("Missing or invalid config file (appsettings.json)");
@@ -44,15 +45,35 @@ string? GetCurrentPath()
     return result;
 }
 
-string GetConfigPath(string? current_path)
+string GetConfigPath()
 {
-    return Path.Combine(current_path, "appsettings.json");
+    return Path.Combine("c:", "YellowNET", "appsettings.json");
 }
 
-AppSettings? GetConfig(JsonSerializerOptions jsonOptions, string config_path)
+AppSettings? GetConfig(JsonSerializerOptions jsonOptions, string config_path, string appPath)
 {
+    var config_dir = Path.GetDirectoryName(config_path);
+    
+    Log.Info(context, $"Checking config directory {config_dir}...");
+    if (!Directory.Exists(config_dir))
+    {
+        Directory.CreateDirectory(config_dir);
+        Log.Info(context, $"Creating new directory {config_dir}...");
+    }
+
+    Log.Info(context, $"Checking config file {config_path}...");
+    if (!File.Exists(config_path))
+    {
+        File.Copy(Path.Combine(appPath, "appsettings.json"), config_path);
+        Log.Info(context, $"Creating new config file {config_path}...");
+    }
+
+    Log.Info(context, "Reading config file...");
+    
     var result = JsonSerializer.Deserialize<AppSettings>(File.ReadAllText(config_path), jsonOptions);
-    Log.Info(context, $"Config: (appsettings.json):\n{JsonSerializer.Serialize(result, jsonOptions)}");
+    
+    Log.Info(context, $"Using config:\n{JsonSerializer.Serialize(result, jsonOptions)}");
+    
     return result;
 }
 
