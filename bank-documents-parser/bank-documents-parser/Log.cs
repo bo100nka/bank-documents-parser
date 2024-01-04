@@ -4,7 +4,7 @@
     {
         private static readonly string LogPath = Path.Combine("c:", "YellowNET", "app.log");
 
-        internal static bool DebugMode { get; set; }
+        internal static bool DebugMode { get; set; } = true;
 
         internal static void Raw(string message = "")
         {
