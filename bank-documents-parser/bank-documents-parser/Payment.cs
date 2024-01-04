@@ -1,6 +1,4 @@
-﻿using UglyToad.PdfPig.Graphics.Operations.SpecialGraphicsState;
-
-namespace bank_documents_parser
+﻿namespace bank_documents_parser
 {
     public class Payment
     {
@@ -38,7 +36,7 @@ namespace bank_documents_parser
 
         public override string ToString()
         {
-            return $"{DateProcessed} - {Amount} - {PaymentType} - {PayerName} [VS:{VariableSymbol}/KS:{ConstantSymbol}/SS:{SpecificSymbol}] ID:{PaymentId} File:{Origin}] (@{Index})";
+            return $"{DateProcessed} - {Amount} - {PaymentType} - {PayerName} - VS:{VariableSymbol} - KS:{ConstantSymbol} SS:{SpecificSymbol} - ID:{PaymentId} - @{Index} - File:{Origin}";
         }
     }
 }
