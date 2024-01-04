@@ -24,13 +24,16 @@ namespace bank_documents_parser
             if (appSettings == null)
                 throw new ArgumentNullException(nameof(appSettings));
 
+            if (appSettings.TestRunMode)
+                Log.Info(context, "*** TestRunMode enabled - only config validation and folder structure will be initialized");
+
             Root = appSettings.TatraBankaDirectory ?? throw new ArgumentNullException(nameof(appSettings.TatraBankaDirectory));
             Password = appSettings.TatraBankaPdfPassword;
             SearchPattern = appSettings.TatraBankaStatementsFilePattern ?? throw new ArgumentNullException(nameof(appSettings.TatraBankaStatementsFilePattern));
-
             Log.Info(context, $"Starting with folder {appSettings.TatraBankaDirectory}{(appSettings.TatraBankaPdfPassword == null ? null : " and password")}");
-            if (!Path.Exists(Root))
-                throw new ApplicationException($"Directory {Root} does not exist!");
+
+            if (!Directory.Exists(Root))
+                Directory.CreateDirectory(Root);
         }
 
         public string[] GetBankStatementsFiles()
@@ -85,6 +88,11 @@ namespace bank_documents_parser
                 Log.Error(context, ex, $"Error while parsing bank statement records from {origin}.");
                 return new ParseResult(ex);
             }
+        }
+
+        public bool Start()
+        {
+            throw new NotImplementedException();
         }
 
         private List<Payment> ParsePaymentsFromText(string? origin, string filteredText)

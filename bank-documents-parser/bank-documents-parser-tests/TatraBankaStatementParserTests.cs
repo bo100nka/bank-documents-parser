@@ -45,9 +45,6 @@ namespace bank_documents_parser_tests
             Assert.Throws<ArgumentNullException>(
                 () => new TatraBankaStatementParser(new AppSettings { TatraBankaDirectory = "c:/some-folder" }));
 
-            Assert.Throws<ApplicationException>(
-                () => new TatraBankaStatementParser(new AppSettings { TatraBankaDirectory = "c:/invalid-folder", TatraBankaStatementsFilePattern = "*.pdf" }));
-
             var parser = new TatraBankaStatementParser(new AppSettings { TatraBankaDirectory = TempDir, TatraBankaStatementsFilePattern = "*.pdf" });
 
             Assert.NotNull(parser);

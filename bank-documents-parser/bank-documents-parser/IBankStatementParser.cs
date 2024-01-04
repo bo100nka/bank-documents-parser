@@ -7,5 +7,7 @@
         string TryParseRaw(string file);
         
         ParseResult TryParsePayments(string text, string? origin);
+
+        bool Start();
     }
 }

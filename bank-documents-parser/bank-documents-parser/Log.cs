@@ -18,13 +18,14 @@
 
         internal static void Error(object context, Exception exception)
         {
-            AppendLog("ERROR", context, exception.ToString());
+            AppendLog("ERROR", context, $"{exception.GetType().FullName} - {exception.Message}");
         }
 
         internal static void Error(object context, Exception exception, string message)
         {
-            var stack = DebugMode ? $"\n{exception.StackTrace}" : default;
-            AppendLog($"ERROR", context, $"{exception} - {message}{stack}");
+            message = $"{exception.GetType().FullName} - {exception.Message}";
+            message = DebugMode ? $"{message}\n{exception.StackTrace}" : message;
+            AppendLog($"ERROR", context, message);
         }
 
         private static string FormatMessage(string logLevel, object context, string message)

@@ -13,19 +13,29 @@ var jsonOptions = new JsonSerializerOptions
 
 try
 {
+    var workDir = GetWorkingDirectory();
+
+    if (!Directory.Exists(workDir))
+    {
+        Directory.CreateDirectory(workDir);
+        Log.Info(context, $"Creating new working directory {workDir}...");
+    }
+
     Log.Raw(new string('*', 120));
     Log.Info(context, "-----------------------");
     Log.Info(context, "Starting...");
     Log.Info(context, "-----------------------");
 
     var appDir = GetCurrentPath();
-    var workDir = GetWorkingDirectory();
-    var appSettings = CreateIfNotExistsAndReadConfigFile(jsonOptions, workDir, appDir);
+    var configPath = GetConfigPath();
+    var appSettings = CreateAndReadConfigFile(jsonOptions, configPath, appDir);
 
     if (appSettings == null)
         throw new ApplicationException("Missing or invalid config file (appsettings.json)");
 
     Initialize(appSettings);
+    Start(appSettings);
+    Finish(appSettings);
 }
 catch (Exception ex)
 {
@@ -38,6 +48,21 @@ finally
 	Log.Info(context, "-----------------------");
 }
 
+void Start(AppSettings appSettings)
+{
+    var parsers = new List<IBankStatementParser>
+    {
+        new TatraBankaStatementParser(appSettings),
+    };
+
+    parsers.ForEach(parser => parser.Start());
+}
+
+void Finish(AppSettings appSettings)
+{
+    throw new NotImplementedException();
+}
+
 string? GetCurrentPath()
 {
     var result = Path.GetDirectoryName(Assembly.GetExecutingAssembly().Location);
@@ -47,20 +72,16 @@ string? GetCurrentPath()
 
 string GetWorkingDirectory()
 {
-    return Path.Combine("c:", "YellowNET", "appsettings.json");
+    return Path.Combine("c:", "YellowNET");
 }
 
-AppSettings? CreateIfNotExistsAndReadConfigFile(JsonSerializerOptions jsonOptions, string configPath, string appPath)
+string GetConfigPath()
 {
-    var workDir = Path.GetDirectoryName(configPath);
-    
-    Log.Info(context, $"Checking working directory {workDir}...");
-    if (!Directory.Exists(workDir))
-    {
-        Directory.CreateDirectory(workDir);
-        Log.Info(context, $"Creating new working directory {workDir}...");
-    }
+    return Path.Combine(GetWorkingDirectory(), "appsettings.json");
+}
 
+AppSettings? CreateAndReadConfigFile(JsonSerializerOptions jsonOptions, string configPath, string appPath)
+{
     Log.Info(context, $"Checking config file {configPath}...");
     if (!File.Exists(configPath))
     {
@@ -77,7 +98,14 @@ AppSettings? CreateIfNotExistsAndReadConfigFile(JsonSerializerOptions jsonOption
     return result;
 }
 
-static void Initialize(AppSettings? appSettings)
+void Initialize(AppSettings? appSettings)
 {
     Log.DebugMode = appSettings.DebugMode;
+
+    if (appSettings.TestRunMode)
+    {
+        Log.Info(context, "*** TEST RUN MODE enabled ***");
+        Log.Info(context, "- only default folder structure and config file will be created and validated.");
+        Log.Info(context, $"- turn this feature off in the config file at {GetConfigPath()}");
+    }
 }
