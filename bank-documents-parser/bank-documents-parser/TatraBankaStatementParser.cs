@@ -5,10 +5,19 @@ namespace bank_documents_parser
     public class TatraBankaStatementParser : IBankStatementParser
     {
         private readonly object context = nameof(TatraBankaStatementParser);
-        private readonly AppSettings appSettings;
         private readonly string Root;
         private readonly string? Password;
         private readonly string SearchPattern;
+        private readonly string RowPattern_Payment =
+              @"(?<date_process>\d{2}\.\d{2}\.\d{4})\s(?<type>platba|tpp|\S)+\s(?<account>\S*)( (?<date_invoice>\d{2}\.\d{2}\.\d{4}))? (?<amount>\d*.\d{2})
+.*: (?<payment_id>.*)(
+.*: (?<bank_reference>.*))?(
+.*: /VS(?<vs>\d*)/SS(?<ss>\d*)/KS(?<ks>\d*))?
+.*
+.*:(?<payer_bank>.*)
+.*: (?<payer_iban>.*)
+(?<payer_name>.*)(
+.*: (?<detail>.*))?";
 
         public TatraBankaStatementParser(AppSettings appSettings)
         {
@@ -52,17 +61,6 @@ namespace bank_documents_parser
             return result;
         }
 
-        private readonly string RowPattern_Payment =
-              @"(?<date_process>\d{2}\.\d{2}\.\d{4})\s(?<type>platba|tpp|\S)+\s(?<account>\S*)( (?<date_invoice>\d{2}\.\d{2}\.\d{4}))? (?<amount>\d*.\d{2})
-.*: (?<payment_id>.*)(
-.*: (?<bank_reference>.*))?(
-.*: /VS(?<vs>\d*)/SS(?<ss>\d*)/KS(?<ks>\d*))?
-.*
-.*:(?<payer_bank>.*)
-.*: (?<payer_iban>.*)
-(?<payer_name>.*)(
-.*: (?<detail>.*))?";
-
         public ParseResult TryParsePayments(string text, string? origin = default)
         {
             if (text == null)
@@ -102,7 +100,9 @@ namespace bank_documents_parser
                 var index = match.Index;
                 var date_process = DateTime.ParseExact(match.Groups["date_process"].Value, "dd.MM.yyyy", System.Globalization.CultureInfo.CurrentCulture);
                 var date_invoice = !match.Groups["date_invoice"].Success ? default(DateTime?) : DateTime.ParseExact(match.Groups["date_invoice"].Value.TrimStart(), "dd.MM.yyyy", System.Globalization.CultureInfo.CurrentCulture);
-                var type = match.Groups["type"].Value.ToLowerInvariant();
+                var type = match.Groups["type"].Captures.Count > 1 
+                    ? string.Join("", match.Groups["type"].Captures.Select(c => c.ToString())) 
+                    : match.Groups["type"].Value.ToLowerInvariant();
                 var account = match.Groups["account"].Value;
                 var amount = decimal.Parse(match.Groups["amount"].Value);
                 var payment_id = match.Groups["payment_id"].Value;
@@ -117,7 +117,7 @@ namespace bank_documents_parser
                 var payment_type =
                     type == "tpp" ? PaymentType.Permanent :
                     type == "platba" ? PaymentType.Manual :
-                    string.IsNullOrWhiteSpace(type) ? PaymentType.Manual : PaymentType.Unknown;
+                    string.IsNullOrWhiteSpace(type) ? PaymentType.Unknown : PaymentType.Manual;
 
                 var payment = new Payment
                 {

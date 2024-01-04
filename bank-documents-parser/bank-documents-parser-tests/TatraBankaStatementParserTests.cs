@@ -121,7 +121,7 @@ namespace bank_documents_parser_tests
             var text = parser.TryParseRaw(files[0]);
 
             // Act
-            var actual = parser.TryParsePayments(text, origin: "test");
+            var actual = parser.TryParsePayments(text, Path.GetFileName(files[0]));
 
             // Assert
             Assert.NotNull(actual);
