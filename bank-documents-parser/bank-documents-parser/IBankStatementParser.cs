@@ -4,10 +4,10 @@
     {
         string[] GetBankStatementsFiles();
         
-        string TryParseRaw(string file);
+        bool TryParseRaw(string file, out string result);
         
-        ParseResult TryParsePayments(string text, string? origin);
+        bool TryParsePaymentsFromFile(string text, string origin, out ParseResult result);
 
-        bool Start();
+        bool TryParseAndConvertPaymentsFromSource();
     }
 }

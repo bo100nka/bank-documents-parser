@@ -9,6 +9,8 @@ var jsonOptions = new JsonSerializerOptions
 	PropertyNameCaseInsensitive = true,
 	WriteIndented = true,
 	PropertyNamingPolicy = JsonNamingPolicy.CamelCase,
+    AllowTrailingCommas = true,
+    ReadCommentHandling = JsonCommentHandling.Skip,
 };
 
 try
@@ -55,12 +57,13 @@ void Start(AppSettings appSettings)
         new TatraBankaStatementParser(appSettings),
     };
 
-    parsers.ForEach(parser => parser.Start());
+    foreach (var parser in parsers)
+        parser.TryParseAndConvertPaymentsFromSource();
 }
 
 void Finish(AppSettings appSettings)
 {
-    throw new NotImplementedException();
+    
 }
 
 string? GetCurrentPath()
@@ -119,4 +122,16 @@ void ValidateMainConfig(AppSettings appSettings)
 {
     if (appSettings.OutputDirectory == null)
         throw new ArgumentNullException(nameof(appSettings.OutputDirectory));
+
+    if (appSettings.OutputPaymentsCsvFields == null)
+        throw new ArgumentNullException(nameof(appSettings.OutputPaymentsCsvFields));
+
+    if (!appSettings.OutputPaymentsCsvFields.Contains(';'))
+        throw new ArgumentException("Parameter must contain a semicolon (;) delimited list of fields.", nameof(appSettings.OutputPaymentsCsvFields));
+
+    var properties = typeof(IPayment).GetProperties().Select(p => p.Name);
+    var fields = appSettings.OutputPaymentsCsvFields.Split(';');
+    if (fields.Any(f => !properties.Contains(f)))
+        throw new ArgumentException($"Invalid field in parameter. Supported fields: {string.Join(';', properties)}");
+
 }

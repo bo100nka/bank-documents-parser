@@ -1,6 +1,6 @@
 ﻿namespace bank_documents_parser
 {
-    public class Payment
+    public class Payment : IPayment
     {
         public int Index { get; set; }
 

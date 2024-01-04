@@ -8,9 +8,9 @@
 
         public string? RawText { get; }
 
-        public Payment[]? Payments { get; }
+        public IPayment[]? Payments { get; }
 
-        public ParseResult(string rawText, Payment[] payments)
+        public ParseResult(string rawText, IPayment[] payments)
         {
             Result = ParseResultEnum.Success;
             Exception = null;

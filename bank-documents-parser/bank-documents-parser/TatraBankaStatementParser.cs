@@ -1,11 +1,15 @@
-﻿using System.Text.RegularExpressions;
+﻿using System.Text;
+using System.Text.RegularExpressions;
 
 namespace bank_documents_parser
 {
     public class TatraBankaStatementParser : IBankStatementParser
     {
         private readonly object context = nameof(TatraBankaStatementParser);
-        private readonly string Root;
+        private readonly bool TestRunMode;
+        private readonly string Source;
+        private readonly string Output;
+        private readonly string CsvHeader;
         private readonly string? Password;
         private readonly string SearchPattern;
         private readonly string RowPattern_Payment =
@@ -24,48 +28,69 @@ namespace bank_documents_parser
             if (appSettings == null)
                 throw new ArgumentNullException(nameof(appSettings));
 
+            TestRunMode = appSettings.TestRunMode;
             if (appSettings.TestRunMode)
+            {
                 Log.Info(context, "*** TestRunMode enabled - only config validation and folder structure will be initialized");
+            }
 
-            Root = appSettings.TatraBankaDirectory ?? throw new ArgumentNullException(nameof(appSettings.TatraBankaDirectory));
+            Source = appSettings.TatraBankaDirectory ?? throw new ArgumentNullException(nameof(appSettings.TatraBankaDirectory));
+            Output = Path.Combine(appSettings.OutputDirectory ?? throw new ArgumentNullException(nameof(appSettings.OutputDirectory)), "TatraBanka");
+            CsvHeader = appSettings.OutputPaymentsCsvFields;
             Password = appSettings.TatraBankaPdfPassword;
             SearchPattern = appSettings.TatraBankaStatementsFilePattern ?? throw new ArgumentNullException(nameof(appSettings.TatraBankaStatementsFilePattern));
             Log.Info(context, $"Starting with folder {appSettings.TatraBankaDirectory}{(appSettings.TatraBankaPdfPassword == null ? null : " and password")}");
 
-            if (!Directory.Exists(Root))
-                Directory.CreateDirectory(Root);
+            if (!Directory.Exists(Source))
+                Directory.CreateDirectory(Source);
+
+            if (!Directory.Exists(Output))
+                Directory.CreateDirectory(Output);
         }
 
         public string[] GetBankStatementsFiles()
         {
-            Log.Info(context, $"Getting bank statements from {Root}");
+            Log.Info(context, $"Getting bank statements from {Source}");
 
             var result = Directory
-                .EnumerateFiles(Root, SearchPattern, SearchOption.TopDirectoryOnly)
+                .EnumerateFiles(Source, SearchPattern, SearchOption.TopDirectoryOnly)
                 .ToArray();
 
-            Log.Info(context, $"Found {result.Length} bank statements in {Root}");
+            Log.Info(context, $"Found {result.Length} bank statements in {Source}");
 
             return result;
         }
 
-        public string TryParseRaw(string file)
+        public bool TryParseRaw(string file, out string result)
         {
+            result = default;
+
             if (string.IsNullOrWhiteSpace(file))
                 throw new ArgumentNullException(nameof(file));
 
             if (!File.Exists(file))
                 throw new ApplicationException($"Could not find file {file}");
 
-            Log.Info(context, $"Parsing text from {file}...");
-            var result = PdfUtils.Parse(file, Password);
-            Log.Info(context, $"Parsed text from {file} ({result?.Length} characters)");
-
-            return result;
+            try
+            {
+                Log.Info(context, $"Parsing text from {file}...");
+                result = PdfUtils.Parse(file, Password);
+                var outputFile = Path.Combine(Output, Path.GetFileName(file).Replace(".pdf", ".txt"));
+                Log.Info(context, $"Parsed text from {file} ({result?.Length} characters).. Saving to {outputFile}...");
+                File.WriteAllText(outputFile, result, Encoding.UTF8);
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(context, ex, $"Error while parsing raw text from pdf {file}...");
+                return false;
+            }   
         }
 
-        public ParseResult TryParsePayments(string text, string? origin = default)
+        public bool TryParsePaymentsFromFile(string text, string origin, out ParseResult result)
         {
+            result = default;
+
             if (text == null)
                 throw new ArgumentNullException(nameof(text));
 
@@ -76,28 +101,106 @@ namespace bank_documents_parser
                 Log.Info(context, $"Parsing bank statement records from {origin} with {lines?.Length} lines...");
                 
                 var filteredText = FilterLines(lines);
-                var payments = ParsePaymentsFromText(origin, filteredText);
-                var result = new ParseResult(text, payments.ToArray());
+                var payments = ParsePaymentsFromText(Path.GetFileName(origin), filteredText);
+                result = new ParseResult(text, payments.ToArray());
                 
                 Log.Info(context, $"Parsed {payments?.Count} bank statement records from {origin}.");
                 
-                return result;
+                return true;
             }
             catch (Exception ex)
             {
                 Log.Error(context, ex, $"Error while parsing bank statement records from {origin}.");
-                return new ParseResult(ex);
+                result = new ParseResult(ex);
+                return false;
             }
         }
 
-        public bool Start()
+        public bool TryParseAndConvertPaymentsFromSource()
         {
-            throw new NotImplementedException();
+            if (TestRunMode)
+            {
+                Log.Info(context, "TestRunMode - skipping main process");
+                return true;
+            }
+
+            // find bank statement files
+            var pdfs = GetBankStatementsFiles();
+            if (!pdfs.Any())
+            {
+                Log.Info(context, $"No bank statement files found at {Source} - skipping process.");
+                return true;
+            }
+
+            // parse raw text from found pdf files
+            var parsedPdfs = new List<(string file, string rawText)>();
+            try
+            {
+                foreach (var pdf in pdfs)
+                {
+                    if (!TryParseRaw(pdf, out var parsedPdf))
+                        throw new ApplicationException($"Error while parsing raw text from PDF {pdf}");
+                    parsedPdfs.Add((pdf, parsedPdf));
+                }
+            }
+            catch (Exception ex)
+            {
+                Log.Error(context, ex, "Error while parsing raw text from PDFs");
+                return false;
+            }   
+
+            // parse payments from parsed raw text
+            try
+            {
+                foreach (var parsedPdf in parsedPdfs)
+                {
+                    if (!TryParsePaymentsFromFile(parsedPdf.rawText, parsedPdf.file, out var result))
+                        throw result.Exception;
+                    SerializePayments(result);
+                }
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(context, ex, "Error while parsing payments from raw text of PDFs");
+                return false;
+            }
         }
 
-        private List<Payment> ParsePaymentsFromText(string? origin, string filteredText)
+        private void SerializePayments(ParseResult parseResult)
         {
-            var payments = new List<Payment>();
+            var outputFile = GetOutputFileName(parseResult.Payments);
+            Log.Info(context, $"Serialzing payments to {outputFile}");
+            var csvRows = parseResult.Payments
+                .Select(PaymentFieldsToCsv)
+                .ToArray();
+
+            File.WriteAllText(outputFile, $"{CsvHeader}{Environment.NewLine}", Encoding.UTF8);
+            File.AppendAllLines(outputFile, csvRows, Encoding.UTF8);
+        }
+
+        private string PaymentFieldsToCsv(IPayment payment)
+        {
+            var fields = CsvHeader.Split(';');
+            var values = new List<object>();
+            foreach (var field in fields)
+            {
+                var value = typeof(IPayment).GetProperty(field).GetValue(payment);
+                values.Add($"\"{value?.ToString()}\"");
+            }
+            var row = string.Join(';', values);
+            return row;
+        }
+
+        private string GetOutputFileName(IPayment[]? payments)
+        {
+            var csvFile = Path.GetFileNameWithoutExtension(payments.First().Origin);
+            return Path.Combine(Output, $"{csvFile}.csv");
+        }
+
+        private List<IPayment> ParsePaymentsFromText(string? origin, string filteredText)
+        {
+            var payments = new List<IPayment>();
             var match = Regex.Match(filteredText, RowPattern_Payment, RegexOptions.IgnoreCase | RegexOptions.Multiline);
             var counter = 0;
 

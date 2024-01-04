@@ -45,7 +45,12 @@ namespace bank_documents_parser_tests
             Assert.Throws<ArgumentNullException>(
                 () => new TatraBankaStatementParser(new AppSettings { TatraBankaDirectory = "c:/some-folder" }));
 
-            var parser = new TatraBankaStatementParser(new AppSettings { TatraBankaDirectory = TempDir, TatraBankaStatementsFilePattern = "*.pdf" });
+            var parser = new TatraBankaStatementParser(new AppSettings 
+            {
+                OutputDirectory = TempDir,
+                TatraBankaDirectory = TempDir, 
+                TatraBankaStatementsFilePattern = "*.pdf",
+            });
 
             Assert.NotNull(parser);
         }
@@ -77,9 +82,9 @@ namespace bank_documents_parser_tests
             var parser = GivenParser();
 
             // Act, Assert
-            Assert.Throws<ArgumentNullException>(() => parser.TryParseRaw(file: default));
-            Assert.Throws<ArgumentNullException>(() => parser.TryParseRaw(file: string.Empty));
-            Assert.Throws<ApplicationException>(() => parser.TryParseRaw(file: "c:/not-valid-file.pdf"));
+            Assert.Throws<ArgumentNullException>(() => parser.TryParseRaw(default, out _));
+            Assert.Throws<ArgumentNullException>(() => parser.TryParseRaw(string.Empty, out _));
+            Assert.Throws<ApplicationException>(() => parser.TryParseRaw("c:/not-valid-file.pdf", out _));
         }
 
         [Fact]
@@ -90,13 +95,14 @@ namespace bank_documents_parser_tests
             var files = parser.GetBankStatementsFiles();
 
             // Act
-            var actual = parser.TryParseRaw(files[0]);
+            var actual = parser.TryParseRaw(files[0], out var actualResult);
 
             // Assert
-            Assert.NotNull(actual);
-            Assert.True(actual.Length > 1000);
-            Assert.StartsWith("Podnikateľský účet 2946082827 Mena EUR Dátum 30.11.2023", actual);
-            Assert.EndsWith("Mena EUR Výpis číslo: 11 Strana: 32", actual);
+            Assert.True(actual);
+            Assert.NotNull(actualResult);
+            Assert.True(actualResult.Length > 1000);
+            Assert.StartsWith("Podnikateľský účet 2946082827 Mena EUR Dátum 30.11.2023", actualResult);
+            Assert.EndsWith("Mena EUR Výpis číslo: 11 Strana: 32", actualResult);
         }
 
         [Fact]
@@ -106,7 +112,7 @@ namespace bank_documents_parser_tests
             var parser = GivenParser();
 
             // Act
-            Assert.Throws<ArgumentNullException>(() => parser.TryParsePayments(text: default, origin: "test"));
+            Assert.Throws<ArgumentNullException>(() => parser.TryParsePaymentsFromFile(text: default, origin: "test", out _));
         }
 
         [Fact]
@@ -115,10 +121,10 @@ namespace bank_documents_parser_tests
             // Arrange
             var parser = GivenParser();
             var files = parser.GetBankStatementsFiles();
-            var text = parser.TryParseRaw(files[0]);
+            parser.TryParseRaw(files[0], out var text);
 
             // Act
-            var actual = parser.TryParsePayments(text, Path.GetFileName(files[0]));
+            var actualCheck = parser.TryParsePaymentsFromFile(text, Path.GetFileName(files[0]), out var actual);
 
             // Assert
             Assert.NotNull(actual);
@@ -132,9 +138,12 @@ namespace bank_documents_parser_tests
 
         IBankStatementParser GivenParser() => new TatraBankaStatementParser(new AppSettings 
         {
+            TestRunMode = false,
+            DebugMode = false,
             TatraBankaDirectory = TempDir, 
             TatraBankaPdfPassword = Password,
             TatraBankaStatementsFilePattern = "*_????-??-??.pdf",
+            OutputDirectory = TempDir,
         });
     }
 }

@@ -8,4 +8,5 @@
     public string TatraBankaStatementsFilePattern { get; set; }
 
     public string OutputDirectory { get; set; }
+    public string OutputPaymentsCsvFields { get; set; }
 }
