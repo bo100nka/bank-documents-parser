@@ -12,24 +12,21 @@ namespace bank_documents_parser
             {
                 var result = default(string?);
                 Log.Info(context, $"Opening PDF {file}...");
-
                 using (var pdf = PdfDocument.Open(file, new ParsingOptions { Password = password }))
                 {
+                    Log.Info(context, $"PDF opened, found {pdf.NumberOfPages}.");
+
                     var resultsPerPage = new List<string>();
                     foreach (var page in pdf.GetPages())
                     {
-                        // Either extract based on order in the underlying document with newlines and spaces.
-                        var text = ContentOrderTextExtractor.GetText(page);
-
-                        //// Or based on grouping letters into words.
-                        //var otherText = string.Join(" ", page.GetWords());
-
-                        //// Or the raw text of the page's content stream.
-                        //var rawText = page.Text;
-
-                        resultsPerPage.Add(text);
+                        Log.Info(context, $"Extracting text from page {page.Number} of {pdf.NumberOfPages}...");
+                        resultsPerPage.Add(ContentOrderTextExtractor.GetText(page));
                     }
+
+                    Log.Info(context, $"Merging text from multiple pages...");
                     result = string.Join("\r\n", resultsPerPage);
+
+                    Log.Info(context, $"Closing PDF {file}...");
                 }
 
                 return result;
@@ -37,6 +34,10 @@ namespace bank_documents_parser
             catch (Exception ex)
             {
                 Log.Error(context, ex);
+            }
+            finally
+            {
+                Log.Info(context, $"Finished parsing text from PDF {file}.");
             }
 
             return default;
