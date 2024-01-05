@@ -1,4 +1,5 @@
-﻿using System.Text;
+﻿using System.Globalization;
+using System.Text;
 using System.Text.RegularExpressions;
 
 namespace bank_documents_parser
@@ -6,13 +7,14 @@ namespace bank_documents_parser
     public class TatraBankaStatementParser : IBankStatementParser
     {
         private readonly object context = nameof(TatraBankaStatementParser);
+        private readonly CultureInfo ParseCulture = CultureInfo.InvariantCulture;
         private readonly bool TestRunMode;
         private readonly string Source;
         private readonly string Output;
         private readonly string CsvHeader;
         private readonly string? Password;
         private readonly string SearchPattern;
-        public const string SymbolsPattern = @"/VS(?<vs>\d*).*";
+        public const string SymbolsPattern = @"/VS/*(?<vs>\d*).*";
         public const string CleanupPattern = @"(^------*\r\n)|(^.*popis.*\r\n)|(^Mena .*\r\n)|(^.* Maji.*\r\n)";
         public const string RowPattern_Payment =
               @"(?<date_process>\d{2}\.\d{2}\.\d{4})\s(?<type>platba|tpp|\S)+\s(?<account>\S*)( (?<date_invoice>\d{2}\.\d{2}\.\d{4}))? (?<amount>[,\d]*.\d{2})
@@ -241,7 +243,7 @@ detail: (?<detail>[^\r\n]*))?";
                     ? string.Join("", match.Groups["type"].Captures.Select(c => c.ToString())) 
                     : match.Groups["type"].Value.ToLowerInvariant();
                 var account = match.Groups["account"].Value;
-                var amount = decimal.Parse(match.Groups["amount"].Value);
+                var amount = decimal.Parse(match.Groups["amount"].Value, ParseCulture);
                 var payment_id = match.Groups["payment_id"].Value;
                 var bank_reference = match.Groups["bank_reference"].Value;
                 var payer_reference = match.Groups["payer_reference"].Value;
