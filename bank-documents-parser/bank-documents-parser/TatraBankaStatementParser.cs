@@ -12,16 +12,18 @@ namespace bank_documents_parser
         private readonly string CsvHeader;
         private readonly string? Password;
         private readonly string SearchPattern;
-        private readonly string RowPattern_Payment =
-              @"(?<date_process>\d{2}\.\d{2}\.\d{4})\s(?<type>platba|tpp|\S)+\s(?<account>\S*)( (?<date_invoice>\d{2}\.\d{2}\.\d{4}))? (?<amount>\d*.\d{2})
-.*: (?<payment_id>.*)(
-.*: (?<bank_reference>.*))?(
-.*: /VS(?<vs>\d*)/SS(?<ss>\d*)/KS(?<ks>\d*))?
-.*
-.*:(?<payer_bank>.*)
-.*: (?<payer_iban>.*)
-(?<payer_name>.*)(
-.*: (?<detail>.*))?";
+        public const string SymbolsPattern = @"/VS(?<vs>\d*).*";
+        public const string CleanupPattern = @"(^------*\r\n)|(^.*popis.*\r\n)|(^Mena .*\r\n)|(^.* Maji.*\r\n)";
+        public const string RowPattern_Payment =
+              @"(?<date_process>\d{2}\.\d{2}\.\d{4})\s(?<type>platba|tpp|\S)+\s(?<account>\S*)( (?<date_invoice>\d{2}\.\d{2}\.\d{4}))? (?<amount>[,\d]*.\d{2})
+(platba trva|prijat).*: (?<payment_id>.*)(
+referencia banky.*: (?<bank_reference>.*))?(
+referencia platite.*: (?<payer_reference>.*))?(
+suma.*)?
+banka.*:(?<payer_bank>.*)
+platite.*: (?<payer_iban>.*)
+(?<payer_name>[^\r\n]*)(
+detail: (?<detail>[^\r\n]*))?";
 
         public TatraBankaStatementParser(AppSettings appSettings)
         {
@@ -75,9 +77,16 @@ namespace bank_documents_parser
             {
                 Log.Info(context, $"Parsing text from {file}...");
                 result = PdfUtils.Parse(file, Password);
-                var outputFile = Path.Combine(Output, Path.GetFileName(file).Replace(".pdf", ".txt"));
-                Log.Info(context, $"Parsed text from {file} ({result?.Length} characters).. Saving to {outputFile}...");
+                var outputFile = Path.Combine(Output, Path.GetFileName(file).Replace(".pdf", ".parsed.txt"));
+                Log.Info(context, $"Parsed text from {file} ({result?.Length} characters)... Saving to {outputFile}...");
                 File.WriteAllText(outputFile, result, Encoding.UTF8);
+                
+                Log.Info(context, $"Parsed text from {file} ({result?.Length} characters)... Performing page break cleanup.");
+                var cleaned = Regex.Replace(result, CleanupPattern, string.Empty, RegexOptions.IgnoreCase | RegexOptions.Multiline);
+                outputFile = Path.Combine(Output, Path.GetFileName(file).Replace(".pdf", ".cleaned.txt"));
+                Log.Info(context, $"Cleaned up {file} ({cleaned?.Length} characters)... Saving to {outputFile}...");
+                File.WriteAllText(outputFile, cleaned, Encoding.UTF8);
+                result = cleaned;
                 return true;
             }
             catch (Exception ex)
@@ -96,12 +105,12 @@ namespace bank_documents_parser
 
             try
             {
-                var lines = text.Split(Environment.NewLine);
+                //var lines = text.Split(Environment.NewLine);
                 
-                Log.Info(context, $"Parsing bank statement records from {origin} with {lines?.Length} lines...");
+                Log.Info(context, $"Parsing bank statement records from {origin} with {text?.Length} characters...");
                 
-                var filteredText = FilterLines(lines);
-                var payments = ParsePaymentsFromText(Path.GetFileName(origin), filteredText);
+                //var filteredText = FilterLines(lines);
+                var payments = ParsePaymentsFromText(Path.GetFileName(origin), text);
                 result = new ParseResult(text, payments.ToArray());
                 
                 Log.Info(context, $"Parsed {payments?.Count} bank statement records from {origin}.");
@@ -152,12 +161,19 @@ namespace bank_documents_parser
             // parse payments from parsed raw text
             try
             {
+                var mergedPayments = new List<IPayment>();
                 foreach (var parsedPdf in parsedPdfs)
                 {
                     if (!TryParsePaymentsFromFile(parsedPdf.rawText, parsedPdf.file, out var result))
                         throw result.Exception;
-                    SerializePayments(result);
+                    
+                    var outputFile = GetOutputFileName(result.Payments);
+                    SerializePayments(result.Payments, outputFile);
+                    
+                    mergedPayments.AddRange(result.Payments);
                 }
+
+                SerializePayments(mergedPayments, GetMergedOutputFileName(mergedPayments));
                 return true;
             }
             catch (Exception ex)
@@ -167,11 +183,10 @@ namespace bank_documents_parser
             }
         }
 
-        private void SerializePayments(ParseResult parseResult)
+        private void SerializePayments(IEnumerable<IPayment> payments, string outputFile)
         {
-            var outputFile = GetOutputFileName(parseResult.Payments);
             Log.Info(context, $"Serialzing payments to {outputFile}");
-            var csvRows = parseResult.Payments
+            var csvRows = payments
                 .Select(PaymentFieldsToCsv)
                 .ToArray();
 
@@ -198,10 +213,21 @@ namespace bank_documents_parser
             return Path.Combine(Output, $"{csvFile}.csv");
         }
 
+        private string GetMergedOutputFileName(IEnumerable<IPayment> payments)
+        {
+            var dateFrom = payments.Min(p => p.DateProcessed);
+            var dateTo = payments.Max(p => p.DateProcessed);
+            var csvFile = $"merged_payments_x{payments.Count()}_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}";
+            return Path.Combine(Output, $"{csvFile}.csv");
+        }
+
         private List<IPayment> ParsePaymentsFromText(string? origin, string filteredText)
         {
             var payments = new List<IPayment>();
-            var match = Regex.Match(filteredText, RowPattern_Payment, RegexOptions.IgnoreCase | RegexOptions.Multiline);
+            var match = Regex.Match(filteredText, RowPattern_Payment, 
+                RegexOptions.ExplicitCapture 
+                | RegexOptions.IgnoreCase 
+                | RegexOptions.Multiline);
             var counter = 0;
 
             while (match.Success)
@@ -218,13 +244,12 @@ namespace bank_documents_parser
                 var amount = decimal.Parse(match.Groups["amount"].Value);
                 var payment_id = match.Groups["payment_id"].Value;
                 var bank_reference = match.Groups["bank_reference"].Value;
-                var vs = match.Groups["vs"].Value;
-                var ss = match.Groups["ss"].Value;
-                var ks = match.Groups["ks"].Value;
+                var payer_reference = match.Groups["payer_reference"].Value;
                 var payer_bank = match.Groups["payer_bank"].Value;
                 var payer_iban = match.Groups["payer_iban"].Value;
                 var payer_name = match.Groups["payer_name"].Value.Trim();
                 var detail = match.Groups["detail"].Value;
+                var vs = Regex.Match(payer_reference, SymbolsPattern).Groups["vs"].Value;
                 var payment_type =
                     type == "tpp" ? PaymentType.Permanent :
                     type == "platba" ? PaymentType.Manual :
@@ -240,14 +265,14 @@ namespace bank_documents_parser
                     Amount = amount,
                     PaymentId = payment_id,
                     BankReference = bank_reference,
+                    PayerReference = payer_reference,
                     VariableSymbol = vs,
-                    SpecificSymbol = ss,
-                    ConstantSymbol = ks,
                     PayerBank = payer_bank,
                     PayerIban = payer_iban,
                     PayerName = payer_name,
                     Detail = detail,
                     Origin = origin,
+                    Source = match.Value,
                 };
 
                 payments.Add(payment);

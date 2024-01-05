@@ -1,4 +1,5 @@
 ﻿using bank_documents_parser;
+using System.Diagnostics;
 using System.Reflection;
 using System.Text.Json;
 
@@ -57,8 +58,12 @@ void Start(AppSettings appSettings)
         new TatraBankaStatementParser(appSettings),
     };
 
+    var error = false;
+
     foreach (var parser in parsers)
-        parser.TryParseAndConvertPaymentsFromSource();
+        error = !parser.TryParseAndConvertPaymentsFromSource() || error;
+
+    Log.Info(context, $"Completed. Error: {error}");
 }
 
 void Finish(AppSettings appSettings)

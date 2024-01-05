@@ -21,5 +21,9 @@
         string PaymentId { get; set; }
 
         string BankReference { get; set; }
+
+        string PayerReference { get; set; }
+
+        string Source { get; set; }
     }
 }
