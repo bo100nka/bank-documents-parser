@@ -21,13 +21,14 @@ try
     if (!Directory.Exists(workDir))
     {
         Directory.CreateDirectory(workDir);
-        Log.Info(context, $"Creating new working directory {workDir}...");
+        Log.Raw($"Creating new working directory {workDir}...");
     }
 
     Log.Raw(new string('*', 120));
-    Log.Info(context, "-----------------------");
-    Log.Info(context, "Starting...");
-    Log.Info(context, "-----------------------");
+    Log.Raw();
+    Log.Raw("-----------------------");
+    Log.Raw("Starting...");
+    Log.Raw("-----------------------");
 
     var appDir = GetCurrentPath();
     var configPath = GetConfigPath();
@@ -38,7 +39,6 @@ try
 
     Initialize(appSettings);
     Start(appSettings);
-    Finish(appSettings);
 }
 catch (Exception ex)
 {
@@ -46,9 +46,7 @@ catch (Exception ex)
 }
 finally
 {
-	Log.Info(context, "-----------------------");
-	Log.Info(context, "Shutting down...");
-	Log.Info(context, "-----------------------");
+    Finish();
 }
 
 void Start(AppSettings appSettings)
@@ -66,9 +64,15 @@ void Start(AppSettings appSettings)
     Log.Info(context, $"Completed. Error: {error}");
 }
 
-void Finish(AppSettings appSettings)
+void Finish()
 {
-    
+    Log.Raw("-----------------------");
+    Log.Raw("Shutting down...");
+    Log.Raw("-----------------------");
+
+    Log.Raw();
+    Log.Raw(new string('*', 20) + " Press any key to exit " + new string('*', 20));
+    Console.ReadKey();
 }
 
 string? GetCurrentPath()
