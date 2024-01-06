@@ -143,7 +143,7 @@ Detail: something
         }
 
         [Fact]
-        public void test()
+        public void CleanupPattern_CorrectlyMatchesUnwantedSubstringsInBankStatements()
         {
             var test = @"
 Podnikateľský účet 2942459340 Mena EUR Dátum 30.12.2023
