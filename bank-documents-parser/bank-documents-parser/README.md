@@ -37,7 +37,7 @@ Package can be obtained either by:
 When the application is executed with the `TestRunMode` setting off, it will start the main process workflow:
 * locates all bank statement documents in the configured directories, for example:
     * `c:/YellowNET/TatraBanka`
-    * _(WIP)_ `c:/YellowNET/SlovenskaPosta`
+    * `c:/YellowNET/SlovenskaPosta`
     * _(WIP)_ `c:/YellowNET/VUB`
 * parses each document in the defined folders
 * converts each document into a `csv` version in `c:/YellowNET/Output`

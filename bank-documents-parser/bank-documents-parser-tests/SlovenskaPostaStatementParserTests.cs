@@ -1,5 +1,5 @@
 ﻿using bank_documents_parser;
-using System.Text.RegularExpressions;
+using System.Globalization;
 
 namespace bank_documents_parser_tests
 {
@@ -33,29 +33,24 @@ namespace bank_documents_parser_tests
             Directory.Delete(OutputDir, true);
         }
 
-        [Fact]
-        public void Ctor_ValidatesConfig()
+        [Theory]
+        [InlineData(null, null, null)]
+        [InlineData("c:/invalid", null, null)]
+        [InlineData(null, "test", null)]
+        [InlineData(null, null, "test")]
+        [InlineData("c:/invalid", "test", null)]
+        [InlineData("c:/invalid", null, "test")]
+        [InlineData(null, "test", "test")]
+        public void Ctor_ValidatesConfig(string source, string zipPattern, string textPattern)
         {
-            Assert.Throws<ArgumentNullException>(
-                () => new SlovenskaPostaStatementParser(appSettings: default));
-
-            Assert.Throws<ArgumentNullException>(
-                () => new SlovenskaPostaStatementParser(new AppSettings { }));
-
-            Assert.Throws<ArgumentNullException>(
-                () => new SlovenskaPostaStatementParser(new AppSettings { SlovenskaPostaStatementsFilePattern = "*.356" }));
-
-            Assert.Throws<ArgumentNullException>(
-                () => new SlovenskaPostaStatementParser(new AppSettings { SlovenskaPostaDirectory = "c:/some-folder" }));
-
-            var parser = new SlovenskaPostaStatementParser(new AppSettings 
+            Assert.Throws<ArgumentNullException>(() => new SlovenskaPostaStatementParser(appSettings: default));
+            var appSettings = new AppSettings
             {
-                OutputDirectory = TempDir,
-                SlovenskaPostaDirectory = TempDir, 
-                SlovenskaPostaStatementsFilePattern = "*.pdf",
-            });
-
-            Assert.NotNull(parser);
+                SlovenskaPostaDirectory = source,
+                SlovenskaPostaStatementsZipFilePattern = zipPattern,
+                SlovenskaPostaStatementsTextFilePattern = textPattern,
+            };
+            Assert.Throws<ArgumentNullException>(() => new SlovenskaPostaStatementParser(appSettings));
         }
 
         [Fact]
@@ -110,13 +105,42 @@ namespace bank_documents_parser_tests
 
         }
 
+        [Fact]
+        public void TryParsePayments_ChecksArguments()
+        {
+            var parser = GivenParser();
+
+            Assert.Throws<ArgumentNullException>(() => parser.TryParsePayments(null, out _));
+        }
+
+        [Fact]
+        public void TryParsePaymentsFromFile_ExtractsPaymentsFromFile()
+        {
+            // Arrange
+            var parser = GivenParser();
+            var files = parser.GetBankStatementsFiles();
+            Assert.True(parser.TryExtractFiles(files, out var extracted));
+            Assert.NotEmpty(extracted);
+            var file = extracted[0];
+
+            // Act
+            var actualCheck = parser.TryParsePaymentsFromFile(file, out var actual);
+
+            // Assert
+            Assert.True(actualCheck);
+            Assert.NotEmpty(actual);
+            Assert.Equal(10, actual[0].Amount);
+            Assert.Equal("Katarína Filípková", actual[0].PayerName);
+        }
+
         SlovenskaPostaStatementParser GivenParser() => new SlovenskaPostaStatementParser(new AppSettings 
         {
             TestRunMode = false,
             DebugMode = false,
             SlovenskaPostaDirectory = TempDir, 
             SlovenskaPostaZipPassword = Password,
-            SlovenskaPostaStatementsFilePattern = "*_iban.356",
+            SlovenskaPostaStatementsZipFilePattern = "sk1*_iban.*",
+            SlovenskaPostaStatementsTextFilePattern = "st1*_iban.*",
             OutputDirectory = OutputDir,
         });
     }

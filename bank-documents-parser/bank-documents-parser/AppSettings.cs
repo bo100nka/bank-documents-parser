@@ -9,7 +9,8 @@
 
     public string? SlovenskaPostaZipPassword { get; set; }
     public string SlovenskaPostaDirectory { get; set; }
-    public string SlovenskaPostaStatementsFilePattern { get; set; }
+    public string SlovenskaPostaStatementsTextFilePattern { get; set; }
+    public string SlovenskaPostaStatementsZipFilePattern { get; set; }
 
     public string OutputDirectory { get; set; }
     public string OutputPaymentsCsvFields { get; set; }

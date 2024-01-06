@@ -219,7 +219,7 @@ detail: (?<detail>[^\r\n]*))?";
         {
             var dateFrom = payments.Min(p => p.DateProcessed);
             var dateTo = payments.Max(p => p.DateProcessed);
-            var csvFile = $"merged_payments_x{payments.Count()}_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}";
+            var csvFile = $"merged_payments_tb_x{payments.Count()}_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}";
             return Path.Combine(Output, $"{csvFile}.csv");
         }
 

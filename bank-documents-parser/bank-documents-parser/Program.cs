@@ -61,7 +61,8 @@ void Start(AppSettings appSettings)
     foreach (var parser in parsers)
         error = !parser.TryParseAndConvertPaymentsFromSource() || error;
 
-    Log.Info(context, $"Completed. Error: {error}");
+    Log.Raw();
+    Log.Raw($"Completed. Error: {error}");
 }
 
 void Finish()
