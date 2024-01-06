@@ -3,6 +3,7 @@
     internal static class Log
     {
         private static readonly string LogPath = Path.Combine("c:", "YellowNET", "app.log");
+        private static readonly object LogLock = new object();
 
         internal static bool DebugMode { get; set; } = true;
 
@@ -41,7 +42,9 @@
             var formattedMessage = FormatMessage(logLevel, context, message);
             
             Console.WriteLine(formattedMessage);
-            File.AppendAllText(LogPath, $"{formattedMessage}{Environment.NewLine}");
+
+            lock (LogLock) 
+                File.AppendAllText(LogPath, $"{formattedMessage}{Environment.NewLine}");
         }
     }
 }
