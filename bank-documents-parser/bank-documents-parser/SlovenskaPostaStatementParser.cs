@@ -83,6 +83,45 @@ namespace bank_documents_parser
             }   
         }
 
+        public bool TryParsePayments(string[] files, out IPayment[]? outPayments)
+        {
+            if (files == null) 
+                throw new ArgumentNullException(nameof(files));
+
+            outPayments = default;
+            var payments = new List<IPayment>();
+
+            try
+            {
+                Log.Info(context, $"Parsing payments from {files.Length} files...");
+
+                foreach (var file in files)
+                {
+                    Log.Info(context, $"Parsing payments from {file}...");
+                    
+                    if (!TryParsePaymentsFromFile(file, out var paymentsPerFile))
+                        throw new ApplicationException($"Failed to parse payments from {file}.");
+                    
+                    payments.AddRange(paymentsPerFile);
+                    Log.Info(context, $"Parsed {paymentsPerFile.Length} payments from {file}...");
+                }
+
+                outPayments = payments.ToArray();
+                Log.Info(context, $"Parsed {outPayments.Length} from {files.Length} files.");
+                return true;
+            }
+            catch (Exception ex)
+            {
+                Log.Error(context, ex, $"Error while parsing payments from {files.Length}");
+                return false;
+            }
+        }
+
+        private bool TryParsePaymentsFromFile(string file, out IPayment[] outPayments)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool TryParseAndConvertPaymentsFromSource()
         {
             throw new NotImplementedException();

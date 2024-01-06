@@ -71,13 +71,11 @@ namespace bank_documents_parser_tests
             // Assert
             Assert.NotNull(actual);
             Assert.NotEmpty(actual);
-            Assert.Equal(2, actual.Length);
+            Assert.Single(actual);
 
             var file1 = actual[0];
-            var file2 = actual[1];
 
-            Assert.Equal(Path.GetFileName(TestDataFiles[0]), Path.GetFileName(file1));
-            Assert.Equal(Path.GetFileName(TestDataFiles[2]), Path.GetFileName(file2));
+            Assert.Equal(Path.GetFileName(TestDataFiles[2]), Path.GetFileName(file1));
         }
 
         [Fact]
@@ -105,12 +103,9 @@ namespace bank_documents_parser_tests
 
             // Assert
             Assert.True(actualCheck);
-            Assert.Equal(2, actual.Length);
+            Assert.Single(actual);
 
-            var actual1 = actual[0];
-            Assert.Equal(Path.GetFileName(TempDataFiles[0]).Replace("sk1", "st1"), Path.GetFileName(actual1));
-
-            var actual2 = actual[1];
+            var actual2 = actual[0];
             Assert.Equal(Path.GetFileName(TempDataFiles[2]).Replace("sk1", "st1"), Path.GetFileName(actual2));
 
         }
@@ -121,7 +116,7 @@ namespace bank_documents_parser_tests
             DebugMode = false,
             SlovenskaPostaDirectory = TempDir, 
             SlovenskaPostaZipPassword = Password,
-            SlovenskaPostaStatementsFilePattern = "*.356",
+            SlovenskaPostaStatementsFilePattern = "*_iban.356",
             OutputDirectory = OutputDir,
         });
     }
