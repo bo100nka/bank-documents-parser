@@ -424,7 +424,7 @@ Roman Drinka";
             Assert.Null(actual.Exception);
         }
 
-        IBankStatementParser GivenParser() => new TatraBankaStatementParser(new AppSettings 
+        TatraBankaStatementParser GivenParser() => new TatraBankaStatementParser(new AppSettings 
         {
             TestRunMode = false,
             DebugMode = false,
