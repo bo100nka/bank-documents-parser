@@ -283,30 +283,5 @@ detail: (?<detail>[^\r\n]*))?";
 
             return payments;
         }
-
-        private string FilterLines(string[] lines)
-        {
-            var removeLinesThatContain = new[] {
-                "Mena ", 
-                " Majite",
-                "--------",
-                "popis",
-            };
-            var result = new List<string>(lines.Length);
-
-            foreach (var line in lines)
-            {
-                var remove = false;
-                foreach (var removeLine in removeLinesThatContain)
-                    if (line.Contains(removeLine, StringComparison.InvariantCultureIgnoreCase))
-                    {
-                        remove = true;
-                        break;
-                    }
-                if (!remove)
-                    result.Add(line);
-            }
-            return string.Join(Environment.NewLine, result);
-        }
     }
 }
