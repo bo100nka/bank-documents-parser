@@ -1,5 +1,4 @@
 ﻿using bank_documents_parser;
-using System.Diagnostics;
 using System.Reflection;
 using System.Text.Json;
 
@@ -54,6 +53,7 @@ void Start(AppSettings appSettings)
     var parsers = new List<IBankStatementParser>
     {
         new TatraBankaStatementParser(appSettings),
+        new SlovenskaPostaStatementParser(appSettings),
     };
 
     var error = false;
