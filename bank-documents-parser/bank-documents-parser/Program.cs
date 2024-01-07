@@ -1,6 +1,5 @@
 ﻿using bank_documents_parser;
 using System.Reflection;
-using System.Reflection.PortableExecutable;
 using System.Text;
 using System.Text.Json;
 
@@ -119,6 +118,9 @@ void ExtractEmailAttachments()
 
 void SerializePayments(IEnumerable<IPayment> payments, string outputFile)
 {
+    if (!payments.Any())
+        return;
+
     Log.Info(context, $"Serialzing payments to {outputFile}");
     var csvRows = payments
         .Select(PaymentFieldsToCsv)
@@ -134,8 +136,16 @@ string PaymentFieldsToCsv(IPayment payment)
     var values = new List<object>();
     foreach (var field in fields)
     {
-        var value = typeof(IPayment).GetProperty(field).GetValue(payment);
-        values.Add($"\"{value?.ToString()}\"");
+        var property = typeof(IPayment).GetProperty(field);
+        var value = property.GetValue(payment);
+        var stringValue = property.PropertyType switch
+        {
+            var t when t == typeof(decimal) => ((decimal)value).ToString("#.00"),
+            var t when t == typeof(DateTime) => ((DateTime)value).ToString("yyyy-MM-dd"),
+            _ => $"{value}",
+        };
+
+        values.Add($"\"{stringValue}\"");
     }
     var row = string.Join(';', values);
     return row;
@@ -143,6 +153,9 @@ string PaymentFieldsToCsv(IPayment payment)
 
 string GetMergedOutputFileName(IEnumerable<IPayment> payments)
 {
+    if (!payments.Any())
+        return default;
+
     var dateFrom = payments.Min(p => p.DateProcessed);
     var dateTo = payments.Max(p => p.DateProcessed);
     var csvFile = $"merged_payments_all_x{payments.Count()}_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}";
