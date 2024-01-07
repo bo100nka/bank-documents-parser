@@ -1,5 +1,4 @@
-﻿using MsgReader;
-using MsgReader.Outlook;
+﻿using MsgReader.Outlook;
 
 namespace bank_documents_parser
 {
