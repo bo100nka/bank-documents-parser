@@ -3,6 +3,8 @@
 ## About
 This solution automates scanning of digital bank statement documents from various banks and exporting the payments received records into a structured, configurable CSV file format.
 
+It will additionally scan for all `.msg` files (emails exported from outlook) and extract all of their file attachments.
+
 It was developed as a windows console application using .NET 8 framework.
 
 The source code is maintained here
@@ -41,7 +43,12 @@ When the application is executed with the `TestRunMode` setting off, it will sta
     * _(WIP)_ `c:/YellowNET/VUB`
 * parses each document in the defined folders
 * converts each document into a `csv` version in `c:/YellowNET/Output`
-* additionally creates a `merged csv` version for easier import and/or analysis
+* additionally creates two different types of `merged csv` files:
+    * one per bank
+    * one final for all banks together
+* lastly scans for all exported outlook emails (`.msg` files) in the configured directory (for example `c:/YellowNET/EmailsToExtract`)
+* for every found email it exports all attachments to the output directory
+
 
 ## Logging
 The application logs every step it performs into:

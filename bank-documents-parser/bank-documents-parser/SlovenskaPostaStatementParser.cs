@@ -237,8 +237,10 @@ namespace bank_documents_parser
             }
         }
 
-        public bool TryParseAndConvertPaymentsFromSource()
+        public bool TryParseAndConvertPaymentsFromSource(out string[] outSourceFiles, out IPayment[] outPayments)
         {
+            outPayments = default;
+            outSourceFiles = default;
             if (TestRunMode)
             {
                 Log.Info(context, "TestRunMode - skipping main process");
@@ -247,6 +249,7 @@ namespace bank_documents_parser
 
             // find bank statement files
             var zips = GetBankStatementsFiles();
+            outSourceFiles = zips;
             if (!zips.Any())
             {
                 Log.Info(context, $"No bank statement files found at {Source} - skipping process.");
@@ -282,6 +285,7 @@ namespace bank_documents_parser
                 }
 
                 SerializePayments(mergedPayments, GetMergedOutputFileName(mergedPayments));
+                outPayments = mergedPayments.ToArray();
                 return true;
             }
             catch (Exception ex)

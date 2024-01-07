@@ -12,6 +12,8 @@
     public string SlovenskaPostaStatementsTextFilePattern { get; set; }
     public string SlovenskaPostaStatementsZipFilePattern { get; set; }
 
+    public string EmailsToExtractDirectory { get; set; }
+
     public string OutputDirectory { get; set; }
     public string OutputPaymentsCsvFields { get; set; }
 }

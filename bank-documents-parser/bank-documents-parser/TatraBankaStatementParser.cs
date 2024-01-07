@@ -127,8 +127,10 @@ detail: (?<detail>[^\r\n]*))?";
             }
         }
 
-        public bool TryParseAndConvertPaymentsFromSource()
+        public bool TryParseAndConvertPaymentsFromSource(out string[] outSourceFiles, out IPayment[] outPayments)
         {
+            outPayments = default;
+            outSourceFiles = default;
             if (TestRunMode)
             {
                 Log.Info(context, "TestRunMode - skipping main process");
@@ -137,6 +139,7 @@ detail: (?<detail>[^\r\n]*))?";
 
             // find bank statement files
             var pdfs = GetBankStatementsFiles();
+            outSourceFiles = pdfs;
             if (!pdfs.Any())
             {
                 Log.Info(context, $"No bank statement files found at {Source} - skipping process.");
@@ -176,6 +179,7 @@ detail: (?<detail>[^\r\n]*))?";
                 }
 
                 SerializePayments(mergedPayments, GetMergedOutputFileName(mergedPayments));
+                outPayments = mergedPayments.ToArray();
                 return true;
             }
             catch (Exception ex)

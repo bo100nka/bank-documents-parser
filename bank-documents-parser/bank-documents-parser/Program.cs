@@ -1,8 +1,11 @@
 ﻿using bank_documents_parser;
 using System.Reflection;
+using System.Reflection.PortableExecutable;
+using System.Text;
 using System.Text.Json;
 
 var context = "main";
+var appSettings = default(AppSettings);
 
 var jsonOptions = new JsonSerializerOptions 
 {
@@ -31,13 +34,13 @@ try
 
     var appDir = GetCurrentPath();
     var configPath = GetConfigPath();
-    var appSettings = CreateAndReadConfigFile(jsonOptions, configPath, appDir);
+    appSettings = CreateAndReadConfigFile(jsonOptions, configPath, appDir);
 
     if (appSettings == null)
         throw new ApplicationException("Missing or invalid config file (appsettings.json)");
 
     Initialize(appSettings);
-    Start(appSettings);
+    Start();
 }
 catch (Exception ex)
 {
@@ -48,7 +51,7 @@ finally
     Finish();
 }
 
-void Start(AppSettings appSettings)
+void Start()
 {
     var parsers = new List<IBankStatementParser>
     {
@@ -57,12 +60,93 @@ void Start(AppSettings appSettings)
     };
 
     var error = false;
+    var payments = new List<IPayment>();
+    var sources = new List<string>();
 
     foreach (var parser in parsers)
-        error = !parser.TryParseAndConvertPaymentsFromSource() || error;
+    {
+        error = !parser.TryParseAndConvertPaymentsFromSource(out var outSourceFiles, out var outPayments) || error;
+        
+        if (outPayments != null)
+            payments.AddRange(outPayments);
+        
+        if (outSourceFiles != null)
+            sources.AddRange(outSourceFiles);
+    }
+
+    SerializePayments(payments, GetMergedOutputFileName(payments));
 
     Log.Raw();
+    Log.Raw($"Source files used:\n- {string.Join($"{Environment.NewLine}- ", sources)}");
+    Log.Raw();
     Log.Raw($"Completed. Error: {error}");
+
+    ExtractEmailAttachments();
+}
+
+void ExtractEmailAttachments()
+{
+    if (appSettings.EmailsToExtractDirectory == null)
+        throw new ArgumentNullException(appSettings.EmailsToExtractDirectory);
+
+    var sourceDir = Path.Combine(appSettings.EmailsToExtractDirectory);
+    if (!Directory.Exists(sourceDir))
+        Directory.CreateDirectory(sourceDir);
+
+    var outDir = Path.Combine(appSettings.OutputDirectory, "ExtractedEmailAttachments");
+    if (!Directory.Exists(outDir))
+        Directory.CreateDirectory(outDir);
+
+    if (appSettings.TestRunMode)
+        return;
+
+    var emails = Directory.EnumerateFiles(sourceDir, "*.msg").ToArray();
+
+    if (!emails.Any())
+        return;
+
+    Log.Info(context, $"Extracting attachments from {emails.Length} emails in {sourceDir}...");
+
+    foreach (var email in emails)
+    {
+        Log.Info(context, $"Extracting attachments from {Path.GetFileName(email)}...");
+        var attachments = OutlookMailAttachmentsExtractor.ExtractAttachments(email, outDir);
+        Log.Info(context, $"Extracted {attachments?.Length} attachments from {Path.GetFileName(email)}.");
+    }
+
+    Log.Info(context, $"Extracted all attachments from {emails.Length} emails in {sourceDir}.");
+}
+
+void SerializePayments(IEnumerable<IPayment> payments, string outputFile)
+{
+    Log.Info(context, $"Serialzing payments to {outputFile}");
+    var csvRows = payments
+        .Select(PaymentFieldsToCsv)
+        .ToArray();
+
+    File.WriteAllText(outputFile, $"{appSettings.OutputPaymentsCsvFields}{Environment.NewLine}", Encoding.UTF8);
+    File.AppendAllLines(outputFile, csvRows, Encoding.UTF8);
+}
+
+string PaymentFieldsToCsv(IPayment payment)
+{
+    var fields = appSettings.OutputPaymentsCsvFields.Split(';');
+    var values = new List<object>();
+    foreach (var field in fields)
+    {
+        var value = typeof(IPayment).GetProperty(field).GetValue(payment);
+        values.Add($"\"{value?.ToString()}\"");
+    }
+    var row = string.Join(';', values);
+    return row;
+}
+
+string GetMergedOutputFileName(IEnumerable<IPayment> payments)
+{
+    var dateFrom = payments.Min(p => p.DateProcessed);
+    var dateTo = payments.Max(p => p.DateProcessed);
+    var csvFile = $"merged_payments_all_x{payments.Count()}_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}";
+    return Path.Combine(appSettings.OutputDirectory, $"{csvFile}.csv");
 }
 
 void Finish()

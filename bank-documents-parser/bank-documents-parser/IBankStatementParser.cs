@@ -2,6 +2,6 @@
 {
     public interface IBankStatementParser
     {
-        bool TryParseAndConvertPaymentsFromSource();
+        bool TryParseAndConvertPaymentsFromSource(out string[] outSourceFiles, out IPayment[] outPayments);
     }
 }
