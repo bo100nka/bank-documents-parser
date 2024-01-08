@@ -10,8 +10,15 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetZip" Version="1.16.0" />
+    <PackageReference Include="Emgu.CV" Version="4.8.1.5350" />
+    <PackageReference Include="itext7" Version="8.0.2" />
+    <PackageReference Include="itext7.bouncy-castle-adapter" Version="8.0.2" />
+    <PackageReference Include="iTextSharp" Version="5.5.13.3" />
     <PackageReference Include="MsgReader" Version="5.5.1" />
+    <PackageReference Include="pdfboxNet" Version="1.8.9" />
     <PackageReference Include="PdfPig" Version="0.1.8" />
+    <PackageReference Include="PDFtoImage" Version="3.0.0" />
+    <PackageReference Include="System.Configuration.ConfigurationManager" Version="8.0.0" />
   </ItemGroup>
 
   <ItemGroup>

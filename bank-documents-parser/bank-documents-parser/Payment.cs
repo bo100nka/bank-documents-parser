@@ -9,7 +9,9 @@
         public DateTime? DateInvoiced { get; set; }
 
         public PaymentType PaymentType { get; set; }
-        
+
+        public bool IsCredit { get; set; }
+
         public string Account { get; set; }
 
         public decimal Amount { get; set; }

@@ -25,6 +25,11 @@ Package can be obtained either by:
 * manually building the solution from source _(requires C# .NET development expertise)_ or by
 * manually downloading pre-built binary package and extracting it into a desired work directory _(link for download sent via email)_
 
+### Updates
+
+* Simply overwrite everything inside the existing installation folder by the contents of the newer version of the application package
+* Delete config file as it will be re-created (you can keep backup of the previous config if needed)
+
 ## Usage
 
 ### Test run mode ON
@@ -40,7 +45,7 @@ When the application is executed with the `TestRunMode` setting off, it will sta
 * locates all bank statement documents in the configured directories, for example:
     * `c:/YellowNET/TatraBanka`
     * `c:/YellowNET/SlovenskaPosta`
-    * _(WIP)_ `c:/YellowNET/VUB`
+    * `c:/YellowNET/VUB`
 * parses each document in the defined folders
 * converts each document into a `csv` version in `c:/YellowNET/Output`
 * additionally creates two different types of `merged csv` files:

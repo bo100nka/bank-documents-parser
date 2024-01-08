@@ -4,6 +4,7 @@
     {
         private static readonly string LogPath = Path.Combine("c:", "YellowNET", "app.log");
         private static readonly object LogLock = new object();
+        private static bool init = false;
 
         internal static bool DebugMode { get; set; } = true;
 
@@ -25,7 +26,7 @@
         internal static void Error(object context, Exception exception, string message)
         {
             message = $"{exception.GetType().FullName} - {exception.Message}";
-            message = DebugMode ? $"{message}\n{exception.StackTrace}" : message;
+            message = $"{message}\n{exception.StackTrace}";
             AppendLog($"ERROR", context, message);
         }
 
@@ -43,8 +44,16 @@
             
             Console.WriteLine(formattedMessage);
 
-            lock (LogLock) 
+            lock (LogLock)
+            {
+                if (!init)
+                {
+                    File.Delete(LogPath);
+                    init = true;
+                }
+
                 File.AppendAllText(LogPath, $"{formattedMessage}{Environment.NewLine}");
+            }
         }
     }
 }

@@ -7,6 +7,7 @@ namespace bank_documents_parser
     public class TatraBankaStatementParser : IBankStatementParser
     {
         private readonly object context = nameof(TatraBankaStatementParser);
+        private readonly bool DebugMode;
         private readonly CultureInfo ParseCulture = CultureInfo.InvariantCulture;
         private readonly bool TestRunMode;
         private readonly string Source;
@@ -33,6 +34,7 @@ detail: (?<detail>[^\r\n]*))?";
                 throw new ArgumentNullException(nameof(appSettings));
 
             TestRunMode = appSettings.TestRunMode;
+            DebugMode = appSettings.DebugMode;
             if (appSettings.TestRunMode)
             {
                 Log.Info(context, "*** TestRunMode enabled - only config validation and folder structure will be initialized");
@@ -79,14 +81,21 @@ detail: (?<detail>[^\r\n]*))?";
             {
                 Log.Info(context, $"Parsing text from {file}...");
                 result = PdfUtils.Parse(file, Password);
+
+                if (result == null)
+                    throw new ApplicationException($"Unable to parse PDF {file}.");
+
                 var outputFile = Path.Combine(Output, Path.GetFileName(file).Replace(".pdf", ".parsed.txt"));
-                Log.Info(context, $"Parsed text from {file} ({result?.Length} characters)... Saving to {outputFile}...");
+                if (DebugMode)
+                    Log.Info(context, $"Parsed text from {file} ({result?.Length} characters)... Saving to {outputFile}...");
                 File.WriteAllText(outputFile, result, Encoding.UTF8);
-                
-                Log.Info(context, $"Parsed text from {file} ({result?.Length} characters)... Performing page break cleanup.");
+
+                if (DebugMode)
+                    Log.Info(context, $"Performing page break cleanup.");
                 var cleaned = Regex.Replace(result, CleanupPattern, string.Empty, RegexOptions.IgnoreCase | RegexOptions.Multiline);
                 outputFile = Path.Combine(Output, Path.GetFileName(file).Replace(".pdf", ".cleaned.txt"));
-                Log.Info(context, $"Cleaned up {file} ({cleaned?.Length} characters)... Saving to {outputFile}...");
+                if (DebugMode)
+                    Log.Info(context, $"Cleaned up {file} ({cleaned?.Length} characters)... Saving to {outputFile}...");
                 File.WriteAllText(outputFile, cleaned, Encoding.UTF8);
                 result = cleaned;
                 return true;
@@ -191,7 +200,11 @@ detail: (?<detail>[^\r\n]*))?";
 
         private void SerializePayments(IEnumerable<IPayment> payments, string outputFile)
         {
-            Log.Info(context, $"Serialzing payments to {outputFile}");
+            if (!payments.Any())
+                return;
+
+            if (DebugMode)
+                Log.Info(context, $"Serialzing payments to {outputFile}");
             var csvRows = payments
                 .Select(PaymentFieldsToCsv)
                 .ToArray();
@@ -215,12 +228,18 @@ detail: (?<detail>[^\r\n]*))?";
 
         private string GetOutputFileName(IPayment[]? payments)
         {
+            if (!payments.Any())
+                return default;
+
             var csvFile = Path.GetFileNameWithoutExtension(payments.First().Origin);
             return Path.Combine(Output, $"{csvFile}.csv");
         }
 
         private string GetMergedOutputFileName(IEnumerable<IPayment> payments)
         {
+            if (!payments.Any())
+                return default;
+
             var dateFrom = payments.Min(p => p.DateProcessed);
             var dateTo = payments.Max(p => p.DateProcessed);
             var csvFile = $"merged_payments_tb_x{payments.Count()}_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}";
@@ -238,7 +257,8 @@ detail: (?<detail>[^\r\n]*))?";
 
             while (match.Success)
             {
-                Log.Info(context, $"Found payment #{++counter} at index {match.Index}: {match.Groups["date_process"]} - {match.Groups["account"].Value} - {match.Groups["amount"].Value}");
+                if (DebugMode)
+                    Log.Info(context, $"Found payment #{++counter} at index {match.Index}: {match.Groups["date_process"]} - {match.Groups["account"].Value} - {match.Groups["amount"].Value}");
 
                 var index = match.Index;
                 var date_process = DateTime.ParseExact(match.Groups["date_process"].Value, "dd.MM.yyyy", System.Globalization.CultureInfo.CurrentCulture);
@@ -268,6 +288,7 @@ detail: (?<detail>[^\r\n]*))?";
                     DateInvoiced = date_invoice,
                     PaymentType = payment_type,
                     Account = account,
+                    IsCredit = true,
                     Amount = amount,
                     PaymentId = payment_id,
                     BankReference = bank_reference,

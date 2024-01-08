@@ -10,6 +10,8 @@
 
         string VariableSymbol { get; set; }
 
+        public bool IsCredit { get; set; }
+
         string Origin { get; set; }
 
         string PayerIban { get; set; }

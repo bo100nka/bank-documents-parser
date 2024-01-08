@@ -10,6 +10,7 @@ namespace bank_documents_parser
     public class SlovenskaPostaStatementParser : IBankStatementParser
     {
         private readonly object context = nameof(SlovenskaPostaStatementParser);
+        private readonly bool DebugMode = false;
         private readonly CultureInfo ParseCulture = CultureInfo.InvariantCulture;
         private readonly bool TestRunMode;
         private readonly string Source;
@@ -34,6 +35,7 @@ namespace bank_documents_parser
             Encoding.RegisterProvider(provider);
 
             TestRunMode = appSettings.TestRunMode;
+            DebugMode = appSettings.DebugMode;
             if (appSettings.TestRunMode)
             {
                 Log.Info(context, "*** TestRunMode enabled - only config validation and folder structure will be initialized");
@@ -77,12 +79,8 @@ namespace bank_documents_parser
                 Log.Info(context, $"Decompressing {files.Length} files to {Output}...");
 
                 foreach (var file in files)
-                {
                     if (!ZipUtils.Decompress(file, Output, Password))
                         throw new ApplicationException($"Error while decompressing {file}.");
-
-                    Log.Info(context, "Processing decompressed file...");
-                }
 
                 outputFiles = Directory
                     .EnumerateFiles(Output, TextFileSearchPattern, SearchOption.TopDirectoryOnly)
@@ -145,21 +143,28 @@ namespace bank_documents_parser
                 Log.Info(context, $"Parsing payments from {file}...");
                 var payments = new List<IPayment>();
 
-                Log.Info(context, $"Reading all lines from {file}...");
+                if (DebugMode)
+                    Log.Info(context, $"Reading all lines from {file}...");
                 var lines = File.ReadAllLines(file, Encoding.GetEncoding(1250));
-                Log.Info(context, $"Read {lines.Length} from {file}.");
+                if (DebugMode)
+                    Log.Info(context, $"Read {lines.Length} line from {file}.");
 
-                Log.Info(context, $"Parsing header row 1...");
+                if (DebugMode)
+                    Log.Info(context, $"Parsing header row 1...");
                 var match_header1 = Regex.Match(lines[0], LineHeader1_Pattern);
-                Log.Info(context, $"Parsed header row 1.");
+                if (DebugMode)
+                    Log.Info(context, $"Parsed header row 1.");
 
-                Log.Info(context, $"Parsing header row 2...");
+                if (DebugMode)
+                    Log.Info(context, $"Parsing header row 2...");
                 var match_header2 = Regex.Match(lines[1], LineHeader2_Pattern);
-                Log.Info(context, $"Parsed header row 2.");
+                if (DebugMode)
+                    Log.Info(context, $"Parsed header row 2.");
 
                 for (int row = 2; row < lines.Length - 2; row++)
                 {
-                    Log.Info(context, $"Parsing data row {row - 2}...");
+                    if (DebugMode)
+                        Log.Info(context, $"Parsing data row {row - 2}...");
                     var match_data = Regex.Match(lines[row], LineData_Pattern);
 
                     var product_code = match_data.Groups["product_code"].Value;
@@ -193,6 +198,7 @@ namespace bank_documents_parser
                         .ToArray();
                     var source = string.Join(",", sources);
                     var origin = Path.GetFileName(file);
+                    var payerName = payer_fname != null ? $"{payer_lname} {payer_fname}" : payer_lname;
 
                     var payment = new Payment
                     {
@@ -201,6 +207,7 @@ namespace bank_documents_parser
                         DateInvoiced = date_submit,
                         PaymentType = PaymentType.Post,
                         Account = default,
+                        IsCredit = true,
                         Amount = amount,
                         PaymentId = default,
                         BankReference = default,
@@ -208,23 +215,28 @@ namespace bank_documents_parser
                         VariableSymbol = vs,
                         PayerBank = default,
                         PayerIban = default,
-                        PayerName = $"{payer_fname} {payer_lname}",
+                        PayerName = $"{payer_lname} {payer_fname}",
                         Detail = payer_message,
                         Origin = origin,
                         Source = source,
                     };
 
                     payments.Add(payment);
-                    Log.Info(context, $"Parsed data row {row - 2}.");
+                    if (DebugMode)
+                        Log.Info(context, $"Parsed data row {row - 2}.");
                 }
 
-                Log.Info(context, $"Parsing footer row 1...");
+                if (DebugMode)
+                    Log.Info(context, $"Parsing footer row 1...");
                 var match_footer1 = Regex.Match(lines[lines.Length - 2], LineFooter1_Pattern);
-                Log.Info(context, $"Parsed footer row 1.");
+                if (DebugMode)
+                    Log.Info(context, $"Parsed footer row 1.");
 
-                Log.Info(context, $"Parsing footer row 2...");
+                if (DebugMode)
+                    Log.Info(context, $"Parsing footer row 2...");
                 var match_footer2 = Regex.Match(lines[lines.Length - 1], LineFooter2_Pattern);
-                Log.Info(context, $"Parsed footer row 2.");
+                if (DebugMode)
+                    Log.Info(context, $"Parsed footer row 2.");
 
                 outPayments = payments.ToArray();
                 Log.Info(context, $"Parsed {outPayments.Length} payments from {file}.");
@@ -303,7 +315,8 @@ namespace bank_documents_parser
 
         private void SerializePayments(IEnumerable<IPayment> payments, string outputFile)
         {
-            Log.Info(context, $"Serialzing payments to {outputFile}");
+            if (DebugMode)
+                Log.Info(context, $"Serialzing payments to {outputFile}");
             var csvRows = payments
                 .Select(PaymentFieldsToCsv)
                 .ToArray();

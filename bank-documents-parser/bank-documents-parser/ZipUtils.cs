@@ -5,6 +5,7 @@ namespace bank_documents_parser
     public static class ZipUtils
     {
         private static readonly object Context = nameof(ZipUtils);
+        public static bool DebugMode = false;
 
         public static bool Decompress(string file, string outFile, string? password = default)
         {
@@ -13,13 +14,15 @@ namespace bank_documents_parser
 
             try
             {
-                Log.Info(Context, $"Decompressing {file}...");
+                if (DebugMode)
+                    Log.Info(Context, $"Decompressing {file}...");
                 
                 using var zip = ZipFile.Read(file);
                 zip.Password = password;
                 
                 zip.ExtractAll(outFile, ExtractExistingFileAction.OverwriteSilently);
-                Log.Info(Context, $"Decompressed {file}.");
+                if (DebugMode)
+                    Log.Info(Context, $"Decompressed {file}.");
                 
                 return true;
             }

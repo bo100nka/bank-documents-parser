@@ -12,6 +12,9 @@
     public string SlovenskaPostaStatementsTextFilePattern { get; set; }
     public string SlovenskaPostaStatementsZipFilePattern { get; set; }
 
+    public string VubDirectory { get; set; }
+    public string VubStatementsFilePattern { get; set; }
+
     public string EmailsToExtractDirectory { get; set; }
 
     public string OutputDirectory { get; set; }

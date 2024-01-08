@@ -56,6 +56,7 @@ void Start()
     {
         new TatraBankaStatementParser(appSettings),
         new SlovenskaPostaStatementParser(appSettings),
+        new VubStatementParser(appSettings),
     };
 
     var error = false;
@@ -77,10 +78,11 @@ void Start()
 
     Log.Raw();
     Log.Raw($"Source files used:\n- {string.Join($"{Environment.NewLine}- ", sources)}");
-    Log.Raw();
-    Log.Raw($"Completed. Error: {error}");
 
     ExtractEmailAttachments();
+
+    Log.Raw();
+    Log.Raw($"Completed. Error: {error}");
 }
 
 void ExtractEmailAttachments()
@@ -211,6 +213,8 @@ AppSettings? CreateAndReadConfigFile(JsonSerializerOptions jsonOptions, string c
 void Initialize(AppSettings? appSettings)
 {
     Log.DebugMode = appSettings.DebugMode;
+    PdfUtils.DebugMode = appSettings.DebugMode;
+    ZipUtils.DebugMode = appSettings.DebugMode;
 
     if (appSettings.TestRunMode)
     {
