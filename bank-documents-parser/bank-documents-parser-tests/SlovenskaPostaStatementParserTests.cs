@@ -130,7 +130,7 @@ namespace bank_documents_parser_tests
             Assert.True(actualCheck);
             Assert.NotEmpty(actual);
             Assert.Equal(10, actual[0].Amount);
-            Assert.Equal("Katarína Filípková", actual[0].PayerName);
+            Assert.Equal("Filípková Katarína", actual[0].PayerName);
         }
 
         SlovenskaPostaStatementParser GivenParser() => new SlovenskaPostaStatementParser(new AppSettings 
