@@ -86,16 +86,13 @@ detail: (?<detail>[^\r\n]*))?";
                     throw new ApplicationException($"Unable to parse PDF {file}.");
 
                 var outputFile = Path.Combine(Output, Path.GetFileName(file).Replace(".pdf", ".parsed.txt"));
-                if (DebugMode)
-                    Log.Info(context, $"Parsed text from {file} ({result?.Length} characters)... Saving to {outputFile}...");
+                Log.Debug(context, $"Parsed text from {file} ({result?.Length} characters)... Saving to {outputFile}...");
                 File.WriteAllText(outputFile, result, Encoding.UTF8);
 
-                if (DebugMode)
-                    Log.Info(context, $"Performing page break cleanup.");
+                Log.Debug(context, $"Performing page break cleanup.");
                 var cleaned = Regex.Replace(result, CleanupPattern, string.Empty, RegexOptions.IgnoreCase | RegexOptions.Multiline);
                 outputFile = Path.Combine(Output, Path.GetFileName(file).Replace(".pdf", ".cleaned.txt"));
-                if (DebugMode)
-                    Log.Info(context, $"Cleaned up {file} ({cleaned?.Length} characters)... Saving to {outputFile}...");
+                Log.Debug(context, $"Cleaned up {file} ({cleaned?.Length} characters)... Saving to {outputFile}...");
                 File.WriteAllText(outputFile, cleaned, Encoding.UTF8);
                 result = cleaned;
                 return true;
@@ -203,8 +200,7 @@ detail: (?<detail>[^\r\n]*))?";
             if (!payments.Any())
                 return;
 
-            if (DebugMode)
-                Log.Info(context, $"Serialzing payments to {outputFile}");
+            Log.Debug(context, $"Serialzing payments to {outputFile}");
             var csvRows = payments
                 .Select(PaymentFieldsToCsv)
                 .ToArray();
@@ -257,8 +253,7 @@ detail: (?<detail>[^\r\n]*))?";
 
             while (match.Success)
             {
-                if (DebugMode)
-                    Log.Info(context, $"Found payment #{++counter} at index {match.Index}: {match.Groups["date_process"]} - {match.Groups["account"].Value} - {match.Groups["amount"].Value}");
+                Log.Debug(context, $"Found payment #{++counter} at index {match.Index}: {match.Groups["date_process"]} - {match.Groups["account"].Value} - {match.Groups["amount"].Value}");
 
                 var index = match.Index;
                 var date_process = DateTime.ParseExact(match.Groups["date_process"].Value, "dd.MM.yyyy", System.Globalization.CultureInfo.CurrentCulture);

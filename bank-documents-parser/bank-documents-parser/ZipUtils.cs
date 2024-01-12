@@ -14,15 +14,13 @@ namespace bank_documents_parser
 
             try
             {
-                if (DebugMode)
-                    Log.Info(Context, $"Decompressing {file}...");
+                Log.Debug(Context, $"Decompressing {file}...");
                 
                 using var zip = ZipFile.Read(file);
                 zip.Password = password;
                 
                 zip.ExtractAll(outFile, ExtractExistingFileAction.OverwriteSilently);
-                if (DebugMode)
-                    Log.Info(Context, $"Decompressed {file}.");
+                Log.Debug(Context, $"Decompressed {file}.");
                 
                 return true;
             }

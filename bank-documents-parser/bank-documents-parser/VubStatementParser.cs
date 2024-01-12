@@ -120,11 +120,9 @@ date_eff\s*(?<date_eff>\d{8})\s*";
                 Log.Info(context, $"Parsing payments from {file}...");
                 var payments = new List<IPayment>();
 
-                if (DebugMode)
-                    Log.Info(context, $"Reading all lines from {file}...");
+                Log.Debug(context, $"Reading all lines from {file}...");
                 var lines = File.ReadAllLines(file, Encoding.GetEncoding(1250));
-                if (DebugMode)
-                    Log.Info(context, $"Read {lines.Length} line from {file}.");
+                Log.Debug(context, $"Read {lines.Length} line from {file}.");
 
                 if (lines.Length == 1)
                 {
@@ -133,12 +131,10 @@ date_eff\s*(?<date_eff>\d{8})\s*";
                     return true;
                 }
 
-                if (DebugMode)
-                    Log.Info(context, $"Parsing data...");
+                Log.Debug(context, $"Parsing data...");
                 var text = string.Join(Environment.NewLine, lines);
                 var match = Regex.Match(text, LineData_Pattern, RegexOptions.Multiline | RegexOptions.IgnoreCase);
-                if (DebugMode)
-                    Log.Info(context, $"Parsed data with {(match.Success ? "Success" : "Failure")} ({match.Captures.Count} payments).");
+                Log.Debug(context, $"Parsed data with {(match.Success ? "Success" : "Failure")} ({match.Captures.Count} payments).");
 
                 while (match.Success)
                 {
@@ -259,8 +255,7 @@ date_eff\s*(?<date_eff>\d{8})\s*";
             if (!payments.Any())
                 return;
 
-            if (DebugMode)
-                Log.Info(context, $"Serialzing payments to {outputFile}");
+            Log.Debug(context, $"Serialzing payments to {outputFile}");
             var csvRows = payments
                 .Select(PaymentFieldsToCsv)
                 .ToArray();

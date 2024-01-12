@@ -13,16 +13,14 @@ namespace bank_documents_parser
             try
             {
                 var result = default(string?);
-                if (DebugMode)
-                    Log.Info(context, $"Extracting text from PDF {file}...");
+                Log.Debug(context, $"Extracting text from PDF {file}...");
 
                 var pageText = new StringBuilder();
                 var passwordBytes = Encoding.ASCII.GetBytes(password);
                 using (var reader = new iTextSharp.text.pdf.PdfReader(file, passwordBytes))
                 {
                     var pageNumbers = reader.NumberOfPages;
-                    if (DebugMode)
-                        Log.Info(context, $"Opened PDF {file} with {pageNumbers} pages.");
+                    Log.Debug(context, $"Opened PDF {file} with {pageNumbers} pages.");
 
                     var resultsPerPage = new List<string>();
                     for (int i = 1; i <= pageNumbers; i++)
@@ -44,17 +42,14 @@ namespace bank_documents_parser
 
                         var text = PdfTextExtractor.GetTextFromPage(reader, i).Replace("\n", "\r\n");
                         //pageText.AppendLine(text);
-                        if (DebugMode)
-                            Log.Info(context, $"Extracting text from page {i} of {pageNumbers}...");
+                        Log.Debug(context, $"Extracting text from page {i} of {pageNumbers}...");
                         resultsPerPage.Add(text);
                     }
 
-                    if (DebugMode)
-                        Log.Info(context, $"Merging text from multiple pages...");
+                    Log.Debug(context, $"Merging text from multiple pages...");
                     result = string.Join("\r\n", resultsPerPage);
 
-                    if (DebugMode)
-                        Log.Info(context, $"Closing PDF {file}...");
+                    Log.Debug(context, $"Closing PDF {file}...");
                 }
 
                 return result;
@@ -65,8 +60,7 @@ namespace bank_documents_parser
             }
             finally
             {
-                if (DebugMode)
-                    Log.Info(context, $"Finished parsing text from PDF {file}.");
+                Log.Debug(context, $"Finished parsing text from PDF {file}.");
             }
 
             return default;

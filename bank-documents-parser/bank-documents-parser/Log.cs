@@ -13,6 +13,12 @@
             AppendLog(default, default, message);
         }
 
+        internal static void Debug(object context, string message)
+        {
+            if (DebugMode)
+                AppendLog("DEBUG", context, message);
+        }
+
         internal static void Info(object context, string message)
         {
             AppendLog("INFO", context, message);

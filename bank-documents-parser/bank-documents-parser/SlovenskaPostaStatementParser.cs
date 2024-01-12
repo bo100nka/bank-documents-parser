@@ -143,28 +143,21 @@ namespace bank_documents_parser
                 Log.Info(context, $"Parsing payments from {file}...");
                 var payments = new List<IPayment>();
 
-                if (DebugMode)
-                    Log.Info(context, $"Reading all lines from {file}...");
+                Log.Debug(context, $"Reading all lines from {file}...");
                 var lines = File.ReadAllLines(file, Encoding.GetEncoding(1250));
-                if (DebugMode)
-                    Log.Info(context, $"Read {lines.Length} line from {file}.");
+                Log.Debug(context, $"Read {lines.Length} line from {file}.");
 
-                if (DebugMode)
-                    Log.Info(context, $"Parsing header row 1...");
+                Log.Debug(context, $"Parsing header row 1...");
                 var match_header1 = Regex.Match(lines[0], LineHeader1_Pattern);
-                if (DebugMode)
-                    Log.Info(context, $"Parsed header row 1.");
+                Log.Debug(context, $"Parsed header row 1.");
 
-                if (DebugMode)
-                    Log.Info(context, $"Parsing header row 2...");
+                Log.Debug(context, $"Parsing header row 2...");
                 var match_header2 = Regex.Match(lines[1], LineHeader2_Pattern);
-                if (DebugMode)
-                    Log.Info(context, $"Parsed header row 2.");
+                Log.Debug(context, $"Parsed header row 2.");
 
                 for (int row = 2; row < lines.Length - 2; row++)
                 {
-                    if (DebugMode)
-                        Log.Info(context, $"Parsing data row {row - 2}...");
+                    Log.Debug(context, $"Parsing data row {row - 2}...");
                     var match_data = Regex.Match(lines[row], LineData_Pattern);
 
                     var product_code = match_data.Groups["product_code"].Value;
@@ -222,21 +215,16 @@ namespace bank_documents_parser
                     };
 
                     payments.Add(payment);
-                    if (DebugMode)
-                        Log.Info(context, $"Parsed data row {row - 2}.");
+                    Log.Debug(context, $"Parsed data row {row - 2}.");
                 }
 
-                if (DebugMode)
-                    Log.Info(context, $"Parsing footer row 1...");
+                Log.Debug(context, $"Parsing footer row 1...");
                 var match_footer1 = Regex.Match(lines[lines.Length - 2], LineFooter1_Pattern);
-                if (DebugMode)
-                    Log.Info(context, $"Parsed footer row 1.");
+                Log.Debug(context, $"Parsed footer row 1.");
 
-                if (DebugMode)
-                    Log.Info(context, $"Parsing footer row 2...");
+                Log.Debug(context, $"Parsing footer row 2...");
                 var match_footer2 = Regex.Match(lines[lines.Length - 1], LineFooter2_Pattern);
-                if (DebugMode)
-                    Log.Info(context, $"Parsed footer row 2.");
+                Log.Debug(context, $"Parsed footer row 2.");
 
                 outPayments = payments.ToArray();
                 Log.Info(context, $"Parsed {outPayments.Length} payments from {file}.");
@@ -315,8 +303,7 @@ namespace bank_documents_parser
 
         private void SerializePayments(IEnumerable<IPayment> payments, string outputFile)
         {
-            if (DebugMode)
-                Log.Info(context, $"Serialzing payments to {outputFile}");
+            Log.Debug(context, $"Serialzing payments to {outputFile}");
             var csvRows = payments
                 .Select(PaymentFieldsToCsv)
                 .ToArray();
