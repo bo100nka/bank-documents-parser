@@ -253,9 +253,9 @@ detail: (?<detail>[^\r\n]*))?";
 
             while (match.Success)
             {
-                Log.Debug(context, $"Found payment #{++counter} at index {match.Index}: {match.Groups["date_process"]} - {match.Groups["account"].Value} - {match.Groups["amount"].Value}");
+                Log.Debug(context, $"Found payment #{++counter}: {match.Groups["date_process"]} - {match.Groups["account"].Value} - {match.Groups["amount"].Value}");
 
-                var index = match.Index;
+                var index = counter;
                 var date_process = DateTime.ParseExact(match.Groups["date_process"].Value, "dd.MM.yyyy", System.Globalization.CultureInfo.CurrentCulture);
                 var date_invoice = !match.Groups["date_invoice"].Success ? default(DateTime?) : DateTime.ParseExact(match.Groups["date_invoice"].Value.TrimStart(), "dd.MM.yyyy", System.Globalization.CultureInfo.CurrentCulture);
                 var type = match.Groups["type"].Captures.Count > 1 
