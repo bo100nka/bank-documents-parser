@@ -15,6 +15,38 @@ var jsonOptions = new JsonSerializerOptions
     ReadCommentHandling = JsonCommentHandling.Skip,
 };
 
+var PaymentsSqlTableName = "import_raw";
+var PaymentsSqlTableCreateScript = $@"############## TABLE CREATION BELOW
+
+#drop table if exists {PaymentsSqlTableName};
+
+create table if not exists {PaymentsSqlTableName}
+(
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    payment_index int not null,
+    payment_date date not null,
+    is_credit bool not null,
+    amount decimal(8,2) not null,
+    vs int(10) null,
+    origin varchar(100) not null,
+    payer_iban varchar(24) null,
+    payer_name nvarchar(100) null,
+    detail nvarchar(100) null,
+    payment_id varchar(30) null,
+    bank_ref varchar(50) null,
+    payer_ref varchar(50) null,
+    payment_source mediumtext null
+);
+
+########## DATA INSERTION BELOW
+
+#### possible problem max query size, if so run the following statement:
+#set global mysqlx_max_allowed_packet = 1073741824;
+
+insert into {PaymentsSqlTableName} values
+
+";
+
 try
 {
     var workDir = GetWorkingDirectory();
@@ -74,10 +106,12 @@ void Start()
             sources.AddRange(outSourceFiles);
     }
 
-    SerializePayments(payments, GetMergedOutputFileName(payments));
-
     Log.Raw();
     Log.Raw($"Source files used:\n- {string.Join($"{Environment.NewLine}- ", sources)}");
+
+    Log.Raw();
+    SerializePaymentsToCsv(payments, GetMergedOutputFileName(payments));
+    SerializePaymentsToSql(payments);
 
     ExtractEmailAttachments();
 
@@ -118,11 +152,12 @@ void ExtractEmailAttachments()
     Log.Info(context, $"Extracted all attachments from {emails.Length} emails in {sourceDir}.");
 }
 
-void SerializePayments(IEnumerable<IPayment> payments, string outputFile)
+void SerializePaymentsToCsv(IEnumerable<IPayment> payments, string outputFile)
 {
     if (!payments.Any())
         return;
 
+    // csv export
     Log.Info(context, $"Serialzing payments to {outputFile}");
     var csvRows = payments
         .Select(PaymentFieldsToCsv)
@@ -130,6 +165,66 @@ void SerializePayments(IEnumerable<IPayment> payments, string outputFile)
 
     File.WriteAllText(outputFile, $"{appSettings.OutputPaymentsCsvFields}{Environment.NewLine}", Encoding.UTF8);
     File.AppendAllLines(outputFile, csvRows, Encoding.UTF8);
+}
+
+void SerializePaymentsToSql(IEnumerable<IPayment> payments)
+{
+    if (!payments.Any())
+        return;
+
+    var paymentsChunks = payments
+        .OrderBy(p => p.DateProcessed)
+        .GroupBy(p => $"{p.DateProcessed.Year}-Q{(p.DateProcessed.Month + 2) / 3}");
+
+    foreach (var group in paymentsChunks)
+    {
+        var paymentsChunk = group.ToArray();
+        var outputFile = GetMergedOutputFileName(paymentsChunk);
+
+        // sql export
+        outputFile = Path.Combine(Path.GetDirectoryName(outputFile), $"{Path.GetFileNameWithoutExtension(outputFile)}.sql");
+        Log.Info(context, $"Serialzing payments to {outputFile}");
+        var sqlRows = paymentsChunk
+            .Select(PaymentFieldsToSql)
+            .ToArray();
+        var mergedRows = string.Join(",\n\n", sqlRows);
+        var createStmt = PaymentsSqlTableCreateScript;
+        File.WriteAllText(outputFile, createStmt, Encoding.UTF8);
+        File.AppendAllText(outputFile, mergedRows, Encoding.UTF8);
+    }
+}
+
+string PaymentFieldsToSql(IPayment payment)
+{
+    try
+    {
+        int.TryParse(payment.VariableSymbol, out var vs);
+        var line = new[] {
+            "default",
+            $"{payment.Index}", 
+            $"'{payment.DateProcessed:yyyy-MM-dd}'", 
+            $"{payment.IsCredit}",
+            $"{payment.Amount:#.00}",
+            $"{vs}",
+            $"'{payment.Origin?.Replace('\'', '`')}'",
+            $"'{payment.PayerIban}'",
+            $"'{payment.PayerName?.Replace('\'', '`')}'",
+            $"'{payment.Detail?.Replace('\'', '`')}'",
+            $"'{payment.PaymentId}'",
+            $"'{payment.BankReference}'",
+            $"'{payment.PayerReference}'",
+            $"'{payment.Source?.Replace('\'', '`')}'",
+        };
+
+        var values = line.Select(s => $"{(s == "''" ? "null" : s)}");
+        var row = string.Join(',', values);
+        return $"({row})";
+    }
+    catch (Exception ex)
+    {
+        Log.Error(context, ex, $"Error while serializing payment to sql: {payment}.");
+        throw;
+    }   
 }
 
 string PaymentFieldsToCsv(IPayment payment)
@@ -160,7 +255,7 @@ string GetMergedOutputFileName(IEnumerable<IPayment> payments)
 
     var dateFrom = payments.Min(p => p.DateProcessed);
     var dateTo = payments.Max(p => p.DateProcessed);
-    var csvFile = $"merged_payments_all_x{payments.Count()}_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}";
+    var csvFile = $"merged_payments_all_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}_x{payments.Count()}";
     return Path.Combine(appSettings.OutputDirectory, $"{csvFile}.csv");
 }
 

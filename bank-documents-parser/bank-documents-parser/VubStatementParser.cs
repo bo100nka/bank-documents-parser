@@ -139,7 +139,7 @@ namespace bank_documents_parser
                     var buildingNumber = ntry.NtryDtls.TxDtls.RltdPties.Dbtr?.PstlAdr?.BldgNb;
                     var detail = ntry.NtryDtls.TxDtls.AddtlTxInf;
                     var paymentCaptured = Regex.Match(text, EntryPattern.Replace("#PAYMENT_ID#", paymentId), RegexOptions.Multiline | RegexOptions.ExplicitCapture);
-                    var source = paymentCaptured.Value.Replace("\"", "'");
+                    var source = paymentCaptured.Value.Replace("\"", "`");
                     var origin = Path.GetFileName(file);
 
                     var payment = new Payment
@@ -264,7 +264,7 @@ namespace bank_documents_parser
                 return default;
             var dateFrom = payments.Min(p => p.DateProcessed);
             var dateTo = payments.Max(p => p.DateProcessed);
-            var csvFile = $"merged_payments_vub_x{payments.Count()}_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}";
+            var csvFile = $"merged_payments_vub_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}_x{payments.Count()}";
             return Path.Combine(Output, $"{csvFile}.csv");
         }
     }

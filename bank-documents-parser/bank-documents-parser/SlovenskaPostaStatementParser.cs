@@ -329,7 +329,7 @@ namespace bank_documents_parser
         {
             var dateFrom = payments.Min(p => p.DateProcessed);
             var dateTo = payments.Max(p => p.DateProcessed);
-            var csvFile = $"merged_payments_slposta_x{payments.Count()}_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}";
+            var csvFile = $"merged_payments_slposta_{dateFrom:yyyyMMdd}_{dateTo:yyyyMMdd}_x{payments.Count()}";
             return Path.Combine(Output, $"{csvFile}.csv");
         }
     }
