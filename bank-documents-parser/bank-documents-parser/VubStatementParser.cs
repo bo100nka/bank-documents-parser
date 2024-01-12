@@ -1,6 +1,7 @@
 ﻿using System.Globalization;
 using System.Text;
 using System.Text.RegularExpressions;
+using System.Xml.Serialization;
 
 namespace bank_documents_parser
 {
@@ -14,24 +15,8 @@ namespace bank_documents_parser
         private readonly string Output;
         private readonly string CsvHeader;
         private readonly string FileSearchPattern;
-        private readonly string LineData_Pattern = @"item:
-stat_id.*
-item_id\s*(?<item_id>\d+)
-req_id\s*.*
-acn\s*(?<acn>\d*)
-date_stat\s*(?<date_process>\d{8})\s*
-desc_item\s(?<item>.*)
-acn_par.*
-bnk_par.*
-cd\s*(?<cd>\d*)
-amt\s*(?<amount>.*)
-var_sym\s*(?<vs>.*)
-kon_sym\s*(?<ks>.*)
-spec_sym\s*(?<ss>.*)
-date_txn\s*.*
-amd_value\s*.*
-txn_id\s*(?<txn_id>.*)
-date_eff\s*(?<date_eff>\d{8})\s*";
+        public const string SymbolsPattern = @"/VS/*(?<vs>\d*).*";
+        public const string EntryPattern = @" *<Ntry>\n.*<NtryRef>#PAYMENT_ID#</NtryRef>(\n.*?)*?</Ntry>";
 
         public VubStatementParser(AppSettings appSettings)
         {
@@ -120,69 +105,65 @@ date_eff\s*(?<date_eff>\d{8})\s*";
                 Log.Info(context, $"Parsing payments from {file}...");
                 var payments = new List<IPayment>();
 
-                Log.Debug(context, $"Reading all lines from {file}...");
-                var lines = File.ReadAllLines(file, Encoding.GetEncoding(1250));
-                Log.Debug(context, $"Read {lines.Length} line from {file}.");
-
-                if (lines.Length == 1)
-                {
-                    Log.Info(context, $"File {file} seems to be empty - skipping.");
-                    outPayments = Array.Empty<IPayment>();
-                    return true;
-                }
+                Log.Debug(context, $"Reading all text from {file}...");
+                var text = File.ReadAllText(file, Encoding.GetEncoding(1250));
+                Log.Debug(context, $"Read all text from {file}.");
 
                 Log.Debug(context, $"Parsing data...");
-                var text = string.Join(Environment.NewLine, lines);
-                var match = Regex.Match(text, LineData_Pattern, RegexOptions.Multiline | RegexOptions.IgnoreCase);
-                Log.Debug(context, $"Parsed data with {(match.Success ? "Success" : "Failure")} ({match.Captures.Count} payments).");
-
-                while (match.Success)
+                var record = default(VubXmlStatement);
                 {
-                    var item_id = int.Parse(match.Groups["item_id"].Value);
-                    //Log.Info(context, $"Parsing item {item_id}...");
+                    var serializer = new XmlSerializer(typeof(VubXmlStatement));
+                    using var reader = new StringReader(text);
+                    record = (VubXmlStatement)serializer.Deserialize(reader);
+                }
+                Log.Debug(context, $"Parsed statement for {record.BkToCstmrStmt.GrpHdr.MsgRcpt.Nm} with ({record.BkToCstmrStmt.Stmt.TxsSummry.TtlNtries.NbOfNtries} credit/debit entries).");
 
-                    var acn = match.Groups["acn"].Value;
-                    var date_process = DateTime.ParseExact(match.Groups["date_process"].Value, "yyyyMMdd", CultureInfo.InvariantCulture);
-                    var item = match.Groups["item"].Value;
-                    var cd = match.Groups["cd"].Value;
-                    var amount_str = match.Groups["amount"].Value;
-                    var amount = decimal.Parse(amount_str == "NaN" ? "0" : amount_str, CultureInfo.GetCultureInfo("sk-SK"));
-                    var vs = match.Groups["vs"].Value;
-                    var ks = match.Groups["ks"].Value;
-                    var ss = match.Groups["ss"].Value;
-                    var txn_id = match.Groups["txn_id"].Value;
-                    var date_eff = DateTime.ParseExact(match.Groups["date_eff"].Value, "yyyyMMdd", CultureInfo.InvariantCulture);
-                    var sources = match.Groups
-                        .Cast<Group>()
-                        .Where(g => g.Name != "0")
-                        .Select(g => $"{g.Name}:`{g.Value}`")
-                        .ToArray();
-                    var source = string.Join(",", sources);
+                foreach (var (ntry, index) in record.BkToCstmrStmt.Stmt.Ntry.Select((ntry, index) => (ntry, index)))
+                {
+                    var paymentId = ntry.NtryRef;
+                    var amount = decimal.Parse(ntry.Amt.Text, CultureInfo.InvariantCulture);
+                    Log.Debug(context, $"Reading entry {ntry.CdtDbtInd} - {index} - {paymentId} - {amount}...");
+
+                    var isCredit = ntry.CdtDbtInd == "CRDT";
+                    var dateBook = ntry.BookgDt?.Dt;
+                    var dateVal = ntry.ValDt.Dt;
+                    var bankRef = ntry.NtryDtls.TxDtls.Refs.InstrId;
+                    var payerRef = ntry.NtryDtls.TxDtls.Refs.EndToEndId;
+                    var vs = Regex.Match(payerRef, SymbolsPattern).Groups["vs"].Value;
+                    var payerName = ntry.NtryDtls.TxDtls.RltdPties.Dbtr?.Nm;
+                    var account = ntry.NtryDtls.TxDtls.RltdPties.DbtrAcct.Id.IBAN;
+                    var street = ntry.NtryDtls.TxDtls.RltdPties.Dbtr?.PstlAdr?.StrtNm;
+                    var city = ntry.NtryDtls.TxDtls.RltdPties.Dbtr?.PstlAdr?.TwnNm;
+                    var country = ntry.NtryDtls.TxDtls.RltdPties.Dbtr?.PstlAdr?.Ctry;
+                    var postalCode = ntry.NtryDtls.TxDtls.RltdPties.Dbtr?.PstlAdr?.PstCd;
+                    var buildingNumber = ntry.NtryDtls.TxDtls.RltdPties.Dbtr?.PstlAdr?.BldgNb;
+                    var detail = ntry.NtryDtls.TxDtls.AddtlTxInf;
+                    var paymentCaptured = Regex.Match(text, EntryPattern.Replace("#PAYMENT_ID#", paymentId), RegexOptions.Multiline | RegexOptions.ExplicitCapture);
+                    var source = paymentCaptured.Value.Replace("\"", "'");
                     var origin = Path.GetFileName(file);
 
                     var payment = new Payment
                     {
-                        Index = item_id,
-                        DateProcessed = date_process,
-                        DateInvoiced = date_eff,
+                        Index = index + 1,
+                        DateProcessed = dateVal,
+                        DateInvoiced = dateBook,
                         PaymentType = PaymentType.Manual,
-                        Account = acn,
-                        IsCredit = match.Groups["cd"].Value == "2",
+                        Account = account,
+                        IsCredit = isCredit,
                         Amount = amount,
-                        PaymentId = txn_id,
-                        BankReference = default,
-                        PayerReference = $"/VS{vs}/KS{ks}/SS{ss}",
+                        PaymentId = paymentId,
+                        BankReference = bankRef,
+                        PayerReference = payerRef,
                         VariableSymbol = vs,
                         PayerBank = default,
-                        PayerIban = default,
-                        PayerName = default,
-                        Detail = item,
+                        PayerIban = account,
+                        PayerName = payerName,
+                        Detail = detail,
                         Origin = origin,
                         Source = source,
                     };
 
                     payments.Add(payment);
-                    match = match.NextMatch();
                 }
 
                 outPayments = payments.ToArray();
