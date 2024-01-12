@@ -41,6 +41,7 @@ detail: (?<detail>[^\r\n]*))?";
             ['¼'] = 'Ľ',
             ['ø'] = 'ř',
             ['\u009d'] = 'ť',
+            ['ò'] = 'ň',
         };
 
         public string CorrectDiacritic(string input)
