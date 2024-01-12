@@ -28,6 +28,28 @@ platite.*: (?<payer_iban>.*)
 (?<payer_name>[^\r\n]*)(
 detail: (?<detail>[^\r\n]*))?";
 
+        private readonly Dictionary<char, char> CharsToReplaceLookup = new Dictionary<char, char>()
+        {
+            ['\u008a'] = 'Š',
+            ['\u009a'] = 'š',
+            ['\u008e'] = 'Ž',
+            ['\u009e'] = 'ž',
+            ['ï'] = 'ď',
+            ['è'] = 'č',
+            ['È'] = 'Č',
+            ['¾'] = 'ľ',
+            ['¼'] = 'Ľ',
+            ['ø'] = 'ř',
+            ['\u009d'] = 'ť',
+        };
+
+        public string CorrectDiacritic(string input)
+        {
+            var correctedText = input;
+            CharsToReplaceLookup.ToList().ForEach(kvp => correctedText = correctedText.Replace(kvp.Key, kvp.Value));
+            return correctedText;
+        }
+
         public TatraBankaStatementParser(AppSettings appSettings)
         {
             if (appSettings == null)
@@ -91,6 +113,7 @@ detail: (?<detail>[^\r\n]*))?";
 
                 Log.Debug(context, $"Performing page break cleanup.");
                 var cleaned = Regex.Replace(result, CleanupPattern, string.Empty, RegexOptions.IgnoreCase | RegexOptions.Multiline);
+                cleaned = CorrectDiacritic(cleaned);
                 outputFile = Path.Combine(Output, Path.GetFileName(file).Replace(".pdf", ".cleaned.txt"));
                 Log.Debug(context, $"Cleaned up {file} ({cleaned?.Length} characters)... Saving to {outputFile}...");
                 File.WriteAllText(outputFile, cleaned, Encoding.UTF8);
@@ -113,11 +136,8 @@ detail: (?<detail>[^\r\n]*))?";
 
             try
             {
-                //var lines = text.Split(Environment.NewLine);
-                
                 Log.Info(context, $"Parsing bank statement records from {origin} with {text?.Length} characters...");
                 
-                //var filteredText = FilterLines(lines);
                 var payments = ParsePaymentsFromText(Path.GetFileName(origin), text);
                 result = new ParseResult(text, payments.ToArray());
                 
