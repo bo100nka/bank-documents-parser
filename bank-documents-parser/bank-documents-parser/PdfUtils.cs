@@ -24,23 +24,7 @@ namespace bank_documents_parser
                     var resultsPerPage = new List<string>();
                     for (int i = 1; i <= pageNumbers; i++)
                     {
-                        //var strategy = new SimpleTextExtractionStrategy();
-                        //string currentText = PdfTextExtractor.GetTextFromPage(reader, i, strategy);
-
-                        //byte[] pageContent = reader.GetPageContent(i); //not zero based
-                        //byte[] utf8 = Encoding.Convert(Encoding.Default, Encoding.UTF8, pageContent);
-                        //byte[] unicode = Encoding.Convert(Encoding.Default, Encoding.Unicode, pageContent);
-                        //var ansi = Encoding.Convert(Encoding.Default, Encoding.GetEncoding(1250), pageContent);
-                        //string textFromPage = Encoding.UTF8.GetString(utf8);
-                        //string textFromPageAnsi = Encoding.GetEncoding(1250).GetString(ansi);
-                        //string textFromPageUni = Encoding.Unicode.GetString(ansi);
-                        //currentText = Encoding.UTF8.GetString(Encoding.Convert(Encoding.Default, Encoding.UTF8, Encoding.Default.GetBytes(currentText)));
-
-
-
-
                         var text = PdfTextExtractor.GetTextFromPage(reader, i).Replace("\n", "\r\n");
-                        //pageText.AppendLine(text);
                         Log.Debug(context, $"Extracting text from page {i} of {pageNumbers}...");
                         resultsPerPage.Add(text);
                     }
