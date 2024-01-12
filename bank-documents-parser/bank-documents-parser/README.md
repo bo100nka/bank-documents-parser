@@ -51,9 +51,10 @@ When the application is executed with the `TestRunMode` setting off, it will sta
 * additionally creates two different types of `merged csv` files:
     * one per bank
     * one final for all banks together
+* for easier database import, generates `merged sql` files grouped by year and quarter
+    * _NOTE: these files will be big, you might have to increase the max packet size before executing the INSERT INTO statements one by one_
 * lastly scans for all exported outlook emails (`.msg` files) in the configured directory (for example `c:/YellowNET/EmailsToExtract`)
 * for every found email it exports all attachments to the output directory
-
 
 ## Logging
 The application logs every step it performs into:
@@ -61,4 +62,4 @@ The application logs every step it performs into:
 * a log file located at `c:/YellowNET/app.log` _(which can be viewed by `notepad`)_.
 
 ## Remarks
-* The application flow ignores any `outgoing` payments.
+* The application flow ignores some `outgoing` payments.
