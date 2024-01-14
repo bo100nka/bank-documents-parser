@@ -204,7 +204,7 @@ string PaymentFieldsToSql(IPayment payment)
             $"{payment.Index}", 
             $"'{payment.DateProcessed:yyyy-MM-dd}'", 
             $"{payment.IsCredit}",
-            $"{payment.Amount:#.00}",
+            $"{payment.Amount.ToString("#.00", System.Globalization.CultureInfo.InvariantCulture)}",
             $"{vs}",
             $"'{payment.Origin?.Replace('\'', '`')}'",
             $"'{payment.PayerIban}'",
