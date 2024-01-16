@@ -117,3 +117,30 @@ select * from platby p where p.datum_platby = '2022-01-03';
 select datum_platby, count(*) from platby p where p.datum_platby between '2022-01-01' and '2022-04-26' group by datum_platby order by 1;
 select datum_platby, count(*) from yndev.platby_new p where p.datum_platby between '2022-01-01' and '2022-04-26' group by datum_platby order by 1;
 
+
+select z.id, z.zmluva, z.meno, z.install_obec, p.datum_platby, p.suma, u.suma as uhrada, f.cislo, f.d_fakt, f.suma as faktura, f.stav
+from platby as p
+left join zakaznici as z on z.id = p.id_customer
+left join uhrady as u on u.id_platba = p.id
+left join faktury as f on u.id_faktura = f.id
+where p.datum_platby between '2022-01-03' and '2022-01-31'
+	and u.id is null
+;
+
+
+select * from uhrady limit 10;
+
+
+select f.cislo, f.d_fakt, f.suma, count(*) as payments
+from uhrady as u
+left join faktury as f on f.id = u.id_faktura
+where f.d_fakt > '20220000'
+group by u.id_faktura, f.d_fakt, f.suma
+order by 4 desc;
+
+
+select f.cislo, f.d_fakt, f.suma, u.suma
+from uhrady as u
+left join faktury as f on f.id = u.id_faktura
+where f.d_fakt > '20220000'
+order by 1 desc;
