@@ -73,7 +73,7 @@ where a.vs = 0
 
 select count(*) from yndev.import_consolidated where vs_filled = 0 and is_credit = 1;
 
-select * from yndev.import_consolidated where payer_name_filled = 'Čuvalová Jana, Ing.';
+select * from yndev.import_consolidated where payer_name_filled = 'masaryk';
 
 
 select count(*) from yndev.import_consolidated left join zakaznici on zmluva = vs where zakaznici.id is not null;
@@ -81,21 +81,39 @@ select count(*) from yndev.import_consolidated left join zakaznici on zmluva = v
 select count(*) from yndev.import_consolidated where vs_filled = 0;
 select count(*) from yndev.import_consolidated where vs_manual != 0;
 
-select * from yndev.import_consolidated where vs_manual != 0;
+select * from yndev.import_consolidated where vs_filled <= 0 order by payer_name,payer_iban,origin;
 
 select meno, zmluva from yellownet.zakaznici where meno like '%vacula%';
 select * from zakaznici where id = 140823;
 select * from zakaznici where obec = 'kunov' or install_obec = 'kunov';
-select * from zakaznici where zmluva = 7002;
+select * from zakaznici where zmluva = 2024;
 
-select zmluva, f.*, z.* from faktury f join zakaznici z on z.id = id_zak where zmluva = 13095;
+select zmluva, f.*, z.* from faktury f join zakaznici z on z.id = id_zak where zmluva = 2024;
+select sum(amount) from yndev.import_consolidated where vs = 2024 order by payment_date;
 select * from faktury left join zakaznici z on z.id = id_zak where d_fakt > 202000 and suma > 1000;
-select * from platby where datum_platby = '2022-05-05';
+select sum(suma) from platby p where p.vs = 2024 and datum_platby < '2022-01-01' order by datum_platby;
 
 select zmluva, p.* from platby p left join zakaznici z on id_customer = z.id 
-where iban = 'SK9002000000001001018151' or account like '1001018151' 
+where iban = 'SK2465000000000002516684' or account like '2516684' 
 	or sender like '%plyn%' 
 	or popis like '%plyn%' 
 order by datum_platby;
 
 select * from faktury left join zakaznici z on z.id = id_zak where d_fakt = 20220212 and suma = 25;
+
+## 2007-04-01 - 31.12.2021 zaplatila 1040.02 eur
+## 01.01.2022 - 31.12.2023 zaplatila 450.60 eur
+## spolu 1490.62 eur
+## od 2007-04-01 je to 200 mesiacov x faktura za 13.30 eur = 2660 eur
+## dlzna 1169.38 eur
+
+
+
+select * from platby p where p.datum_platby = '2022-01-03';
+/* id	id_customer	suma	vs	ss	datum_platby	zdroj	file	day_index	popis	account	bank	sender	iban
+84921	101	6.61	1003	0	2022-01-03	banka	export_SK0702000000002278166653_03-01-2022-03-01-2022.TXT	7	INTERNET	0000002915968836	1100
+*/
+
+select datum_platby, count(*) from platby p where p.datum_platby between '2022-01-01' and '2022-04-26' group by datum_platby order by 1;
+select datum_platby, count(*) from yndev.platby_new p where p.datum_platby between '2022-01-01' and '2022-04-26' group by datum_platby order by 1;
+
