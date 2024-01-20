@@ -2,7 +2,7 @@
 ###### iban to payer lookup table
 	drop table if exists yndev.import_lookup_iban2payer;
 
-	create table yndev.import_lookup_iban2payer as
+	create temporary table yndev.import_lookup_iban2payer as
 	select payer_iban, max(payer_name) as payer_name
     from yndev.import_raw
     where payer_iban is not null
@@ -14,7 +14,7 @@
 ###### payer to vs lookup table
 	drop table if exists yndev.import_lookup_payer2vs;
 
-	create table yndev.import_lookup_payer2vs as
+	create temporary table yndev.import_lookup_payer2vs as
 	select payer_name, max(vs) as vs
 	from yndev.import_raw
 	where payer_name is not null
@@ -26,7 +26,7 @@
 ###### iban_payer to vs
 	drop table if exists yndev.import_lookup_ibanpayer2vs;
 
-	create table yndev.import_lookup_ibanpayer2vs as
+	create temporary table yndev.import_lookup_ibanpayer2vs as
 	select vs,concat(payer_iban,'_',payer_name) as iban_payer
 	from yndev.import_raw
 	order by 1
