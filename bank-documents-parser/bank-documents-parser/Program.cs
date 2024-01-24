@@ -15,7 +15,7 @@ var jsonOptions = new JsonSerializerOptions
     ReadCommentHandling = JsonCommentHandling.Skip,
 };
 
-var PaymentsSqlTableName = "import_raw";
+var PaymentsSqlTableName = "yndev.import_raw";
 var PaymentsSqlTableCreateScript = $@"############## TABLE CREATION BELOW
 
 #drop table if exists {PaymentsSqlTableName};
@@ -28,6 +28,7 @@ create table if not exists {PaymentsSqlTableName}
     is_credit bool not null,
     amount decimal(8,2) not null,
     vs int(10) null,
+    ss int(10) null,
     origin varchar(100) not null,
     payer_iban varchar(24) null,
     payer_name nvarchar(100) null,
@@ -199,6 +200,7 @@ string PaymentFieldsToSql(IPayment payment)
     try
     {
         int.TryParse(payment.VariableSymbol, out var vs);
+        int.TryParse(payment.SpecificSymbol, out var ss);
         var line = new[] {
             "default",
             $"{payment.Index}", 
@@ -206,6 +208,7 @@ string PaymentFieldsToSql(IPayment payment)
             $"{payment.IsCredit}",
             $"{payment.Amount.ToString("#.00", System.Globalization.CultureInfo.InvariantCulture)}",
             $"{vs}",
+            $"{ss}",
             $"'{payment.Origin?.Replace('\'', '`')}'",
             $"'{payment.PayerIban}'",
             $"'{payment.PayerName?.Replace('\'', '`')}'",

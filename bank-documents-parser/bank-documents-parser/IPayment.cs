@@ -10,6 +10,8 @@
 
         string VariableSymbol { get; set; }
 
+        string SpecificSymbol { get; set; }
+
         public bool IsCredit { get; set; }
 
         string Origin { get; set; }

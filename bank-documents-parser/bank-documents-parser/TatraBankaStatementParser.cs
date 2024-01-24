@@ -15,7 +15,7 @@ namespace bank_documents_parser
         private readonly string CsvHeader;
         private readonly string? Password;
         private readonly string SearchPattern;
-        public const string SymbolsPattern = @"/VS/*(?<vs>\d*).*";
+        public const string SymbolsPattern = @"/VS/*(?<vs>\d*)/SS/*(?<ss>\d*).*";
         public const string CleanupPattern = @"(^------*\r\n)|(^.*popis.*\r\n)|(^Mena .*\r\n)|(^.* Maji.*\r\n)";
         public const string RowPattern_Payment =
               @"(?<date_process>\d{2}\.\d{2}\.\d{4})\s(?<type>platba|tpp|\S)+\s(?<account>\S*)( (?<date_invoice>\d{2}\.\d{2}\.\d{4}))? (?<amount>[,\d]*.\d{2})
@@ -291,7 +291,9 @@ detail: (?<detail>[^\r\n]*))?";
                 var payer_iban = match.Groups["payer_iban"].Value;
                 var payer_name = match.Groups["payer_name"].Value.Trim();
                 var detail = match.Groups["detail"].Value;
-                var vs = Regex.Match(payer_reference, SymbolsPattern).Groups["vs"].Value;
+                var symbolsMatch = Regex.Match(payer_reference, SymbolsPattern);
+                var vs = symbolsMatch.Groups["vs"].Value;
+                var ss = symbolsMatch.Groups["ss"].Value;
                 var payment_type =
                     type == "tpp" ? PaymentType.Permanent :
                     type == "platba" ? PaymentType.Manual :
@@ -310,6 +312,7 @@ detail: (?<detail>[^\r\n]*))?";
                     BankReference = bank_reference,
                     PayerReference = payer_reference,
                     VariableSymbol = vs,
+                    SpecificSymbol = ss,
                     PayerBank = payer_bank,
                     PayerIban = payer_iban,
                     PayerName = payer_name,

@@ -206,6 +206,7 @@ namespace bank_documents_parser
                         BankReference = default,
                         PayerReference = $"/VS{vs}/KS{ks}/SS{ss}",
                         VariableSymbol = vs,
+                        SpecificSymbol = ss,
                         PayerBank = default,
                         PayerIban = default,
                         PayerName = $"{payer_lname} {payer_fname}",

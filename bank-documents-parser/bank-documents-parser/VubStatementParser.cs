@@ -15,7 +15,7 @@ namespace bank_documents_parser
         private readonly string Output;
         private readonly string CsvHeader;
         private readonly string FileSearchPattern;
-        public const string SymbolsPattern = @"/VS/*(?<vs>\d*).*";
+        public const string SymbolsPattern = @"/VS/*(?<vs>\d*)/SS/*(?<ss>\d*).*";
         public const string EntryPattern = @" *<Ntry>\n.*<NtryRef>#PAYMENT_ID#</NtryRef>(\n.*?)*?</Ntry>";
 
         public VubStatementParser(AppSettings appSettings)
@@ -125,11 +125,13 @@ namespace bank_documents_parser
                     Log.Debug(context, $"Reading entry {ntry.CdtDbtInd} - {index} - {paymentId} - {amount}...");
 
                     var isCredit = ntry.CdtDbtInd == "CRDT";
-                    var dateBook = ntry.BookgDt?.Dt;
+                    var dateBook = ntry.BookgDt?.Dt ?? ntry.ValDt.Dt;
                     var dateVal = ntry.ValDt.Dt;
                     var bankRef = ntry.NtryDtls.TxDtls.Refs.InstrId;
                     var payerRef = ntry.NtryDtls.TxDtls.Refs.EndToEndId;
-                    var vs = Regex.Match(payerRef, SymbolsPattern).Groups["vs"].Value;
+                    var symbolsMatch = Regex.Match(payerRef, SymbolsPattern);
+                    var vs = symbolsMatch.Groups["vs"].Value;
+                    var ss = symbolsMatch.Groups["ss"].Value;
                     var payerName = ntry.NtryDtls.TxDtls.RltdPties.Dbtr?.Nm;
                     var account = ntry.NtryDtls.TxDtls.RltdPties.DbtrAcct.Id.IBAN;
                     var street = ntry.NtryDtls.TxDtls.RltdPties.Dbtr?.PstlAdr?.StrtNm;
@@ -145,8 +147,8 @@ namespace bank_documents_parser
                     var payment = new Payment
                     {
                         Index = index + 1,
-                        DateProcessed = dateVal,
-                        DateInvoiced = dateBook,
+                        DateProcessed = dateBook,
+                        DateInvoiced = dateVal,
                         PaymentType = PaymentType.Manual,
                         Account = account,
                         IsCredit = isCredit,
@@ -155,6 +157,7 @@ namespace bank_documents_parser
                         BankReference = bankRef,
                         PayerReference = payerRef,
                         VariableSymbol = vs,
+                        SpecificSymbol = ss,
                         PayerBank = default,
                         PayerIban = account,
                         PayerName = payerName,

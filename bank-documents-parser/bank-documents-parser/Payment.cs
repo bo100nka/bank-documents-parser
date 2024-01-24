@@ -18,6 +18,8 @@
 
         public string VariableSymbol { get; set; }
 
+        public string SpecificSymbol { get; set; }
+
         public string Origin { get; set; }
         
         public string PayerReference { get; set; }
@@ -38,7 +40,7 @@
 
         public override string ToString()
         {
-            return $"{DateProcessed} - {Amount} - {PaymentType} - {PayerName} - VS:{VariableSymbol} - ID:{PaymentId} - @{Index} - File:{Origin} - {Source}";
+            return $"{DateProcessed} - {Amount} - {PaymentType} - {PayerName} - VS:{VariableSymbol}/SS:{SpecificSymbol} - ID:{PaymentId} - @{Index} - File:{Origin} - {Source}";
         }
     }
 }
