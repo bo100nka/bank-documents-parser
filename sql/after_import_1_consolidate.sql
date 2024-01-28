@@ -383,6 +383,8 @@ order by payer_name, payment_date
     group by ic.payer_iban, ic.payer_name
     order by 2;
 
+/*
+
 select id,count(*) from yndev.import_consolidated group by id having count(*) > 1 order by 2 desc;
 select id,count(*) from yndev.import_raw group by id having count(*) > 1 order by 2 desc;
 select * from yndev.import_consolidated where id in (1681,2214);
@@ -413,3 +415,7 @@ select ic.*, z.id customer_id, z.meno from yndev.import_consolidated as ic left 
 
 select * from zakaznici where zmluva = 4194;
 select * from zakaznici where id = 1083;
+select * from yndev.faktury_source where id_zak = 964;
+
+select * from yndev.uhrady_new where id_zak = 964;
+*/

@@ -1,6 +1,40 @@
+drop procedure if exists yndev.match_payments_to_invoices;
 
-# call yndev.match_payments_to_invoices();
+delimiter $$
 
+create procedure yndev.match_payments_to_invoices()
+begin
+
+
+############ create steps table
+
+	drop table if exists yndev.customer_steps;
+
+	create table yndev.customer_steps
+	(
+		id_zak int primary key,
+		step_f int not null,
+		step_p int not null,
+		steps_f int not null,
+		steps_p int not null,
+		saldo decimal(8,2) not null
+	);
+
+############ create extended invoice_payments
+
+	drop table if exists yndev.uhrady_new;
+
+
+	create table yndev.uhrady_new like yellownet.uhrady;
+	alter table yndev.uhrady_new add suma_p decimal(10,2);
+	alter table yndev.uhrady_new add suma_f decimal(10,2);
+	alter table yndev.uhrady_new add datum date;
+	alter table yndev.uhrady_new add id_zak int;
+	alter table yndev.uhrady_new add balance decimal(10,2);
+	alter table yndev.uhrady_new add step_f int;
+	alter table yndev.uhrady_new add step_p int;
+
+############ init first step one time
 
 	truncate table yndev.uhrady_new;
 	truncate table yndev.customer_steps;
@@ -8,8 +42,10 @@
 	insert into yndev.customer_steps
 	select distinct id_zak, 1, 1, 1, 1, 0 
 	from yndev.faktury_source
-    #where id_zak in (106)
+    #where id_zak = 102
     ;
+
+	set @rowcount = row_count();
     
     update yndev.customer_steps as cs
     join (select id_zak, max(step) as step_max from yndev.faktury_source group by id_zak) as f on f.id_zak = cs.id_zak
@@ -21,20 +57,17 @@
     set cs.steps_p = p.step_max
     ;
     
-    
-    
-    select * from yndev.faktury_source;
-    select * from yndev.platby_source;
-    
-    select u.*, cs.steps_f, cs.steps_p
-    from yndev.uhrady_new as u
-    join yndev.customer_steps as cs on cs.id_zak = u.id_zak
-    order by u.id_zak, u.step_f, u.step_p;
-    
-    select id_zak, saldo, step_f, step_p, steps_f, steps_p from yndev.customer_steps;
+	#select * from yndev.customer_steps;
+    #select * from yndev.platby_source
 
+############ loop
 
-		# insert into yndev.uhrady_new
+	while @rowcount > 0 do
+
+		##### pair payments with invoices for the current step per customer
+
+		insert into yndev.uhrady_new
+        
 		select 
 			null as id, 
 			coalesce(f.id, -1) as f_id, 
@@ -91,20 +124,8 @@
 			,saldo = u.balance
 		;
 
+	end while;
 
+end$$
 
-
-select * from yndev.customer_steps;
-update yndev.customer_steps set step_f = 4, step_p = 4, saldo = 0;
-
-
-
-
-select * from yndev.customer_balance order by id_zak, step_f, step_p limit 0,40000;
-select * from yndev.customer_balance order by id_zak, step_f, step_p limit 40001,40000;
-select * from yndev.customer_balance order by id_zak, step_f, step_p limit 80002,40000;
-
-select * from yndev.uhrady_new limit 5;
-
-
-select * from yndev.customer_balance where id_zak = 1583 order by datum_platby desc;
+delimiter ;
