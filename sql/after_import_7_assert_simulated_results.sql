@@ -28,5 +28,5 @@
 		and ua.id_faktura = un.id_faktura 
 		and ua.id_platba = un.id_platba
 	#where ua.id_zak = 102
-	order by ua.id_zak; 
+	order by ua.id_zak, ua.step_f, ua.step_p; 
 

@@ -8,7 +8,7 @@
 	insert into yndev.customer_steps
 	select distinct id_zak, 1, 1, 1, 1, 0 
 	from yndev.faktury_source
-    #where id_zak in (106)
+    #where id_zak in (107)
     ;
     
     update yndev.customer_steps as cs
@@ -44,12 +44,20 @@
 				case when /*PREVIOUS DEBT*/ cs.saldo < 0 then
 					case when /*SUFFICIENT PAY*/ p.suma >= -cs.saldo then -cs.saldo else /*INSUFFICIENT PAYMENT*/ p.suma end
 				else 
-					case when /*UNSPENT CREDIT*/ cs.saldo > 0 then
-						case when /*SUFFICIENT CREDIT*/ cs.saldo >= f.suma then f.suma else /*INSUFFICIENT CREDIT*/ cs.saldo end
-					else /*NO PREVIOUS DEBT TO PAY NOR CREDIT TO DRAIN*/
-						case when /*SUFFICIENT PAYMENT*/ p.suma >= f.suma then f.suma else /*INSUFFICIENT PAYMENT*/ p.suma end
-				end end
+					case when f.id is null then 
+						p.suma 
+					else
+						case when /*UNSPENT CREDIT*/ cs.saldo > 0 then
+							case when /*SUFFICIENT CREDIT*/ cs.saldo >= f.suma then f.suma else /*INSUFFICIENT CREDIT*/ cs.saldo end
+						else /*NO PREVIOUS DEBT TO PAY NOR CREDIT TO DRAIN*/
+							case when /*SUFFICIENT PAYMENT*/ p.suma >= f.suma then f.suma else /*INSUFFICIENT PAYMENT*/ p.suma end
+						end 
+					end
+				end
 			, 0) as suma,
+            #case when /*SUFFICIENT PAYMENT*/ p.suma >= f.suma then f.suma else /*INSUFFICIENT PAYMENT*/ p.suma end as test123,
+            #case when /*SUFFICIENT CREDIT*/ cs.saldo >= f.suma then f.suma else /*INSUFFICIENT CREDIT*/ cs.saldo end as testxyz,
+            #cs.saldo as test444,
 			coalesce(p.suma, 0) as suma_p, 
 			coalesce(f.suma, 0) as suma_f, 
  			coalesce(p.datum_platby, '1900-01-01') as datum,
@@ -100,11 +108,26 @@ update yndev.customer_steps set step_f = 4, step_p = 4, saldo = 0;
 
 
 
-select * from yndev.customer_balance order by id_zak, step_f, step_p limit 0,40000;
-select * from yndev.customer_balance order by id_zak, step_f, step_p limit 40001,40000;
-select * from yndev.customer_balance order by id_zak, step_f, step_p limit 80002,40000;
+select * from yndev.customer_balance_detail order by id_zak, step_f, step_p limit 0,40000;
+select * from yndev.customer_balance_detail order by id_zak, step_f, step_p limit 40001,40000;
+select * from yndev.customer_balance_detail order by id_zak, step_f, step_p limit 80002,40000;
 
 select * from yndev.uhrady_new limit 5;
 
 
 select * from yndev.customer_balance where id_zak = 1583 order by datum_platby desc;
+select * from yndev.customer_balance where meno like '%albrecht%';
+
+
+select * from yndev.platby_source where id_customer = 978;
+
+select sum(suma) from yndev.platby_source where id_customer = 978;
+select 
+	sum(case when coalesce(id_customer, -1) = -1 then suma else 0 end) as unmatched_payments_amount
+	,sum(case when coalesce(id_customer, -1) = -1 then 0 else suma end) as matched_payments_amount
+    , sum(suma) as total_payments_amount  from yndev.platby_source 
+
+;
+
+select id_customer, count(*) from yndev.platby_source group by id_customer order by 1;
+

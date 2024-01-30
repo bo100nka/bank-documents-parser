@@ -77,11 +77,16 @@ begin
 				case when /*PREVIOUS DEBT*/ cs.saldo < 0 then
 					case when /*SUFFICIENT PAY*/ p.suma >= -cs.saldo then -cs.saldo else /*INSUFFICIENT PAYMENT*/ p.suma end
 				else 
-					case when /*UNSPENT CREDIT*/ cs.saldo > 0 then
-						case when /*SUFFICIENT CREDIT*/ cs.saldo >= f.suma then f.suma else /*INSUFFICIENT CREDIT*/ cs.saldo end
-					else /*NO PREVIOUS DEBT TO PAY NOR CREDIT TO DRAIN*/
-						case when /*SUFFICIENT PAYMENT*/ p.suma >= f.suma then f.suma else /*INSUFFICIENT PAYMENT*/ p.suma end
-				end end
+					case when f.id is null then 
+						p.suma 
+					else
+						case when /*UNSPENT CREDIT*/ cs.saldo > 0 then
+							case when /*SUFFICIENT CREDIT*/ cs.saldo >= f.suma then f.suma else /*INSUFFICIENT CREDIT*/ cs.saldo end
+						else /*NO PREVIOUS DEBT TO PAY NOR CREDIT TO DRAIN*/
+							case when /*SUFFICIENT PAYMENT*/ p.suma >= f.suma then f.suma else /*INSUFFICIENT PAYMENT*/ p.suma end
+						end 
+					end
+				end
 			, 0) as suma,
 			coalesce(p.suma, 0) as suma_p, 
 			coalesce(f.suma, 0) as suma_f, 

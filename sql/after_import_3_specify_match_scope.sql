@@ -5,7 +5,7 @@
     create temporary table yndev.customers_limit as
     select distinct id
     from zakaznici
-    #where id in (1583)
+    #where id in (978)
     ;
 
 
