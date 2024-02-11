@@ -154,6 +154,7 @@ namespace bank_documents_parser
                 Log.Debug(context, $"Parsing header row 2...");
                 var match_header2 = Regex.Match(lines[1], LineHeader2_Pattern);
                 Log.Debug(context, $"Parsed header row 2.");
+                var origin = Path.GetFileName(file);
 
                 for (int row = 2; row < lines.Length - 2; row++)
                 {
@@ -184,13 +185,12 @@ namespace bank_documents_parser
                     var payer_post = match_data.Groups["payer_post"].Value.Trim();
                     var payer_message = match_data.Groups["payer_message"].Value.Trim();
 
-                    var sources = match_data.Groups
+                    var sources_data = match_data.Groups
                         .Cast<Group>()
                         .Where(g => g.Index > 0)
-                        .Select(g => $"{g.Name}:`{g.Value}`")
+                        .Select(g => $"{g.Name}:`{g.Value?.Trim()}`")
                         .ToArray();
-                    var source = string.Join(",", sources);
-                    var origin = Path.GetFileName(file);
+                    var source = string.Join(",", sources_data);
                     var payerName = payer_fname != null ? $"{payer_lname} {payer_fname}" : payer_lname;
 
                     var payment = new Payment
@@ -225,6 +225,34 @@ namespace bank_documents_parser
 
                 Log.Debug(context, $"Parsing footer row 2...");
                 var match_footer2 = Regex.Match(lines[lines.Length - 1], LineFooter2_Pattern);
+
+                var date_processed = DateTime.ParseExact(match_header2.Groups["date_process"].Value, "ddMMyyyy", CultureInfo.InvariantCulture);
+                var amount_statement = decimal.Parse(match_footer2.Groups["amount_statement"].Value) / 100;
+                var org_name = match_header1.Groups["org_name"].Value?.Trim();
+                var sources_footer = match_footer2.Groups.Cast<Group>().Where(g => g.Index > 0).Select(g => $"{g.Name}:`{g.Value?.Trim()}`");
+                var expense = new Payment
+                {
+                    Index = 0,
+                    DateProcessed = date_processed,
+                    DateInvoiced = date_processed,
+                    PaymentType = PaymentType.Post,
+                    Account = default,
+                    IsCredit = false,
+                    Amount = amount_statement,
+                    PaymentId = default,
+                    BankReference = default,
+                    PayerReference = default,
+                    VariableSymbol = default,
+                    SpecificSymbol = default,
+                    PayerName = org_name,
+                    Detail = default,
+                    Origin = origin,
+                    PayerBank = default,
+                    PayerIban = default,
+                    Source = string.Join(",", sources_footer),
+                };
+
+                payments.Add(expense);
                 Log.Debug(context, $"Parsed footer row 2.");
 
                 outPayments = payments.ToArray();
