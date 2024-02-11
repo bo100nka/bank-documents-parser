@@ -15,6 +15,10 @@ namespace bank_documents_parser
             foreach (var attachment in attachments)
             {
                 var outFile = Path.Combine(outDir, attachment.FileName);
+
+                if (File.Exists(outFile) && attachment.Data.Length != new FileInfo(outFile).Length)
+                    throw new ApplicationException($"Attempted to extract {attachment.FileName} - File {outFile} already exists!");
+
                 File.WriteAllBytes(outFile, attachment.Data);
             }
 
