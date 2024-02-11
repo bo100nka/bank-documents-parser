@@ -363,10 +363,38 @@
 order by payer_name, payment_date
 	;
 
+	insert into yndev.import_consolidated
+    select 
+		r.id
+		,r.payment_index
+		,r.payment_date
+		,r.is_credit
+		,r.amount
+		,r.vs
+		,r.ss
+        ,r.origin
+		,r.payer_iban
+        ,r.payer_name
+		,r.detail
+		,r.payment_id
+		,r.bank_ref
+		,r.payer_ref
+        ,-1 as customer_Id
+        ,r.vs as vs_orig
+        ,r.vs as vs_from_payer
+        ,r.vs as vs_from_typo
+        ,r.vs as vs_from_iban_payer
+        ,r.vs as vs_from_adhoc_invoice
+	from yndev.import_raw as r
+	where is_credit = 0 and origin like 'st1%'
+    ;
+
+
+
 	# payments with missing vs after consolidated
 	select * 
     from yndev.import_consolidated 
-    where vs = 0 or customer_id is null and is_credit = 1 
+    where (vs = 0 or customer_id is null) and is_credit = 1 
     order by payer_name, payment_date;
 
 	# payments with ignored customer_id after consolidated
@@ -418,4 +446,7 @@ select * from zakaznici where id = 1083;
 select * from yndev.faktury_source where id_zak = 964;
 
 select * from yndev.uhrady_new where id_zak = 964;
+
+select * from yndev.import_consolidated where is_credit = 0;
+select * from yndev.import_raw where is_credit = 0 and origin like 'st1%';
 */
