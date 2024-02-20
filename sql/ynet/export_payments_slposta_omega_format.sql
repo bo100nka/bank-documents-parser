@@ -19,6 +19,7 @@ Odstran vsetky NULL hodnoty - CTRL+H - hladany vyraz: NULL, Nahradit s: prazdne 
 */
 #select e, count(*) x from (
 
+
 select a_row_type, b_record_type, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
 	, aa, ab, ac, ad
 from 
@@ -42,26 +43,23 @@ from
 	select
 		 concat('melisko_', p.id_customer, '_', p.datum_platby, '_', p.day_index, '_fid000000')	as melisko
 		,'R01' 															as a_row_type
-        ,170															as b_doc_type # BV/Bank Statement
-        , case p.zdroj
-			when 'tatrabanka' then 'TATR'
-            when 'banka' then 'SUBA' end								as c_tally_code
-        , case p.zdroj
-			when 'tatrabanka' then 'TATR'
-            when 'banka' then 'SUBA' end								as d_sequence_code
-		,concat( #BU-{TB/VUB}-DDMMYYYY-A-XX
-			'BU', 
-			case p.zdroj when 'tatrabanka' then 'TB' when 'banka' then 'VUB' end,
-            '-A-', 
-            date_format(p.datum_platby, '%d%m%Y'), '-', right(concat('00', di.day_index), 2)
+        ,180															as b_doc_type # Internal Document
+        ,'IDUP'															as c_tally_code
+        ,'X'															as d_sequence_code
+		,concat( # IDUHTATR{YYYYMMDD}{12}
+			'IDUHTATR', 
+            date_format(p.datum_platby, '%Y%m%d'), '-', right(concat('00', di.day_index), 2)
 		)																as e_internal_number
-        ,''																as f_external_number
+		,concat( # IDUHTATR{YYYYMMDD}{12}
+			'IDUHTATR', 
+            date_format(p.datum_platby, '%Y%m%d'), '-', right(concat('00', di.day_index), 2)
+		)																as f_external_number
 		,left(concat(z.meno, ' (', z.zmluva, ')'), 75)					as g_partners_name
 		,case z.ico when 0 then null else z.ico end						as h_ico
 		,case z.ico when 0 then null else z.dic end						as i_tax_partner
 		,date_format(p.datum_platby, '%d.%m.%Y')						as j
         ,''																as k
-        ,''																as l
+		,date_format(p.datum_platby, '%d.%m.%Y')						as l
 		,date_format(p.datum_platby, '%d.%m.%Y')						as m
 		,date_format(p.datum_platby, '%d.%m.%Y')						as n
         ,'EUR'															as o
@@ -79,16 +77,16 @@ from
         ,0																as aa
         ,0																as ab
         ,0																as ac
-        ,'(Nedefinované)'												as ad
+        ,'Martin'														as ad
 
 	FROM yndev.platby_new p
     join (select distinct id_platba from yndev.uhrady_new where id_faktura != -1) ud on p.id = ud.id_platba # ignore payments without invoice
-    join (select id, row_number() over (partition by zdroj, datum_platby order by zdroj, datum_platby) as day_index from yndev.platby_new) as di on di.id = p.id
+    join (select id, row_number() over (partition by datum_platby order by datum_platby) as day_index from yndev.platby_new) as di on di.id = p.id
 	join zakaznici z on z.id = p.id_customer
 	where 1=1 
-    and p.zdroj != 'posta' 
+    and p.zdroj = 'posta' 
     and p.datum_platby between '2023-01-01' and '2023-12-31'
-    #and z.zmluva =1173#in (1174,6023,1152)
+    and z.zmluva =9070#in (1174,6023,1152)
     #order by melisko
 	#*/
 
@@ -103,17 +101,13 @@ from
 		 concat('melisko_', u.id_zak, '_', p.datum_platby, '_', p.day_index, '_fid', f.cislo)	as melisko
 		,'R02' 															as a_row_type
         ,0																as b_item_type
-        ,case zdroj 
-			when 'tatrabanka' then 221
-			when 'banka' then 221 end									as c
-        ,case zdroj 
-			when 'tatrabanka' then 100
-			when 'banka' then 200 end									as d
+        ,315															as c
+        ,100															as d
         ,311															as e
         ,100															as f
 		,u.suma															as g
 		,u.suma															as h
-        ,concat('úhrada dokladu ', f.cislo)								as i
+        ,left(concat('Zákazník:', z.meno, ' (', z.zmluva, ') data z PP ', z.meno), 60) as i
         ,'V'															as j
         ,f.cislo														as k
 		,null as l,null as m,null as n,null as o,null as p,null as q,null as r,null as s,null as t,null as u,null as v,null as w,null as x,null as y,null as z
@@ -124,16 +118,15 @@ from
     join yndev.platby_new as p on p.id = u.id_platba
     join yndev.faktury_new as f on f.id = u.id_faktura
 	where 1=1 
-    and p.zdroj != 'posta'
+    and p.zdroj = 'posta'
     and f.d_fakt between '20230101' and '20231231'
-    #and z.zmluva =1173#in (1174)#,6023,1152)
+    and z.zmluva =9070#in (1174)#,6023,1152)
     #order by melisko
 	#*/
 	)
 
 	order by melisko, a_row_type
 ) as result
-
 
 #) data group by e having x > 1 order by 2 desc
 

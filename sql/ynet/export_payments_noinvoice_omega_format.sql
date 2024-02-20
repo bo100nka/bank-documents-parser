@@ -17,7 +17,9 @@ v pravom dolnom rohu zmen pravym kliknutim mysi sposob riadakovania (z Unix LF n
 Zmen kodovanie cez hornu ponuku: Enkoding - Convert to ANSI
 Odstran vsetky NULL hodnoty - CTRL+H - hladany vyraz: NULL, Nahradit s: prazdne - nahradit vsetko.
 */
+
 #select e, count(*) x from (
+
 
 select a_row_type, b_record_type, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
 	, aa, ab, ac, ad
@@ -82,7 +84,7 @@ from
         ,'(Nedefinované)'												as ad
 
 	FROM yndev.platby_new p
-    join (select distinct id_platba from yndev.uhrady_new where id_faktura != -1) ud on p.id = ud.id_platba # ignore payments without invoice
+    join (select distinct id_platba from yndev.uhrady_new where id_faktura = -1) ud on p.id = ud.id_platba # ignore payments without invoice
     join (select id, row_number() over (partition by zdroj, datum_platby order by zdroj, datum_platby) as day_index from yndev.platby_new) as di on di.id = p.id
 	join zakaznici z on z.id = p.id_customer
 	where 1=1 
@@ -92,49 +94,8 @@ from
     #order by melisko
 	#*/
 
-	
-
-	union all
-
-	#/*
-	
-	(
-	select
-		 concat('melisko_', u.id_zak, '_', p.datum_platby, '_', p.day_index, '_fid', f.cislo)	as melisko
-		,'R02' 															as a_row_type
-        ,0																as b_item_type
-        ,case zdroj 
-			when 'tatrabanka' then 221
-			when 'banka' then 221 end									as c
-        ,case zdroj 
-			when 'tatrabanka' then 100
-			when 'banka' then 200 end									as d
-        ,311															as e
-        ,100															as f
-		,u.suma															as g
-		,u.suma															as h
-        ,concat('úhrada dokladu ', f.cislo)								as i
-        ,'V'															as j
-        ,f.cislo														as k
-		,null as l,null as m,null as n,null as o,null as p,null as q,null as r,null as s,null as t,null as u,null as v,null as w,null as x,null as y,null as z
-		,null as aa,null as ab,null as ac,null as ad
-
-	FROM yndev.uhrady_new u
-	join zakaznici z on z.id = u.id_zak
-    join yndev.platby_new as p on p.id = u.id_platba
-    join yndev.faktury_new as f on f.id = u.id_faktura
-	where 1=1 
-    and p.zdroj != 'posta'
-    and f.d_fakt between '20230101' and '20231231'
-    #and z.zmluva =1173#in (1174)#,6023,1152)
-    #order by melisko
-	#*/
-	)
 
 	order by melisko, a_row_type
 ) as result
-
-
 #) data group by e having x > 1 order by 2 desc
-
 ;

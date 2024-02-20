@@ -360,6 +360,7 @@
 			case p2v.vs when 0 then null else p2v.vs end, 
             0)
 	where is_credit = 1 #and coalesce(case r.payer_name when '' then null else r.payer_name end, i2p.payer_name) like '%kapsa%'
+    and r.payment_date >= '2023-01-01'
 order by payer_name, payment_date
 	;
 
@@ -411,10 +412,13 @@ order by payer_name, payment_date
     group by ic.payer_iban, ic.payer_name
     order by 2;
 
+
+
 /*
 
 select id,count(*) from yndev.import_consolidated group by id having count(*) > 1 order by 2 desc;
 select id,count(*) from yndev.import_raw group by id having count(*) > 1 order by 2 desc;
+select * from yndev.import_consolidated where id_zak = 1268
 select * from yndev.import_consolidated where id in (1681,2214);
 
 	select *

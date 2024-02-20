@@ -22,7 +22,7 @@
 
 	select 
 		d.id_zak, d.zmluva, d.meno, obec, install_obec, ico, dic, icdph
-        , max_step_f, max_step_p, total_invoiced, total_paid, balance
+        , max_step_f, max_step_p, total_invoiced, round(total_paid, 2) as total_paid, balance
         , date_format(min_d_fakt, '%Y-%m-%d') as min_d_fakt
         , date_format(max_d_fakt, '%Y-%m-%d') as max_d_fakt
         , case min_d_pay when '2050-01-01' then '1900-01-01' else min_d_pay end as min_d_pay, max_d_pay

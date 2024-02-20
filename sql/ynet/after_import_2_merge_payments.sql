@@ -25,7 +25,7 @@
 		,ic.payer_iban 		as iban
 	from yndev.import_consolidated as ic
 	left join zakaznici z on z.zmluva = ic.vs
-    #where z.id = 5904
+    #where payment_date >= '2023-01-01' #z.id = 5904
 	order by datum_platby, id_customer, suma
 	;
     #select id_customer, count(*) from platby group by id_customer order by 1;
@@ -33,7 +33,7 @@
     #select * from yndev.import_consolidated where amount = 5904.00 order by id desc
 
 ####### blacklist existing payments so that they can be replaced
-
+/*
 	drop table if exists yndev.platby_blacklist;
     
     create temporary table yndev.platby_blacklist as
@@ -46,11 +46,11 @@
 	#where pn.id_customer = 1214 and pn.datum_platby = '2022-01-04'
 	order by p.datum_platby asc
 	;
-
+*/
 ######## insert old payments
-
+	/*
 	insert into yndev.platby_new
-	select null /*p.id*/, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
+	select null  as id, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
 	from platby as p
     left join yndev.platby_blacklist as pb on pb.id = p.id
     where pb.id is null and datum_platby between '2001-01-01' and '2010-12-31'
@@ -58,7 +58,7 @@
     ;
 
 	insert into yndev.platby_new
-	select null /*p.id*/, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
+	select null  as id, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
 	from platby as p
     left join yndev.platby_blacklist as pb on pb.id = p.id
     where pb.id is null and datum_platby between '2011-01-01' and '2015-12-31'
@@ -66,7 +66,7 @@
     ;
 
 	insert into yndev.platby_new
-	select null /*p.id*/, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
+	select null  as id, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
 	from platby as p
     left join yndev.platby_blacklist as pb on pb.id = p.id
     where pb.id is null and datum_platby between '2016-01-01' and '2017-12-31'
@@ -74,7 +74,7 @@
     ;
 
 	insert into yndev.platby_new
-	select null /*p.id*/, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
+	select null  as id, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
 	from platby as p
     left join yndev.platby_blacklist as pb on pb.id = p.id
     where pb.id is null and datum_platby between '2018-01-01' and '2019-12-31'
@@ -82,16 +82,16 @@
     ;
 
 	insert into yndev.platby_new
-	select null /*p.id*/, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
+	select null  as id, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
 	from platby as p
     left join yndev.platby_blacklist as pb on pb.id = p.id
     where pb.id is null and datum_platby between '2020-01-01' and '2021-12-31'
     order by datum_platby
     ;
-
+*/
 /*
 	#insert into yndev.platby_new
-	select null /*p.id*//*, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
+	select null  as id/*, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
 	from platby as p
     left join yndev.platby_blacklist as pb on pb.id = p.id
     where pb.id is null and datum_platby between '2022-01-01' and '2023-12-31'
