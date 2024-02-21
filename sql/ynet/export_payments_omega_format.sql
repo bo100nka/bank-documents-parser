@@ -83,16 +83,18 @@ from
 
 	FROM yndev.platby_new p
     join (select distinct id_platba from yndev.uhrady_new where id_faktura != -1) ud on p.id = ud.id_platba # ignore payments without invoice
+    join (select id_platba, min(d_fakt) min_d_fakt from yndev.uhrady_new u join yndev.faktury_new f on f.id = u.id_faktura group by id_platba) upf on upf.id_platba = p.id
     join (select id, row_number() over (partition by zdroj, datum_platby order by zdroj, datum_platby) as day_index from yndev.platby_new) as di on di.id = p.id
 	join zakaznici z on z.id = p.id_customer
 	where 1=1 
+    and upf.min_d_fakt <= '20231231'
     and p.zdroj != 'posta' 
     and p.datum_platby between '2023-01-01' and '2023-12-31'
-    #and z.zmluva =1173#in (1174,6023,1152)
+    #and z.zmluva =14007#in (1174,6023,1152)
     #order by melisko
 	#*/
 
-	
+	#select * from yndev.uhrady_new where id_platba = 8270
 
 	union all
 
@@ -125,8 +127,8 @@ from
     join yndev.faktury_new as f on f.id = u.id_faktura
 	where 1=1 
     and p.zdroj != 'posta'
-    and f.d_fakt between '20230101' and '20231231'
-    #and z.zmluva =1173#in (1174)#,6023,1152)
+    and f.d_fakt <= '20231231'
+    #and z.zmluva =14007#in (1174)#,6023,1152)
     #order by melisko
 	#*/
 	)
