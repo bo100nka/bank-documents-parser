@@ -14,6 +14,7 @@
 		,0					as ss
 		,ic.payment_date 	as datum_platby
 		,case when origin like '%.pdf' then 'tatrabanka' else
+
 		 case when origin like 'st1%' then 'posta' else null end end as zdroj
 		,ic.origin			as file
 		,ic.payment_index 	as day_index
@@ -32,7 +33,7 @@
     #select * from yidev.import_consolidated where amount = 5904.00 order by id desc
 
 ####### blacklist existing payments so that they can be replaced
-
+/*
 	drop table if exists yidev.platby_blacklist;
     
     create temporary table yidev.platby_blacklist as
@@ -50,7 +51,7 @@
 
 
 	insert into yidev.platby_new
-	select null /*p.id*/, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
+	select null as id, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
 	from platby as p
     left join yidev.platby_blacklist as pb on pb.id = p.id
     where pb.id is null and datum_platby between '2020-01-01' and '2021-12-31'
@@ -58,7 +59,7 @@
     ;
 
 	insert into yidev.platby_new
-	select null /*p.id*/, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
+	select null as id, p.id_customer, p.suma, p.vs, p.ss, p.datum_platby, p.zdroj, p.file, p.day_index, p.popis, p.account, p.bank, p.sender, p.iban
 	from platby as p
     left join yidev.platby_blacklist as pb on pb.id = p.id
     where pb.id is null and datum_platby between '2022-01-01' and '2023-12-31'

@@ -168,6 +168,7 @@
 			case p2v.vs when 0 then null else p2v.vs end, 
             0)
 	where is_credit = 1 #and coalesce(case r.payer_name when '' then null else r.payer_name end, i2p.payer_name) like '%kapsa%'
+    and r.payment_date >= '2023-01-01'
 order by payer_name, payment_date
 	;
 
