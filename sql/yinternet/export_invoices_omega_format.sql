@@ -53,19 +53,20 @@ from
 		,date_format(f.d_splat, '%d.%m.%Y')								as f_due_date
 		,date_format(f.d_fakt, '%d.%m.%Y')								as g_duzp
 		,0																as h_vat_base_lower
-		,round(f.cena_bez_dph, 4)										as i_vat_base_higher	### ynet
-		#,0																as i_vat_base_higher	### yinternet
+		#,round(f.cena_bez_dph, 4)										as i_vat_base_higher	### ynet
+		,0																as i_vat_base_higher	### yinternet
 		,0																as j_vat_base_null
-		,0																as k_vat_base_free		### ynet
-		#,round(f.cena_bez_dph, 4)										as k_vat_base_free		### yinternet
+		#,0																as k_vat_base_free		### ynet
+		,round(f.cena_bez_dph, 4)										as k_vat_base_free		### yinternet
 		,10																as l_vat_rate_lower
 		,20																as m_vat_rate_higher
 		,0																as n_vat_lower
-		,f.dph															as o_vat_higher			### ynet
-		#,0																as o_vat_higher			### yinternet
+		#,f.dph															as o_vat_higher			### ynet
+		,0																as o_vat_higher			### yinternet
 		,0																as p_price_correction
 		#,round(floor(f.cena_bez_dph * 1.2 * 100) / 100, 2)				as q_amount_foreign_currency
-		,round(f.cena_bez_dph * 1.2, 2)									as q_amount_foreign_currency
+		#,round(f.cena_bez_dph * 1.2, 2)									as q_amount_foreign_currency ### ynet
+		,f.cena_bez_dph													as q_amount_foreign_currency ### yinternet
 		,0																as r_record_type #0 = customer invoice
 		,'OF'															as s_tally_code
 		,'OF'															as t_code_of_sequence
@@ -92,7 +93,8 @@ from
 		,1																as ao_quantity
 		,1																as ap_exchange_rate
 		#,round(floor(f.cena_bez_dph * 1.2 * 100) / 100, 2)				as aq_amount_domestic_currency
-		,round(f.cena_bez_dph * 1.2, 2)									as aq_amount_domestic_currency
+		#,round(f.cena_bez_dph * 1.2, 2)								as aq_amount_domestic_currency ### ynet
+		,f.cena_bez_dph													as aq_amount_domestic_currency ### yinternet
 		,null															as ar_xxxxx
 		,null															as as_xxxxx
 		,null															as at_xxxxx
@@ -108,8 +110,8 @@ from
 		,null															as bd_xxxxx
 		,null															as be_xxxxx
 		,'SK'															as bf_partner_country
-		,'2022339121'													as bg_vat_of_supplier	### pre yellownet
-		#,null															as bg_vat_of_supplier	### pre yellowinternet
+		#,'2022339121'													as bg_vat_of_supplier	### pre yellownet
+		,null															as bg_vat_of_supplier	### pre yellowinternet
 		,'SK'															as bh_partner_country
 		,-3																as bi_round
 		,3																as bj_round_mode
@@ -147,7 +149,7 @@ from
 		,0																as cp_xxxxx
 	FROM faktury f 
 	left join zakaznici z on z.id = f.id_zak 
-	where d_fakt between '20240201' and '20240229' # and z.zmluva in (1174,6023,1152)
+	where d_fakt between '20230101' and '20231231' # and z.zmluva in (1174,6023,1152)
 	#*/
 
 	union all
@@ -163,8 +165,8 @@ from
 		,1																as c_quantity
 		,'ks'															as d_unit
 		,p.cena_bez_dph													as e_unit_price_without_vat
-		,'V'															as f_rate_of_vat	### ynet
-		#,null															as f_rate_of_vat	### yinternet
+		#,'V'															as f_rate_of_vat	### ynet
+		,null															as f_rate_of_vat	### yinternet
 		,0																as g_xxxxx
 		,p.cena_bez_dph													as h_list_price
 		,'0'																as i_xxxx
@@ -188,8 +190,8 @@ from
 		,'X'															as aa_xxxx
 		,'(Nedefinované)'												as ab_xxxx
 		,null															as ac_xxxx
-		,'03'															as ad_xxxx		### ynet
-		#,null															as ad_xxxx		### yinternet
+		#,'03'															as ad_xxxx		### ynet
+		,null															as ad_xxxx		### yinternet
 		,1																as ae_xxxx
 		,1																as af_xxxx
 		,1																as ag_xxxx
@@ -208,13 +210,15 @@ from
 		,3																as at_xxxx
 		,0																as au_xxxx
 		,null															as av_xxxx
-		,round(floor(p.cena_bez_dph * 1.2 * 100) / 100, 2)				as aw_list_price_with_vat
+		#,round(floor(p.cena_bez_dph * 1.2 * 100) / 100, 2)				as aw_list_price_with_vat ### ynet
+		,p.cena_bez_dph													as aw_list_price_with_vat ### yinternet
 		,0																as ax_xxxx
-		,round(floor(p.cena_bez_dph * 1.2 * 100) / 100, 2)				as ay_unit_price_with_vat
+		#,round(floor(p.cena_bez_dph * 1.2 * 100) / 100, 2)				as ay_unit_price_with_vat ### ynet
+		,p.cena_bez_dph													as ay_unit_price_with_vat ### yinternet
 		,0																as az_xxxx
 		,0																as ba_xxxx
-		,case z.ico when 0 then 'D2' else 'A1' end 						as bb_kvdph		### ynet
-		#,'X'									 						as bb_kvdph		### yinternet
+		#,case z.ico when 0 then 'D2' else 'A1' end 					as bb_kvdph		### ynet
+		,'X'									 						as bb_kvdph		### yinternet
 		,null															as bc_xxxx
 		,null															as bd_xxxx
 		,null															as be_xxxx
@@ -225,7 +229,7 @@ from
 	FROM faktury f 
 	left join faktury_polozky p on p.id_faktura = f.id
 	left join zakaznici z on z.id = f.id_zak 
-	where d_fakt between '20240201' and '20240229' # and z.zmluva in (1174,6023,1152)
+	where d_fakt between '20230101' and '20231231' # and z.zmluva in (1174,6023,1152)
 	order by h_list_price desc
 	#*/
 	)

@@ -226,7 +226,8 @@
 	insert into yndev.import_lookup_ibanpayer2vs values (10058,'SK4165000000000095650734_Vacula Peter');
 	insert into yndev.import_lookup_ibanpayer2vs values (-1,'SK7711000000002946082827_Yellow INTERNET, s.r.o.');
 	insert into yndev.import_lookup_ibanpayer2vs values (-1,'SK7711000000002946082827_Yellow INTERNET');
-
+	insert into yndev.import_lookup_ibanpayer2vs values (-1, 'SK5111110000001620128018_MICHAL HOLKOVIC');
+    
 	# from payments with wrong vs
 	#                                                    vs             iban + _ + name
 	insert into yndev.import_lookup_ibanpayer2vs values (9058, 'SK4402000000002874771956_ADIC SK, S.R.O.');
@@ -295,6 +296,9 @@
 	insert into yndev.import_lookup_ibanpayer2vs values (-1, 'SK4702000000003028657358_YELLOWNET,S.R.O.');
 	insert into yndev.import_lookup_ibanpayer2vs values (2183, 'SK8302000000003265012051_Zuzana Oravcova');
 	insert into yndev.import_lookup_ibanpayer2vs values (13056, 'SK8902000000003996136154_Zuzana Vašková');
+	insert into yndev.import_lookup_ibanpayer2vs values (-1, 'SK3609000000000312514537_EKONOMSERVIS, s. r. o.');
+	insert into yndev.import_lookup_ibanpayer2vs values (9023, 'SK7611000000002627811295_INTEGRUM s.r.o.');
+	insert into yndev.import_lookup_ibanpayer2vs values (-1, 'SK9411000000002943162821_TWINS STAV s. r. o.');
 
 	#select iban_payer, count(*) cnt from yndev.import_lookup_ibanpayer2vs group by iban_payer having cnt > 1;
 

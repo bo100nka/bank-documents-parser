@@ -81,7 +81,7 @@ from
         ,0																as aa
         ,0																as ab
         ,0																as ac
-        ,'(Nedefinované)'												as ad
+        ,'Martin'														as ad
 
 	FROM yndev.platby_new p
     join (select id, row_number() over (partition by zdroj, datum_platby order by zdroj, datum_platby) as day_index from yndev.platby_new) as di on di.id = p.id

@@ -20,7 +20,7 @@ Odstran vsetky NULL hodnoty - CTRL+H - hladany vyraz: NULL, Nahradit s: prazdne 
 #select e, count(*) x from (
 
 select a_row_type, b_record_type, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
-	, aa, ab, ac, ad
+	, aa, ab, ac, ad, ae, af, ag, ah, ai, aj, ak, al, am, an, ao
 from 
 (
 	#/*
@@ -29,7 +29,7 @@ from
 		,'R00'															as a_row_type
 		,'T00'															as b_record_type
 		,null as c,null as d,null as e,null as f,null as g,null as h,null as i,null as j,null as k,null as l,null as m,null as n,null as o,null as p,null as q,null as r,null as s,null as t,null as u,null as v,null as w,null as x,null as y,null as z
-		,null as aa,null as ab,null as ac,null as ad
+		,null as aa,null as ab,null as ac,null as ad,null as ae,null as af,null as ag,null as ah,null as ai,null as aj,null as ak,null as al,null as am,null as an,null as ao
 	union all
 	##*/
 
@@ -79,18 +79,29 @@ from
         ,0																as aa
         ,0																as ab
         ,0																as ac
-        ,'(Nedefinované)'												as ad
+        ,'Martin'														as ad
+        ,''																as ae
+        ,''																as af
+        ,upf.cislo														as ag
+        ,z.zmluva														as ah
+        ,'+'															as ai
+        ,''																as aj
+        ,z.zmluva														as ak
+        ,''																as al
+        ,'08:00:00'														as am
+        ,''																as an
+        ,coalesce(case p.popis when '' then null else left(p.popis, 60) end, 'Platba bez popisu')				as ao
 
 	FROM yndev.platby_new p
     join (select distinct id_platba from yndev.uhrady_new where id_faktura != -1) ud on p.id = ud.id_platba # ignore payments without invoice
-    join (select id_platba, min(d_fakt) min_d_fakt from yndev.uhrady_new u join yndev.faktury_new f on f.id = u.id_faktura group by id_platba) upf on upf.id_platba = p.id
+    join (select id_platba, min(d_fakt) min_d_fakt, min(cislo) cislo from yndev.uhrady_new u join yndev.faktury_new f on f.id = u.id_faktura group by id_platba) upf on upf.id_platba = p.id
     join (select id, row_number() over (partition by zdroj, datum_platby order by zdroj, datum_platby) as day_index from yndev.platby_new) as di on di.id = p.id
 	join zakaznici z on z.id = p.id_customer
 	where 1=1 
     and upf.min_d_fakt <= '20231231'
     and p.zdroj != 'posta' 
     and p.datum_platby between '2023-01-01' and '2023-12-31'
-    #and z.zmluva =14007#in (1174,6023,1152)
+    #and z.zmluva = 13104#in (1174,6023,1152)
     #order by melisko
 	#*/
 
@@ -118,8 +129,15 @@ from
         ,concat('úhrada dokladu ', f.cislo)								as i
         ,'V'															as j
         ,f.cislo														as k
-		,null as l,null as m,null as n,null as o,null as p,null as q,null as r,null as s,null as t,null as u,null as v,null as w,null as x,null as y,null as z
-		,null as aa,null as ab,null as ac,null as ad
+		,null as l
+        ,'X' as m
+        ,null as n
+        ,'X' as o
+        ,null as p
+        ,'X' as q
+        ,null as r
+        ,'X' as s,null as t,null as u,null as v,null as w,null as x,null as y,null as z
+		,null as aa,null as ab,null as ac,null as ad,null as ae,null as af,null as ag,null as ah,null as ai,null as aj,null as ak,null as al,null as am,null as an,null as ao
 
 	FROM yndev.uhrady_new u
 	join zakaznici z on z.id = u.id_zak
@@ -128,7 +146,8 @@ from
 	where 1=1 
     and p.zdroj != 'posta'
     and f.d_fakt <= '20231231'
-    #and z.zmluva =14007#in (1174)#,6023,1152)
+    and p.datum_platby <= '2023-12-31'
+    #and z.zmluva = 13104#in (1174)#,6023,1152)
     #order by melisko
 	#*/
 	)

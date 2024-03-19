@@ -44,6 +44,6 @@
 
 	# select * from yndev.customer_balance_detail where id_zak = 175
 
-	select * from yndev.customer_balance_detail order by meno limit 100;
+	select * from yndev.customer_balance_detail order by meno; #limit 100;
     select * from yndev.customer_balance order by meno;
     

@@ -31,7 +31,7 @@ from
 		,'R00'															as a_row_type
 		,'T00'															as b_record_type
 		,null as c,null as d,null as e,null as f,null as g,null as h,null as i,null as j,null as k,null as l,null as m,null as n,null as o,null as p,null as q,null as r,null as s,null as t,null as u,null as v,null as w,null as x,null as y,null as z
-		,null as aa,null as ab,null as ac,null as ad
+		,null as aa,null as ab,null as ac,null as ad,null as ae,null as af,null as ag,null as ah,null as ai,null as aj,null as ak,null as al,null as am,null as an,null as ao
 	union all
 	##*/
 
@@ -78,6 +78,17 @@ from
         ,0																as ab
         ,0																as ac
         ,'Martin'														as ad
+        ,''																as ae
+        ,''																as af
+        ,''																as ag
+        ,z.zmluva														as ah
+        ,'+'															as ai
+        ,''																as aj
+        ,z.zmluva														as ak
+        ,''																as al
+        ,'08:00:00'														as am
+        ,''																as an
+        ,coalesce(case p.popis when '' then null else left(p.popis, 60) end, 'Platba bez popisu')				as ao
 
 	FROM yidev.platby_new p
     join (select distinct id_platba from yidev.uhrady_new where id_faktura = -1) ud on p.id = ud.id_platba # ignore payments without invoice

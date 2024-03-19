@@ -93,7 +93,12 @@
 	insert into yidev.import_lookup_ibanpayer2vs values (810003, 'SK8209000000000037043215_Jaroslava Vrablecova');
 	insert into yidev.import_lookup_ibanpayer2vs values (2174, 'SK9709000000005129462532_Rene Keves');
 	insert into yidev.import_lookup_ibanpayer2vs values (818001, 'SK9709000000005176307906_Renáta Tomšejová');
-
+	insert into yidev.import_lookup_ibanpayer2vs values (-1, 'SK8911000000002932475742_Holkovičová Katarína, Mgr.');
+	insert into yidev.import_lookup_ibanpayer2vs values (-1, 'AT501400006210018610_Jaroslav Jaroska');
+    insert into yidev.import_lookup_ibanpayer2vs values (818001, 'SK9456000000004670962004_TOMSEJOVA RENATA');
+    insert into yidev.import_lookup_ibanpayer2vs values (801006, 'SK7175000000004012736187_Dusan Skurka');
+    insert into yidev.import_lookup_ibanpayer2vs values (3146, 'SK8509000000005051109252_Tibor Malík');
+    
 	# from payments with missing vs
 	#                                                    vs             iban + _ + name
 	#insert into yidev.import_lookup_ibanpayer2vs values (2064,'SK7909000000000251455464_Adriana Tothova');

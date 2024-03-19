@@ -103,7 +103,7 @@ select * from yidev.import_consolidated where amount = 4;
 select * from zakaznici where email like '%malik%' or meno like '%malik%' or telefon like '%0918%513%287%';
 
 select zmluva, p.* from platby p left join zakaznici z on id_customer = z.id 
-where iban = 'SK2611000000002947133382' or account like '%2947133382' 
+where iban = 'SK8509000000005051109252' or account like '%5051109252' 
 	or sender like '%Malík%'  
 	or popis like '%Malík%' 
 order by datum_platby;
