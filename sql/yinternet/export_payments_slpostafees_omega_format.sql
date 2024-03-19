@@ -21,7 +21,7 @@ Odstran vsetky NULL hodnoty - CTRL+H - hladany vyraz: NULL, Nahradit s: prazdne 
 #select e, count(*) x from (
 
 select a_row_type, b_record_type, c, d, e, f, g, h, i, j, k, l, m, n, o, p, q, r, s, t, u, v, w, x, y, z
-	, aa, ab, ac, ad
+	, aa, ab, ac, ad, ae, af, ag, ah, ai
 from 
 (
 	#/*
@@ -30,7 +30,7 @@ from
 		,'R00'															as a_row_type
 		,'T00'															as b_record_type
 		,null as c,null as d,null as e,null as f,null as g,null as h,null as i,null as j,null as k,null as l,null as m,null as n,null as o,null as p,null as q,null as r,null as s,null as t,null as u,null as v,null as w,null as x,null as y,null as z
-		,null as aa,null as ab,null as ac,null as ad
+		,null as aa,null as ab,null as ac,null as ad,null as ae,null as af,null as ag,null as ah,null as ai
 	union all
 	##*/
 
@@ -78,6 +78,11 @@ from
         ,0																as ab
         ,0																as ac
         ,'Martin'														as ad
+        ,''																as ae
+        ,''																as af
+        ,''																as ag
+        ,''																as ah
+        ,'-'															as ai
 
 	FROM yidev.platby_new p
     join (select id, row_number() over (partition by date_format(datum_platby, '%Y') order by date_format(datum_platby, '%Y')) as day_index from yidev.platby_new) as di on di.id = p.id
@@ -113,7 +118,7 @@ from
             date_format(p.datum_platby, '%Y'), '-', right(concat('000', di.day_index), 3)
 		)																as k
 		,null as l,null as m,null as n,null as o,null as p,null as q,null as r,null as s,null as t,null as u,null as v,null as w,null as x,null as y,null as z
-		,null as aa,null as ab,null as ac,null as ad
+		,null as aa,null as ab,null as ac,null as ad,null as ae,null as af,null as ag,null as ah,null as ai
 
 	FROM yidev.platby_new as p
     join (select id, row_number() over (partition by date_format(datum_platby, '%Y') order by date_format(datum_platby, '%Y')) as day_index from yidev.platby_new) as di on di.id = p.id
